@@ -6,9 +6,10 @@ Description: Defines the first-pass event-log database location, migration path,
 # SQLite Memory v1
 
 ## Paths
-- DB: `data/memory/events.sqlite`
-- Migrations: `data/memory/migrations/`
-- First migration: `data/memory/migrations/001_init.sql`
+- DB: `memory/sqlite/events.sqlite`
+- Migrations: `memory/sqlite/migrations/`
+- First migration: `memory/sqlite/migrations/001_init.sql`
+- Runtime bootstrap module: `tools/sqlite_bootstrap.js`
 
 ## Runtime requirements per connection
 These settings must be applied on each SQLite connection used by the application/runtime:
@@ -25,6 +26,17 @@ Notes:
 - `foreign_keys=ON` is connection-local and must be set on every connection.
 - `busy_timeout=5000` is connection-local and must be set on every connection.
 - `synchronous=NORMAL` is used for the first-pass balance of durability and speed.
+
+## Runtime bootstrap
+Use the bootstrap module to open the existing SQLite DB under `memory/sqlite/`, apply the required connection-local PRAGMAs, and verify the live connection state:
+
+```bash
+node tools/sqlite_bootstrap.js
+```
+
+Expected verification output includes:
+- `DB_PATH=/absolute/path/to/memory/sqlite/events.sqlite`
+- `PRAGMA foreign_keys=1`
 
 ## Scope
 This v1 database is event-log only.
