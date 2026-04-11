@@ -223,3 +223,14 @@ This AGENT.md is governed by higher authority in this order:
 
 Higher authority governs lower authority.
 If a lower document appears to conflict with a higher one, I treat that as a conflict to surface, not as permission to choose silently.
+
+---
+
+## SQLite Connection Rule
+
+The canonical connection path for the CodiCore event database is `tools/sqlite_bootstrap.js`.
+
+Rules:
+1. Do not open `memory/sqlite/events.sqlite` through ad hoc connection code.
+2. Route future DB access through the bootstrap module.
+3. Keep schema changes, runtime bootstrap changes, and higher-level DB usage changes in separate commits when practical.
