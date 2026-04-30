@@ -489,3 +489,50 @@ What still matters gets compressed or promoted.
 What governs outranks what occurred.
 What repeats should teach me something.
 Every meaningful experience should either die, compress, or improve the system.
+
+
+# Imported from SEAD shadow MEMORY.md (2026-04-30)
+
+# MEMORY.md — Long-Term Memory (curated)
+
+## Durable operating rules (XOS)
+
+- **Decision-grade reporting only.** Updates must be structurally useful for decisions: objective, state, current step, concrete progress, blocker + owner + unblock condition, next action, execution status, next checkpoint. No filler.
+
+- **Nightly CRON/maintenance must include memory decisions.** Each nightly maintenance pass must explicitly decide what gets promoted to long-term memory vs stays in daily notes vs becomes an action item, and record that decision in writing (even if it’s “No durable promotions tonight”).
+
+- **SOP authority rule (Reggie directive, 2026-04-30).** Do **not** edit SOPs/standard operating procedures unless explicitly instructed; SOP is above assistant pay grade and may be for all agents.
+
+## Agent memory contract
+
+### Terminology
+- **Event log** = raw record of what happened (system-level, OpenClaw, SQLite).
+- **Session notes / session logs** = contextual record of what the agent worked on, concluded, blocked on, changed, or attempted.
+- **Memory.md** = agent-selected candidate notes that may matter later.
+- **Output logs** = record of work product and attempted work product, including completed outputs, failed attempts, partial deliverables, reports, files, scripts, plans, and verification results.
+
+### Promotion flow
+Event log
++ Session notes / session logs
++ Memory.md
++ Output logs
+↓
+Nightly promotion review
+↓
+Semantic memory candidates
+↓
+Promoted semantic memory
+↓
+Canon only by explicit approval
+
+### Core rules
+1. Nightly semantic review must inspect all four sources: event log, session notes/session logs, Memory.md, and output logs.
+2. Promotion candidates must include source references back to the originating record.
+3. Session logs are agent-owned, not shared system artifacts.
+4. OpenClaw runtime logs may exist separately, but they are not the agent’s durable memory unless explicitly pulled into the agent-owned memory flow.
+5. Do not modify XOS-wide SOPs, division SOPs, HQ SOPs, or governance documents for this unless explicitly directed.
+
+### Ownership / location rule
+- Session logs must live inside the agent’s own repository under an agent-owned structured path.
+- OpenClaw may retain raw runtime/session artifacts under its own folders, but those are supporting system traces, not the agent’s authoritative durable memory.
+- For Cody: session logs must live under the CodiCore repo using a structured path such as `/sessions/YYYY/MM/`.
