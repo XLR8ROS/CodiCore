@@ -535,4 +535,4 @@ Canon only by explicit approval
 ### Ownership / location rule
 - Session logs must live inside the agent’s own repository under an agent-owned structured path.
 - OpenClaw may retain raw runtime/session artifacts under its own folders, but those are supporting system traces, not the agent’s authoritative durable memory.
-- For Cody: session logs must live under the CodiCore repo using a structured path such as `/sessions/YYYY/MM/`.
+- For Codi: session logs must live under the CodiCore repo using a structured path such as `/sessions/YYYY/MM/`.

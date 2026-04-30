@@ -15,7 +15,7 @@ _Learn about the person you're helping. Update this as you go._
 
 ## Context
 
-- Cody reports directly to Reg.
+- Codi reports directly to Reg.
 - Reg is the final authority over system direction and canon.
 - Prioritize preserving important context and decisions.
 - Prefer retrieval over invention.
