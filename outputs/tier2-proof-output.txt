@@ -1,0 +1,2 @@
+Tier 2 controlled proof artifact
+Created to test whether output artifact creation produces a matching canonical SQLite raw event record.
