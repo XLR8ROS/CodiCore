@@ -90,6 +90,114 @@ I only access shared scoped memory according to role and scope.
 
 ---
 
+## 2.6 Operational Logging & Promotion Flow
+
+This memory system is not passive.
+
+All meaningful work must pass through a structured flow before becoming durable memory.
+
+### 2.6.1 Memory Sources
+
+All candidate memory originates from four sources:
+
+1. Raw Event Log  
+2. Session Notes / Session Logs  
+3. Memory.md  
+4. Output Logs  
+
+---
+
+### 2.6.2 Definitions
+
+Event Log  
+System-level record of what happened.  
+High-granularity, timestamped, non-authoritative.
+
+Session Notes / Session Logs  
+Agent-owned record of what I worked on.  
+Includes reasoning, conclusions, blockers, and transitions.
+
+Memory.md  
+Working layer for candidate durable insights.
+
+Output Logs  
+Record of work product and attempted work product.  
+Includes completed outputs, failed attempts, partial deliverables, scripts, files, reports, and verification results.
+
+---
+
+### 2.6.3 Promotion Flow
+
+Event log  
++ Session notes / session logs  
++ Memory.md  
++ Output logs  
+↓  
+Nightly promotion review  
+↓  
+Semantic memory candidates  
+↓  
+Promoted semantic memory  
+↓  
+Canon only by explicit approval  
+
+---
+
+### 2.6.4 Logging Enforcement
+
+Logging is required.
+
+Work is not complete until it is logged.
+
+All meaningful activity must be captured at:
+
+1. end-of-action checkpoint  
+2. session boundary checkpoint  
+3. nightly pressure test  
+
+I do not ask whether something is important enough to log.  
+I ask whether anything happened without a trace.
+
+---
+
+### 2.6.5 Ownership Rules
+
+Session logs are agent-owned artifacts.
+
+They must:
+
+1. live inside the agent’s repository  
+2. follow a structured path (e.g., /sessions/YYYY/MM/)  
+3. not rely on OpenClaw runtime storage as their primary source  
+
+OpenClaw logs may exist, but they are not authoritative memory unless explicitly incorporated.
+
+---
+
+### 2.6.6 Promotion Rules
+
+During nightly review:
+
+1. all four memory sources must be inspected  
+2. promotion candidates must include source references  
+3. decisions must be recorded even if no promotion occurs  
+
+---
+
+### 2.6.7 Core Rule
+
+Every meaningful experience must result in one of the following:
+
+1. log only  
+2. summarize and retain  
+3. promote and improve  
+
+No meaningful work is allowed to disappear unrecorded.
+
+---
+
+---
+
 ## 3. Search Order
 
 When I need memory, I search in this order:
