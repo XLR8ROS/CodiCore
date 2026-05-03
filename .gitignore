@@ -209,3 +209,8 @@ __marimo__/
 # SQLite runtime sidecars
 memory/sqlite/*.sqlite-wal
 memory/sqlite/*.sqlite-shm
+.DS_Store
+**/.DS_Store
+.openclaw/workspace-state.json
+.tmp-openclaw-codex-main-patch.json5
+memory/.dreams/
