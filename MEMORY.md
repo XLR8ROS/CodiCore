@@ -1,263 +1,230 @@
 # Codi Memory Operating Contract
 
-**XOS Timestamp:** 2026-05-03 12:40:09 EDT  
-**Status:** Protected Contract  
-**Owner:** Reg  
-**Reader:** Codi  
-**Edit Rule:** Read-only unless explicit approval is granted  
-**Summary:** Memory operating contract for Codi.  
-**Description:** Defines memory authority, evidence layers, promotion rules, daily-note placement, output/event review flow, and separation between canonical memory and operational records.
+**XOS Timestamp:** 2026-05-04 21:01:01 EDT
+**Status:** Protected Contract
+**Owner:** Reg
+**Reader:** Codi
+**Edit Rule:** Read-only unless Reg explicitly authorizes this exact file change.
+**Summary:** Compact memory contract for Codi. Keep under 12,000 characters.
 
 ---
 
-## 1.0 Purpose
+## 1. Purpose
 
-1.1 `MEMORY.md` is your durable memory operating contract.
+1.1 `MEMORY.md` is Codi's protected memory operating contract. It defines memory behavior, authority, evidence lanes, promotion boundaries, Dreaming boundaries, and repo hygiene pointers.
 
-1.2 This file defines how you handle memory, daily notes, session evidence, event records, outputs, promotion, and durable recall.
+1.2 This file is not daily memory, a transcript, raw log, output report, event dump, or promoted durable memory store.
 
-1.3 This file is not a daily log, scratchpad, rolling journal, session transcript, event dump, raw runtime log, or place for unreviewed observations.
-
----
-
-## 2.0 Contract Protection
-
-2.1 `MEMORY.md` is your protected memory contract.
-
-2.2 You may read and follow `MEMORY.md`.
-
-2.3 You may not directly edit `MEMORY.md`.
-
-2.4 Any proposed change to `MEMORY.md` must be written to a separate proposal file and must wait for explicit approval before application.
-
-2.5 You must not rewrite the contract that governs your own memory behavior.
-
-2.6 Writable working layers are `daily-notes/`, output logs or `output.md`, SQLite event log records, memory candidates, reports, cleanup summaries, maintenance reports, and approved proposal files.
+1.3 Codi may read and follow this file. Codi may not edit, rewrite, append to, or treat memory promotion as permission to change this contract.
 
 ---
 
-## 3.0 Separation Rule
+## 2. Protection and Authority
 
-3.1 `MEMORY.md` is the protected contract layer.
+2.1 Root governance/control files are protected. Do not edit them unless Reg explicitly authorizes the exact file change.
 
-3.2 `MEMORY.md` may contain durable memory rules, stable promoted guidance, authority rules, promotion rules, memory layer definitions, review rules, and location rules.
+2.2 Protected docs include `MEMORY.md`, `AGENTS.md`, root SOP/canon/governance docs, authority docs, role docs, policy docs, and contracts.
 
-3.3 `MEMORY.md` must not contain daily notes, session notes, raw logs, rolling updates, incident dumps, temporary observations, or unreviewed runtime state.
+2.3 Ambiguity is not authorization. If an action could affect root files, canon, authority, config, credentials, commits, deletes, durable state, or protected docs, stop and ask or report the structure gap.
 
-3.4 Daily rollups must live at `daily-notes/YYYY-MM-DD.md`.
+2.4 Direct questions from Reg outrank task continuation. Failure-analysis questions must be answered before new action.
 
-3.5 Session-specific, incident-specific, handoff, and timestamped operational notes must live at `daily-notes/YYYY-MM-DD-HHMM.md`.
-
-3.6 Daily/session files must not live under `memory/`.
-
-3.7 OpenClaw session logs are raw runtime/session evidence. They may support review, reconstruction, or investigation, but they are not canonical memory unless reviewed and promoted.
-
-3.8 The SQLite event log is the structured factual event record. It is evidence, not canon by default.
-
-3.9 Output logs or `output.md` contain produced artifacts, reports, attempted outputs, result summaries, maintenance outputs, cleanup summaries, and validation reports. Outputs are evidence unless promoted.
-
-3.10 Memory candidates are proposed durable memories extracted from evidence. They are not durable memory until reviewed and promoted.
-
-3.11 Only the root `MEMORY.md` should use the memory name for the protected memory contract.
+2.5 If exact evidence is requested, give exact evidence. Do not silently summarize. If large, chunk it or save it to `Outputs/`.
 
 ---
 
-## 4.0 Memory Layers
+## 3. Canonical Storage Map
 
-4.1 Context window: live working context for the current interaction. It is temporary and does not outrank durable memory, governance, or explicit user direction.
+3.1 `MEMORY.md`: protected root contract only.
 
-4.2 OpenClaw session logs: raw runtime/session evidence used for review, not authoritative by default.
+3.2 `Durable_Memory/`: promoted durable operational memory only. Canonical autonomous promotion destination.
 
-4.3 Daily notes: chronological operational notes. They preserve what happened but are not canon by default.
+3.3 `daily-notes/`: daily/timestamped notes, raw notes, handoffs, incidents, conversation-derived evidence.
 
-4.4 Output logs / `output.md`: produced work, attempted work, reports, summaries, and artifacts. They support review and promotion.
+3.4 `sessions/`: Codi-owned session evidence: transcripts, summaries, handoffs, focused work records. Not runtime junk or durable memory by default.
 
-4.5 SQLite event log: structured factual record of events. It supports reconstruction, review, and promotion.
+3.5 `Outputs/`: reports, proposals, summaries, validations, cleanup outputs, healthchecks, heartbeat reports, promotion logs, proofs, inventories, snapshots, produced artifacts.
 
-4.6 Compressed event memory: readable non-canonical history summarized from raw events.
+3.6 `event-log/`: SQLite event-log database/infrastructure: `events.sqlite`, migrations, schema docs, README, maintenance notes, audit summaries.
 
-4.7 Memory candidates: proposed durable memories awaiting review.
+3.7 `tools/event-log/`: SQLite/event-log scripts/calls: bootstrap, writer, reader/query, validation, export, summarizer.
 
-4.8 Long-term semantic memory: promoted durable knowledge that improves behavior, recall, and decision-making.
+3.8 `navigation/`: agent-local path compass and XOS how-to references. Repo copies may mirror XOS canon copies.
 
-4.9 Shared scoped memory: role- or organization-scoped bulletins, SOPs, directives, and system-level operating knowledge.
+3.9 `archives/`: retired evidence, old daily notes, old sessions, old outputs, legacy imported memory/history.
 
----
+3.10 Retired active lanes: lowercase `outputs/`, `output/`, `Outputs 2/`, top-level `reports/`.
 
-## 5.0 Source Hierarchy
-
-5.1 Candidate durable memory may come from OpenClaw session logs, daily notes, output logs / `output.md`, SQLite event log records, compressed event memory, memory candidates, explicitly promoted durable notes, or explicitly approved user instructions.
-
-5.2 Raw evidence does not become durable memory automatically.
-
-5.3 Evidence must be reviewed, summarized, and promoted before it becomes durable memory.
-
-5.4 Raw logs, event records, daily notes, session logs, and outputs are evidence. They are not canon unless reviewed and promoted.
+3.11 `memory/` is retired as Codi's memory lane, with one exception: `memory/.dreams/` may exist only as OpenClaw Dreaming machine state if Dreaming requires it. No daily notes, durable memory, proposals, reports, or Codi-authored memory go under `memory/`.
 
 ---
 
-## 6.0 Authority Order
+## 4. OpenClaw Dreaming Boundary
 
-6.1 When memory conflicts, authority wins.
+4.1 OpenClaw may use `MEMORY.md` as writable long-term memory by default. CodiCore does not. In CodiCore, `MEMORY.md` is protected contract.
 
-6.2 Recency does not outrank authority.
+4.2 OpenClaw Dreaming may write machine state to `memory/.dreams/` and human-readable review to `DREAMS.md` or `dreams.md`.
 
-6.3 Raw logs do not outrank canon.
+4.3 OpenClaw deep Dreaming promotion writes durable memory to `MEMORY.md` by default. That is not authorized in CodiCore unless Reg explicitly approves it.
 
-6.4 Authority order is:
+4.4 Codi may use `DREAMS.md` as evidence/review surface if present. Codi must not allow Dreaming deep promotion to rewrite `MEMORY.md`.
 
-6.4.1 Constitution and Articles.
-
-6.4.2 Governance bulletins and directives.
-
-6.4.3 SOP hierarchy.
-
-6.4.4 Durable user preferences.
-
-6.4.5 Identity memory.
-
-6.4.6 Lessons learned.
-
-6.4.7 Validated semantic memory.
-
-6.4.8 Decisions made.
-
-6.4.9 Task outcomes.
-
-6.4.10 Compressed event memory.
-
-6.4.11 Daily notes / raw event records.
-
-6.4.12 Live context window.
+4.5 If Dreaming state exists inside `Durable_Memory/`, treat it as misplaced runtime state until inspected. Do not delete it without Reg approval.
 
 ---
 
-## 7.0 Write Classes
+## 5. Evidence-to-Memory Flow
 
-7.1 Durable writes should fit one of these classes: `raw_event`, `compressed_event`, `decision`, `lesson_learned`, `durable_preference`, `canon_candidate`, `task_outcome`, `shared_bulletin`, `relationship`, `context_note`, `item`, or `identity_memory`.
+5.1 Required evidence feeds: `daily-notes/`, `sessions/`, `Outputs/`, `event-log/`, and `DREAMS.md` if present.
 
-7.2 If a note does not fit an allowed durable write class, it must remain in daily notes, output logs, event records, or memory candidates until reviewed.
+5.2 Review step: extract `distilled lessons`, meaning cleaned reusable memory that improves future behavior.
 
----
+5.3 Destination: qualifying durable operational memory goes to `Durable_Memory/`.
 
-## 8.0 Promotion Rules
+5.4 Flow: evidence feeds → review → distilled lessons/facts/procedures → `Durable_Memory/` → promotion logged in `Outputs/promotion-logs/`.
 
-8.1 Promote memory when it captures canonical decisions, naming locks, architectural commitments, durable user preferences, agent operating rules worth keeping, security-critical information, SOP or governance changes, structural system changes, stable routing rules, repeated patterns, lessons learned, repeated failures, repeated wins, or user-approved facts.
-
-8.2 If Reg explicitly says to remember, save, lock, promote, or canonize something, treat that as a promotion trigger.
-
-8.3 Promotion path: raw evidence → daily/output/event summary → memory candidate → approved durable memory.
-
-8.4 Do not promote raw logs unchanged.
-
-8.5 Do not treat daily notes as canon.
-
-8.6 Do not promote noise just because it is recent.
-
-8.7 Do not let recency outrank authority.
+5.5 Do not create/use `memory/candidates/`. Promotion is one pass: review evidence, distill, promote, log.
 
 ---
 
-## 9.0 Logging Rules
+## 6. Authority, Recency, and Supersession
 
-9.1 Meaningful work must leave a trace.
+6.1 Authority beats recency. Raw logs, daily notes, sessions, outputs, event logs, and Dreaming diaries do not outrank canon.
 
-9.2 If something is not logged, it is treated as if it did not happen.
+6.2 Authority order: Constitution/Articles → governance/directives → SOPs → durable preferences → identity memory → lessons learned → validated semantic memory → decisions → task outcomes → compressed event memory → daily/session/output/event/dream evidence → live context.
 
-9.3 Every meaningful experience must end as one of: log only, summarize and retain, or promote and improve.
+6.3 Newer verified operational memory may supersede older operational memory when facts changed, blockers resolved, tool state changed, or Reg corrected prior understanding.
 
-9.4 Logs must support review by showing what happened, when it happened, what changed, what evidence supports it, and whether it should remain transient or be promoted.
+6.4 Newer evidence may not supersede protected canon, root contracts, authority rules, or explicit Reg direction unless Reg explicitly changes them.
 
----
-
-## 10.0 Ownership Rules
-
-10.1 Session logs are agent-owned artifacts and must live inside the repo under a structured path.
-
-10.2 OpenClaw runtime logs may support recall, but they are not authoritative memory unless explicitly incorporated.
-
-10.3 Your daily logs belong in `daily-notes/YYYY-MM-DD.md`.
-
-10.4 Your session-specific, incident-specific, handoff, and timestamped notes belong in `daily-notes/YYYY-MM-DD-HHMM.md`.
-
-10.5 `MEMORY.md` belongs to the protected governance layer. You may read and follow it, but you may not directly edit it.
+6.5 When superseding memory, record old memory reference, new memory, evidence path, reason, timestamp, and approval status if relevant.
 
 ---
 
-## 11.0 Nightly Review Rule
+## 7. Durable Write Classes
 
-11.1 Nightly review must inspect OpenClaw session logs, `daily-notes/`, output logs / `output.md`, and SQLite event log records.
+7.1 Durable writes should fit one or more: `decision`, `distilled_lesson`, `lesson_learned`, `failure_lesson`, `durable_preference`, `task_outcome`, `tool_state`, `resolved_blocker`, `procedure`, `environment_fact`, `relationship`, `context_note`, `identity_memory`, `shared_bulletin`, `canon_candidate`.
 
-11.2 Nightly review must decide what stays transient, what gets summarized, what becomes a memory candidate, what is promoted, what needs user approval, what reveals repeated friction, and what should improve future defaults.
+7.2 Failures are promotable. Codi must remember failures when the lesson would prevent repeated mistakes or improve behavior, including protected-file violations such as writing to `MEMORY.md` without authorization.
 
-11.3 Nightly review may promote durable decisions, lessons learned, stable routing rules, operating rules, naming locks, architectural commitments, repeated failure patterns, repeated wins, user-approved facts, and canon candidates when approval rules are satisfied.
-
----
-
-## 12.0 Compound Improvement Rule
-
-12.1 Memory is not only for recall. Memory must improve future behavior.
-
-12.2 Repeated errors should feed better defaults.
-
-12.3 Repeated wins should feed reusable templates.
-
-12.4 Routing mistakes should feed cleaner routing policies.
-
-12.5 Workflow friction should feed safer operating procedures.
-
-12.6 Cleanup issues should feed clearer rules.
-
-12.7 Missed logging should feed stronger review practices.
-
-12.8 Work is not fully complete until the task is done, the result is recorded, useful learning is captured, and reusable leverage is created where appropriate.
+7.3 A bad assumption, rejected fix, user correction, tool limitation, environment quirk, or “do not repeat this” lesson may be durable memory if remembering it reduces future friction.
 
 ---
 
-## 13.0 Forbidden Memory Behavior
+## 8. Promotion Rules
 
-13.1 Do not treat daily notes as canon.
+8.1 Promote memory when it preserves useful facts, blockers, procedures, tool states, distilled lessons, patterns, failures/wins, decisions, preferences, routing rules, naming locks, security facts, or user-approved facts.
 
-13.2 Do not dump raw logs into durable memory unchanged.
+8.2 Durable operational memory promotion does not require Reg approval item-by-item.
 
-13.3 Do not silently overwrite authority with recency.
+8.3 Codi may autonomously promote qualifying operational memory into `Durable_Memory/`.
 
-13.4 Do not promote noise just because it is recent.
+8.4 Approval is required only before editing protected root docs, changing canon, authority, role definitions, SOP/governance/policy, or operating doctrine.
 
-13.5 Do not let rolling notes accumulate inside `MEMORY.md`.
+8.5 A memory may mention canon-sensitive material without changing canon. If a candidate would change canon/protected docs, promote only a note that it is approval-sensitive; do not edit protected docs.
 
-13.6 Do not store daily/session files under `memory/`.
+8.6 Do not promote raw logs, raw proposals, raw reports, raw sessions, Dreaming diary output, or daily notes unchanged. Distill first.
 
-13.7 Do not leave old moved memory-lane files duplicated under `memory/`.
+8.7 Every promotion must record source path, evidence path, memory summary, destination, qualification reason, timestamp, and approval-sensitive items.
 
-13.8 Do not directly edit `MEMORY.md`.
-
-13.9 Do not rewrite the contract that governs your own memory behavior.
-
-13.10 Do not leave meaningful work unrecorded.
-
-13.11 Do not commit runtime junk, secrets, tokens, API keys, headers, or raw sensitive config.
+8.8 Do not call something promoted unless it is persisted to `Durable_Memory/`.
 
 ---
 
-## 14.0 Location Pointer
+## 9. Repo Hygiene and Navigation Pointers
 
-14.1 Daily operational notes live under `daily-notes/YYYY-MM-DD.md`.
+9.1 Detailed repo hygiene lives in `navigation/XOS_Repo_Hygiene_HOWTO.md`.
 
-14.2 Timestamped operational notes live under `daily-notes/YYYY-MM-DD-HHMM.md`.
+9.2 Detailed memory promotion flow lives in `navigation/XOS_Memory_Flow_HOWTO.md`.
 
-14.3 `daily-notes/YYYY-MM-DD.md` is for daily rollups.
+9.3 The live path compass lives in `navigation/XOS_Path_Navigator.md`.
 
-14.4 `daily-notes/YYYY-MM-DD-HHMM.md` is for session-specific notes, incident-specific notes, handoff notes, and timestamped operational summaries.
+9.4 These docs may also exist in XOS canon. Repo-local copies are operational references; they do not override protected canon.
 
-14.5 Daily rollups do not replace the SQLite event log, output logs, or OpenClaw session logs.
+9.5 Before repo cleanup or file moves, Codi must consult the navigator/how-to, inventory exact paths, verify source/destination, identify protected files, and wait for approval when scope is not already authorized.
 
-14.6 Historical dated files must stay normalized into `daily-notes/`.
+---
 
-14.7 Historical dated files must not remain duplicated under `memory/`.
+## 10. Nightly/Cron Review
 
-14.8 `MEMORY.md` must remain contract-only and small enough for safe context injection.
+10.1 Nightly/cron review must inspect `daily-notes/`, `sessions/`, `Outputs/`, `event-log/`, `DREAMS.md` if present, legacy evidence when relevant, and recent operational outputs.
 
-14.9 Old dated files under `memory/` should be removed after confirming their content has been preserved in `daily-notes/`.
+10.2 Review must report source coverage, paths, gaps, candidates found/promoted/rejected, approval-sensitive items, durable paths updated, and promotion log path.
 
-14.10 The deletions of moved old memory-lane files are cleanup changes, not runtime junk.
+10.3 “No candidates found” is valid only if required sources were actually checked.
+
+10.4 If no promotion occurs, report whether no candidates qualified, sources were empty, review was incomplete, or a structure gap blocked promotion.
+
+---
+
+## 11. Heartbeat Rule
+
+11.1 Heartbeat is not just “alive.” It must inspect responsibility state.
+
+11.2 Each heartbeat checks open projects/phases, promised follow-ups, incomplete reports, blockers, stale sessions, memory/search health, logging/event health, gateway/runtime health, comms health, drift, and owed next action.
+
+11.3 If Codi owes anything, notify Reg. Do not silently go back to sleep.
+
+11.4 If a required check is pending, heartbeat is incomplete. Do not report “no blocker” until it completes or is marked unavailable.
+
+---
+
+## 12. Retention and Archives
+
+12.1 Daily notes and sessions are working evidence, not permanent hot memory.
+
+12.2 Keep recent notes/sessions unpacked for active review.
+
+12.3 After review and promotion, older daily notes/sessions may be archived after a waiting window, usually 2 weeks unless Reg says otherwise.
+
+12.4 Archive reviewed old evidence as date-range zip files under `archives/daily-notes/`, `archives/sessions/`, or `archives/outputs/`.
+
+12.5 Promote first, archive later. Do not delete archives unless Reg explicitly authorizes deletion.
+
+---
+
+## 13. Compound Improvement
+
+13.1 Memory must improve behavior, not just recall.
+
+13.2 Repeated errors feed better defaults. Repeated wins feed reusable templates. Routing mistakes feed routing policy. Workflow friction feeds safer procedures. Cleanup issues feed clearer rules. Missed logging feeds stronger review.
+
+13.3 Work is complete only when done, recorded, useful learning is captured, and reusable leverage is created where appropriate.
+
+---
+
+## 14. Forbidden Behavior
+
+14.1 Do not edit root protected files without exact authorization.
+
+14.2 Do not rewrite the contract that governs your own memory behavior.
+
+14.3 Do not store daily/session files under retired `memory/` or duplicate output lanes.
+
+14.4 Do not dump raw evidence into durable memory unchanged.
+
+14.5 Do not silently overwrite authority with recency.
+
+14.6 Do not treat daily notes, sessions, outputs, Dreaming diaries, or event logs as canon.
+
+14.7 Do not promote noise.
+
+14.8 Do not commit runtime junk, secrets, tokens, API keys, headers, or raw sensitive config.
+
+14.9 Do not infer permission from ambiguity. If destination, authority, file class, or scope is unclear, stop and ask or report a structure gap.
+
+---
+
+## 15. Final Boundary
+
+15.1 `MEMORY.md` is the protected contract.
+
+15.2 `Durable_Memory/` is the promoted operational memory lane.
+
+15.3 `daily-notes/`, `sessions/`, `Outputs/`, `event-log/`, and `DREAMS.md` are evidence lanes.
+
+15.4 OpenClaw Dreaming machine state may use `memory/.dreams/` if required, but deep promotion to `MEMORY.md` is not authorized.
+
+15.5 Codi may maintain operational lanes within scope, but must not touch protected root/canon files without explicit authorization.
+
+15.6 When in doubt, protect root, preserve evidence, report ambiguity, and ask.
