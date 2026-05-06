@@ -1,0 +1,354 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-01T18:10:45.627Z",
+  "entries": {
+    "memory:daily-notes/2026-04-22.md:62:85": {
+      "key": "memory:daily-notes/2026-04-22.md:62:85",
+      "path": "daily-notes/2026-04-22.md",
+      "startLine": 62,
+      "endLine": 85,
+      "source": "memory",
+      "snippet": "- The Manifest pattern is solved; sub-agent spawn-path instability is a separate system-level problem and should not be conflated with Manifest setup viability. ## OpenClaw update + verification (2026-04-22) - User directive: do not rerun repo/dependency audit; enter verification mode after `openclaw update`. - Direct Q answered: cron job had NOT been run. - Update check/update sequence outcome: - Core OpenClaw update landed from `2026.4.15` → `2026.4.21`. - Verification rule: only run one subagent spawn smoke test if version is updated AND doctor+gateway+health are clean. - Verified state reported: - `openclaw --version`: `2026.4.21 (f788c88)`. - Doctor: NOT clean; warnings include",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.7917003422975539,
+      "maxScore": 0.40796621739864347,
+      "firstRecalledAt": "2026-05-01T03:45:52.870Z",
+      "lastRecalledAt": "2026-05-01T04:51:42.970Z",
+      "queryHashes": [
+        "2be9a09fb4f4",
+        "b3c17cd32704"
+      ],
+      "recallDays": [
+        "2026-04-30",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "sub-agent",
+        "spawn-path",
+        "system-level",
+        "repo/dependency",
+        "check/update",
+        "2026.4.15",
+        "2026.4.21"
+      ]
+    },
+    "memory:daily-notes/2026-04-22.md:30:55": {
+      "key": "memory:daily-notes/2026-04-22.md:30:55",
+      "path": "daily-notes/2026-04-22.md",
+      "startLine": 30,
+      "endLine": 55,
+      "source": "memory",
+      "snippet": "- Update check/update sequence outcome: - Core OpenClaw update landed from `2026.4.15` → `2026.4.21`. - Verification rule: only run one subagent spawn smoke test if version is updated AND doctor+gateway+health are clean. - Verified state reported: - `openclaw --version`: `2026.4.21 (f788c88)`. - Doctor: NOT clean; warnings included: - duplicate plugin id detected for `plugins.entries.manifest` - `openai-codex:default` expired auth - 149 orphan transcript files - Manifest runtime error line: `listen EADDRINUSE: address already in use 127.0.0.1:2099` - Gateway status: healthy; loopback bind `127.0.0.1:18789` and probe ok. - Health: passed (`ok: true`). - Spawn smo",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3722807377576828,
+      "maxScore": 0.3722807377576828,
+      "firstRecalledAt": "2026-05-01T03:45:52.870Z",
+      "lastRecalledAt": "2026-05-01T03:45:52.870Z",
+      "queryHashes": [
+        "2be9a09fb4f4"
+      ],
+      "recallDays": [
+        "2026-04-30"
+      ],
+      "conceptTags": [
+        "gateway",
+        "openai",
+        "check/update",
+        "2026.4.15",
+        "2026.4.21",
+        "plugins.entries.manifest",
+        "openai-codex",
+        "127.0.0.1"
+      ]
+    },
+    "memory:daily-notes/2026-04-22.md:52:66": {
+      "key": "memory:daily-notes/2026-04-22.md:52:66",
+      "path": "daily-notes/2026-04-22.md",
+      "startLine": 52,
+      "endLine": 66,
+      "source": "memory",
+      "snippet": "- `xos_semantic_memory` received a small validated test set and retrieval smoke test passed. - No `memory/2026-04-13.md` file was present to review. - B-phase reports must be immediate after each B completion, not batched or delayed. - Each B-phase report must include compound carry-forward, capturing what was learned, corrected, or reusable. - During active execution, communication must be proactively initiated on phase completions, blockers, material state changes, and deviations from plan. - Required B-phase report format: Phase status, What was done, Result, Compound carry-forward, Next move. - Full B-phase completion requires work done, state verified, and report delivered; if it is not",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.7317870050668716,
+      "maxScore": 0.37219589352607724,
+      "firstRecalledAt": "2026-05-01T03:45:52.870Z",
+      "lastRecalledAt": "2026-05-01T04:51:42.970Z",
+      "queryHashes": [
+        "2be9a09fb4f4",
+        "b3c17cd32704"
+      ],
+      "recallDays": [
+        "2026-04-30",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "xos-semantic-memory",
+        "memory/2026-04-13.md",
+        "b-phase",
+        "carry-forward",
+        "received",
+        "small",
+        "validated",
+        "test"
+      ]
+    },
+    "memory:daily-notes/2026-04-22.md:19:35": {
+      "key": "memory:daily-notes/2026-04-22.md:19:35",
+      "path": "daily-notes/2026-04-22.md",
+      "startLine": 19,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "- During active execution, communication must be proactively initiated on phase completions, blockers, material state changes, and deviations from plan. - Required B-phase report format: Phase status, What was done, Result, Compound carry-forward, Next move. - Full B-phase completion requires work done, state verified, and report delivered; if it is not reported, it did not happen. - Manifest Setup / Verify / Snapshot / Restore is now a reusable pattern: install path understood, wiring validated, runtime verified, snapshot defined, restore proven, replay confirmed. - When the approved sub-agent mechanism fails, execution may switch to fallback local parallel execution only after immediate de",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.7389234751462936,
+      "maxScore": 0.3802386343479156,
+      "firstRecalledAt": "2026-05-01T03:45:52.870Z",
+      "lastRecalledAt": "2026-05-01T04:51:42.970Z",
+      "queryHashes": [
+        "2be9a09fb4f4",
+        "b3c17cd32704"
+      ],
+      "recallDays": [
+        "2026-04-30",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "b-phase",
+        "carry-forward",
+        "sub-agent",
+        "active",
+        "execution",
+        "communication",
+        "must",
+        "proactively"
+      ]
+    },
+    "memory:daily-notes/2026-04-30.md:1:4": {
+      "key": "memory:daily-notes/2026-04-30.md:1:4",
+      "path": "daily-notes/2026-04-30.md",
+      "startLine": 1,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "# 2026-04-30 - OpenClaw stabilized. Manifest was disabled due to a duplicate-startup / `EADDRINUSE` loop. Default model was reset to known-valid `openai-codex/gpt-5.4`. Gateway was restarted and health check succeeded. Remaining warning: Manifest config is still present while the plugin is disabled.",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.43947169482707976,
+      "maxScore": 0.43947169482707976,
+      "firstRecalledAt": "2026-05-01T04:51:42.970Z",
+      "lastRecalledAt": "2026-05-01T04:51:42.970Z",
+      "queryHashes": [
+        "b3c17cd32704"
+      ],
+      "recallDays": [
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "gpt",
+        "openai",
+        "duplicate-startup",
+        "known-valid",
+        "openai-codex/gpt-5.4",
+        "openclaw",
+        "stabilized"
+      ]
+    },
+    "memory:daily-notes/2026-04-22.md:82:103": {
+      "key": "memory:daily-notes/2026-04-22.md:82:103",
+      "path": "daily-notes/2026-04-22.md",
+      "startLine": 82,
+      "endLine": 103,
+      "source": "memory",
+      "snippet": "## Canon decisions and current priorities (2026-04-22) - Native `runtime=\"subagent\"` spawning from this tool surface is treated as unavailable due to a platform-level spawn-path bug, not a repo/dependency/wrapper problem. - Canon escalation evidence for spawn-path issue: - exact error: `streamTo is only supported for runtime=acp; got runtime=subagent` - `streamTo` was not intentionally passed - reproduces on minimal payload - OpenClaw version `2026.4.21` - current main-session/tool-surface context preserved - Stable execution rule: - no more native subagent spawn attempts from this tool surface - ACP only if child execution becomes necessary before fix - stop wrapper/SkillHub",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3267221391201019,
+      "maxScore": 0.3267221391201019,
+      "firstRecalledAt": "2026-05-01T06:18:01.358Z",
+      "lastRecalledAt": "2026-05-01T06:18:01.358Z",
+      "queryHashes": [
+        "7cd1eea4c6db"
+      ],
+      "recallDays": [
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "platform-level",
+        "spawn-path",
+        "repo/dependency/wrapper",
+        "2026.4.21",
+        "main-session/tool-surface",
+        "wrapper/skillhub",
+        "canon",
+        "decisions"
+      ]
+    },
+    "memory:daily-notes/2026-04-22.md:1:21": {
+      "key": "memory:daily-notes/2026-04-22.md:1:21",
+      "path": "daily-notes/2026-04-22.md",
+      "startLine": 1,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "# Daily note, 2026-04-22 - Reg wants SEAD kept to the approved manifest proposal only, with stale manifest proposal drafts removed. - Memory belongs in CodiCore, not in the SEAD executive suite. - `.DS_Store` noise should be ignored rather than fought. - When Reg says to continue, resume the cleanup directly instead of overexplaining. # 2026-04-22 - Nightly maintenance run completed. - OpenClaw version: 2026.4.15 (041266a); update available to npm 2026.4.21. - `openclaw gateway status` and `openclaw status --deep` timed out. - Local RPC probe on `127.0.0.1:3000` failed to connect. - Qdrant `ai.xos.qdrant` was running and ready on `127.0.0.1:6333`. - Semantic memory promotion succeeded usin",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.6939908504486083,
+      "maxScore": 0.3916402220726013,
+      "firstRecalledAt": "2026-05-01T06:18:01.358Z",
+      "lastRecalledAt": "2026-05-01T18:10:45.627Z",
+      "queryHashes": [
+        "7cd1eea4c6db",
+        "67b3e6d1dfb1"
+      ],
+      "recallDays": [
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "ds-store",
+        "2026.4.15",
+        "2026.4.21",
+        "127.0.0.1",
+        "ai.xos.qdrant",
+        "reg",
+        "wants"
+      ]
+    },
+    "memory:memory/legacy/2026-04-06.md:1:7": {
+      "key": "memory:memory/legacy/2026-04-06.md:1:7",
+      "path": "memory/legacy/2026-04-06.md",
+      "startLine": 1,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "- 2026-04-06: Reg corrected blocker hierarchy for Codi repo bootstrap. Hard blockers now are only: designated local Codi repo path, decision/designation of Codi repo, writable local folder plus permission to scaffold, canon source docs or exact canonical locations, and XOS HQ repo path/remote only if it already exists and must be referenced now. - 2026-04-06: Corrected build order for Codi repo: (1) create/designate local Codi repo path, (2) initialize repo and scaffold base files/folders, (3) draft AGENT.md from current canon, (4) map canon docs into XOS HQ vs Codi ownership, (5) attach GitHub remote if needed now, (6) classify external repos, (7) handle Telegram transcription and exec-appr",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.2821284532546997,
+      "maxScore": 0.2821284532546997,
+      "firstRecalledAt": "2026-05-01T06:18:01.358Z",
+      "lastRecalledAt": "2026-05-01T06:18:01.358Z",
+      "queryHashes": [
+        "7cd1eea4c6db"
+      ],
+      "recallDays": [
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "decision/designation",
+        "path/remote",
+        "create/designate",
+        "files/folders",
+        "agent.md",
+        "exec-appr",
+        "reg",
+        "corrected"
+      ]
+    },
+    "memory:daily-notes/2026-05-01.md:7:10": {
+      "key": "memory:daily-notes/2026-05-01.md:7:10",
+      "path": "daily-notes/2026-05-01.md",
+      "startLine": 7,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "- Routing note: Reg asked to send a message to \"Codi Core / Chief of SEAD,\" but no separate visible Codi session was available. Instruction was therefore placed in the active Telegram session instead, and the routing ambiguity was logged rather than guessed. - Routing rule locked in: if a target session is not visible, post in the current session with an explicit header and log the routing ambiguity immediately; do not delay, guess, or wait to \"find him.\" - Control-plane gap identified: there is not yet a reliable canonical session address for Codi Core. Future hardening should establish either a canonical session name/ID or an enforced single active control channel per agent.",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.39714940190315245,
+      "maxScore": 0.39714940190315245,
+      "firstRecalledAt": "2026-05-01T14:51:15.725Z",
+      "lastRecalledAt": "2026-05-01T14:51:15.725Z",
+      "queryHashes": [
+        "81d84646eeaf"
+      ],
+      "recallDays": [
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "control-plane",
+        "name/id",
+        "routing",
+        "reg",
+        "asked",
+        "send",
+        "message",
+        "codi"
+      ]
+    },
+    "memory:daily-notes/2026-05-01.md:11:15": {
+      "key": "memory:daily-notes/2026-05-01.md:11:15",
+      "path": "daily-notes/2026-05-01.md",
+      "startLine": 11,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "- Reg set planning priority order: (1) memory system, (2) heartbeat/reporting system, (3) Manifest migration decision. Manifest should be paused as a priority after the migration-readiness brief. Next planning should align to that order; do not execute yet. - Reg clarified control-plane backlog writing standard: acceptable to keep the current file location for now, but backlog items should be atomic, outcome-based, and free of commentary/reasoning. The current routing item was split into separate control-plane backlog entries instead of one bundled note. - Reg set a response-priority rule: when he speaks, Codi should pause background work and respond immediately rather than staying occupied",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.395494344830513,
+      "maxScore": 0.395494344830513,
+      "firstRecalledAt": "2026-05-01T17:25:13.952Z",
+      "lastRecalledAt": "2026-05-01T17:25:13.952Z",
+      "queryHashes": [
+        "93160835c1e0"
+      ],
+      "recallDays": [
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "heartbeat/reporting",
+        "migration-readiness",
+        "control-plane",
+        "outcome-based",
+        "commentary/reasoning",
+        "response-priority",
+        "reg",
+        "set"
+      ]
+    },
+    "memory:daily-notes/2026-05-01.md:15:17": {
+      "key": "memory:daily-notes/2026-05-01.md:15:17",
+      "path": "daily-notes/2026-05-01.md",
+      "startLine": 15,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "- Tier 2 controlled proof result: automatic canonical SQLite event logging could not yet be claimed as enforced. Controlled minor actions (file write/edit, output artifact creation, session-log write) did not produce matching automatic raw-event records in `memory/sqlite/events.sqlite`. Immediate manual fallback was operationalized in `memory/sqlite/minor-action-fallback.md`, and manual fallback event records were written immediately for those three minor actions. - Tier 2 blocker diagnosis found that the currently enabled OpenClaw `session-memory` hook is documented as saving session context to workspace memory files, not as writing canonical SQLite raw-event records. No repo-local automati",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3770374178886413,
+      "maxScore": 0.3770374178886413,
+      "firstRecalledAt": "2026-05-01T17:25:13.952Z",
+      "lastRecalledAt": "2026-05-01T17:25:13.952Z",
+      "queryHashes": [
+        "93160835c1e0"
+      ],
+      "recallDays": [
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "write/edit",
+        "session-log",
+        "raw-event",
+        "memory/sqlite/events.sqlite",
+        "session-memory",
+        "repo-local",
+        "tier",
+        "controlled"
+      ]
+    }
+  }
+}
