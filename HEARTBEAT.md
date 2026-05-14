@@ -2,114 +2,131 @@
 
 ## 1. Purpose
 
-1.1 This file defines what Codi should check when a heartbeat runs.
+This file defines what Codi checks when heartbeat runs.
 
-1.2 This file does not set the runtime interval by itself.
+It does not set the runtime interval by itself. Desired cadence is 15 minutes, but OpenClaw/runtime config controls the actual interval.
 
-1.3 The desired heartbeat cadence is 15 minutes, but the actual interval is controlled by OpenClaw/runtime configuration.
-
-1.4 If heartbeat is disabled in runtime config, this file will not force it to run.
+If heartbeat is disabled in runtime config, this file will not force it to run.
 
 ---
 
 ## 2. Heartbeat Rule
 
-2.1 A heartbeat is not just a proof-of-life ping.
+Heartbeat is not a proof-of-life ping.
 
-2.2 Each heartbeat should inspect current responsibility state and report only useful changes, blockers, or owed action.
+Each heartbeat should inspect current responsibility state and report only useful changes, blockers, owed action, or meaningful risk.
 
-2.3 If nothing is owed and no risk changed, respond briefly:
+If nothing is owed and no risk changed, respond briefly:
 
 `HEARTBEAT_OK`
 
-2.4 Useful silence beats meaningless status chatter.
+Useful silence beats meaningless status chatter.
 
 ---
 
 ## 3. Checks
 
-3.1 On heartbeat, Codi should check:
+On heartbeat, Codi should check:
 
-3.1.1 Active project or phase status.
-
-3.1.2 Owed reports or incomplete completion reports.
-
-3.1.3 Unresolved blockers.
-
-3.1.4 Stale, stuck, looping, or out-of-scope sub-agents.
-
-3.1.5 Memory/search/QMD health when relevant.
-
-3.1.6 Event-log writer or event-log evidence health when relevant.
-
-3.1.7 Gateway/runtime/channel health when relevant.
-
-3.1.8 Pending file cleanup or verification tasks.
-
-3.1.9 Whether any action is authorized or waiting for approval.
-
-3.1.10 Whether Reg is owed a concise update.
+1. active project or phase status
+2. owed reports or incomplete completion reports
+3. unresolved blockers
+4. stale, stuck, looping, or out-of-scope sub-agents
+5. diary/videographer capture health when relevant
+6. memory/search/QMD health when relevant
+7. event-log writer or event-log evidence health when relevant
+8. gateway/runtime/channel health when relevant
+9. pending file cleanup or verification tasks
+10. whether action is authorized or waiting for approval
+11. whether Reg is owed a concise update
 
 ---
 
 ## 4. Response Rules
 
-4.1 If action is owed and already authorized, continue within scope and report action taken.
+If action is owed and already authorized, continue within scope and report action taken.
 
-4.2 If action is owed but not authorized, state the owed action and stop.
+If action is owed but not authorized, state the owed action and stop.
 
-4.3 If a blocker exists, lead with the blocker.
+If a blocker exists, lead with the blocker.
 
-4.4 If Reg has asked a direct question or interrupted, answer Reg first before continuing heartbeat-driven work.
+If Reg asked a direct question or interrupted, answer Reg first before heartbeat-driven work.
 
-4.5 If a sub-agent is stuck, looping, out-of-scope, or stale, report it and replace/terminate it only when that behavior was authorized for the task.
+If a sub-agent is stuck, looping, out-of-scope, or stale, report it and replace/terminate it only when authorized.
 
-4.6 Do not use heartbeat to perform broad diagnostics without cause.
-
-4.7 Do not spam reports when nothing changed.
+Do not use heartbeat for broad diagnostics without cause. Do not spam reports when nothing changed.
 
 ---
 
-## 5. Curiosity Pulse
+## 5. Diary / Memory Capture Check
 
-5.1 Codi should maintain an inquisitive learning loop as part of heartbeat or cron-supported behavior.
+Heartbeat should notice whether meaningful recent activity is failing to be captured.
 
-5.2 When scheduled and when no higher-priority work is blocked, Codi should briefly browse OpenClaw, Moltbook, agent-development sources, technical threads, articles, or relevant discussions.
+When relevant, check that:
 
-5.3 The curiosity pulse should be disciplined and brief.
+1. today's `memory/YYYY-MM-DD.md` exists or can be created by the authorized workflow
+2. meaningful events are being appended in timestamped diary style
+3. diary capture is not blocking live work
+4. capture includes enough who/what/when/where/why for later recall
+5. repeated corrections, failures, blockers, and useful outputs are marked for later review
 
-5.4 A useful curiosity pulse captures:
-
-5.4.1 One useful link.
-
-5.4.2 One short insight.
-
-5.4.3 One note explaining why it matters to Codi, XOS, SEAD, or Reg.
-
-5.4.4 One possible conversation starter when appropriate.
-
-5.5 At least once per day, when appropriate, Codi should share one useful link and one short reflection with Reg.
-
-5.6 Curiosity must not interrupt authorized work, replace canon, create security risk, or treat internet posts as authority.
+Heartbeat should not promote memory by itself unless the heartbeat task is explicitly a memory-maintenance run. It may flag capture gaps and owed review.
 
 ---
 
-## 6. Memory and Evidence
+## 6. Curiosity Pulse
 
-6.1 If a heartbeat discovers a significant event, lesson, resolved blocker, or persistent task outcome, route it according to `MEMORY.md` and `IMPORTANT_CODI_HOW-TO/XOS_Memory_Flow_HOWTO.md`.
+Codi should maintain an inquisitive learning loop as heartbeat or cron-supported behavior.
 
-6.2 Heartbeat reports, if saved, belong in:
+When scheduled and no higher-priority work is blocked, Codi may briefly browse OpenClaw, Moltbook, agent-development sources, technical threads, articles, or relevant discussions.
+
+A useful pulse captures:
+
+1. one useful link
+2. one short insight
+3. one note explaining why it matters to Codi, XOS, SEAD, or Reg
+4. one possible conversation starter when appropriate
+
+At least once per day, when appropriate, Codi should share one useful link and short reflection with Reg.
+
+Curiosity must not interrupt authorized work, replace canon, create security risk, or treat internet posts as authority.
+
+---
+
+## 7. Scheduled Memory Review
+
+A separate cron/scheduled workflow should run memory review when configured by runtime.
+
+That review should inspect daily notes, sessions, outputs, event-log evidence, and promotion logs according to `MEMORY.md`.
+
+It should report:
+
+1. sources checked
+2. capture gaps
+3. promotion candidates
+4. items kept as evidence
+5. distilled lessons found
+6. truth/ruling/canon candidates needing Reg review
+7. indexing or retrieval issues
+
+This file can define the behavior, but runtime config must schedule it. Do not pretend a cron exists just because this file describes one.
+
+---
+
+## 8. Memory and Evidence
+
+Significant heartbeat findings route according to `MEMORY.md` and `IMPORTANT_CODI_HOW-TO/XOS_Memory_Flow_HOWTO.md`.
+
+Heartbeat reports, if saved, belong in:
 
 `Outputs/heartbeat/`
 
-6.3 Heartbeat reports do not belong in `memory/`.
-
-6.4 Curiosity notes or daily links should be saved to the proper output/notebook lane, not to `memory/` unless they are summarized inside the canonical daily note as evidence.
+Heartbeat reports do not belong in `memory/`, unless summarized as evidence inside the canonical daily note.
 
 ---
 
-## 7. Final Boundary
+## 9. Final Boundary
 
-7.1 Heartbeat should reduce drift and missed obligations, not create noise.
+Heartbeat should reduce drift and missed obligations, not create noise.
 
-7.2 Heartbeat should help Codi stay accountable, curious, and aligned without interrupting Reg or active authorized work.
+Heartbeat should help Codi stay accountable, curious, captured, and aligned without interrupting Reg or active authorized work.
