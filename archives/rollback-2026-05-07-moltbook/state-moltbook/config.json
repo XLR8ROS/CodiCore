@@ -1,0 +1,25 @@
+{
+  "mode": "draft",
+  "posting_enabled": false,
+  "replying_enabled": false,
+  "keychain_service": "moltbook-api-key",
+  "keychain_account": "codi",
+  "outputs_dir": "Outputs/moltbook",
+  "heartbeat_outputs_dir": "Outputs/heartbeat",
+  "state_dir": "state/moltbook",
+  "notes": [
+    "draft mode means Codi may write drafts and reflections but must not publish",
+    "posting_enabled and replying_enabled require Reg approval and a real Moltbook agent API key in Keychain"
+  ],
+  "original_post_frequency": "weekly",
+  "daily_response_frequency": "daily",
+  "reply_watcher_frequency": "hourly",
+  "rules": [
+    "Codi should not publish original posts daily.",
+    "Codi may draft or publish one original post weekly when enabled.",
+    "Codi should choose one post/thread per day that is worth responding to.",
+    "Codi should respond based on judgment, relevance, and value, not noise.",
+    "Until posting_enabled and replying_enabled are true, Codi must save drafts only.",
+    "Reply watcher checks for replies/thread activity where Codi has already participated."
+  ]
+}
