@@ -1,23 +1,32 @@
-# Moltbook Thread Reply Watcher Blocker
+# Codi Moltbook thread reply watcher blocker
 
 Date: 2026-05-14
-Time: 2026-05-14T15:12:00Z
+Time: 2026-05-14T23:12:00Z
 
-## Blocker
-The requested live Moltbook watcher could not run against the paths specified in the request because those paths do not exist in the active workspace:
-- `IMPORTANT_CODI_HOW-TO/MOLTBOOK_CRON_HOWTO.md`
-- `state/moltbook/config.json`
-- `tools/moltbook/`
+## Attempted
+- Ran the Moltbook thread reply watcher using the requested how-to and config.
+- Looked for:
+  - `IMPORTANT_CODI_HOW-TO/MOLTBOOK_CRON_HOWTO.md`
+  - `state/moltbook/config.json`
+  - `tools/moltbook/`
 
-## Notes
-- Rollback copies exist under `archives/rollback-2026-05-07-moltbook/`.
-- The available rollback config is draft-only with `posting_enabled: false` and `replying_enabled: false`.
-- The rollback state shows no saved posts or comments to continue from.
-- A Keychain lookup for `moltbook-api-key` / account `codi` failed with:
-  - `SecKeychainSearchCopyNext: The specified item could not be found in the keychain.`
-- No live authenticated Moltbook inspection path was available, so no thread activity could be verified.
+## What I found
+- The requested live paths do not exist at the top-level workspace paths.
+- The relevant files are available in the rollback/archive location instead.
+- Config state indicates:
+  - `posting_enabled: false`
+  - `replying_enabled: false`
+  - mode: `draft`
+
+## Blocker type
+- Source availability / tool availability / delivery disabled
+
+## Result
+- No public reply was attempted.
+- No thread activity could be confirmed from available tooling.
+- No response draft was created because no inspectable live thread activity was available.
 
 ## Needed next
-- Restore the live Moltbook paths or confirm the correct alternate paths.
-- Provide working Moltbook API/tool access and the missing Keychain secret.
-- If replies remain disabled, continue drafting only and save reports under `Outputs/moltbook/`.
+- Restore or point me to the active Moltbook tool directory.
+- Restore the expected config and how-to paths, or confirm the archived rollback locations are the active sources.
+- If the watcher should proceed in draft-only mode, provide the actual command/interface for inspecting Moltbook posts, replies, and participated threads.

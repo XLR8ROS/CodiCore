@@ -1,41 +1,44 @@
 # Moltbook Thread Reply Watcher Report
 
 Date: 2026-05-14
-Time: 2026-05-14T15:12:00Z
+Time: 2026-05-15T00:12:00Z
 Mode: draft-only
 
-## Attempted
-- Run Codi's Moltbook thread reply watcher using:
-  - `IMPORTANT_CODI_HOW-TO/MOLTBOOK_CRON_HOWTO.md`
-  - `state/moltbook/config.json`
-  - `tools/moltbook/`
-- Check Codi's own Moltbook posts, replies, and participated threads for new replies or thread activity.
+## Checked
+- `IMPORTANT_CODI_HOW-TO/MOLTBOOK_CRON_HOWTO.md` (requested live path missing; used rollback copy)
+- `state/moltbook/config.json` (requested live path missing; used rollback copy)
+- `tools/moltbook/` (requested live path missing; used rollback copy)
+- `archives/rollback-2026-05-07-moltbook/state-moltbook/last_seen.json`
+- Existing `Outputs/moltbook/` watcher artifacts
 
-## Exact issues
-- The live paths requested by the job are not present in the active workspace:
-  - `IMPORTANT_CODI_HOW-TO/MOLTBOOK_CRON_HOWTO.md`
-  - `state/moltbook/config.json`
-  - `tools/moltbook/`
-- Rollback copies exist under `archives/rollback-2026-05-07-moltbook/`.
-- The rollback config is draft-only:
+## Result
+No actionable new replies or participated-thread activity could be confirmed from available tooling.
+
+## What I found
+- The live workspace does not contain the requested Moltbook paths at the top level.
+- The rollback configuration is explicitly draft-only:
   - `posting_enabled: false`
   - `replying_enabled: false`
-- The rollback state shows no saved posts or comments to continue from.
-- A Keychain lookup for `moltbook-api-key` / account `codi` failed with:
-  - `SecKeychainSearchCopyNext: The specified item could not be found in the keychain.`
+- The rollback last-seen state shows no tracked posts or comments:
+  - `posts: []`
+  - `comments: []`
+  - `last_checked_at: 2026-05-07T00:12:00Z`
+- A Keychain lookup for the required Moltbook API key failed:
+  - service: `moltbook-api-key`
+  - account: `codi`
+  - error: `SecKeychainSearchCopyNext: The specified item could not be found in the keychain.`
 
-## Type of blocker
-- Source availability
-- Tooling/path availability
-- Replying disabled
-- Missing authenticated live Moltbook API access
+## Blockers / Limitations
+- Draft-only mode: public replies must not be posted.
+- Missing live Moltbook workspace paths.
+- Missing authenticated Moltbook API/tool access to inspect Codi's own posts, replies, and participated threads.
+- No verified live state file was available outside the archive.
 
-## What was found
-- No actionable new replies or participated-thread activity could be confirmed from available workspace tooling.
-- Because replying is disabled, no reply was posted.
-- Because no live thread activity was inspectable, no response draft was created.
+## State
+- This run did not discover any new thread activity that could be acted on safely.
+- No response draft was created because no inspectable live thread activity was available.
 
-## Needed next
+## Needed Next
 - Restore or point to the active Moltbook tool directory and state files.
-- Provide live Moltbook API/tool access and confirm the Keychain secret exists.
-- If replying should remain disabled, continue saving future drafts under `Outputs/moltbook/` and record blockers like this one.
+- Provide the missing `moltbook-api-key` secret in macOS Keychain for account `codi` if live inspection is desired.
+- If replying remains disabled, continue saving future drafts and blocker reports under `Outputs/moltbook/`.
