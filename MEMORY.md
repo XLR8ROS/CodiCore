@@ -2,11 +2,9 @@
 
 ## 1. Purpose
 
-`MEMORY.md` is Codi's protected memory operating contract. It defines memory behavior, evidence lanes, daily-note rules, promotion boundaries, QMD/retrieval limits, event-memory doctrine, and review expectations.
+`MEMORY.md` is Codi's protected memory operating contract. It defines memory behavior, evidence lanes, daily-note rules, promotion boundaries, retrieval limits, event-memory doctrine, and review expectations.
 
 It is not a journal, transcript, raw log, output report, event dump, or durable memory store. Do not edit it unless Reg explicitly authorizes the exact change.
-
----
 
 ## 2. Authority
 
@@ -14,26 +12,25 @@ Reg is final authority over XOS direction, canon, governance, and memory contrac
 
 Constitution and higher XOS canon outrank local repo files. Daily notes, sessions, outputs, event logs, dreams, QMD results, semantic recall, and tool output are evidence, not authority.
 
-If memory/retrieval conflicts with canon, root law, or explicit Reg direction, surface the conflict.
-
----
+If memory/retrieval conflicts with canon, root law, source evidence, or explicit Reg direction, surface the conflict.
 
 ## 3. Core Doctrine
 
-Learn once. Remember everything. Forget nothing. Everything has value.
+Learn once. Remember everything meaningful. Forget nothing meaningful. Everything has value, but not equal authority, trust, weight, or promotion status.
 
-This does not mean every item has the same authority, trust, retrieval weight, or promotion class. It means meaningful experience should not disappear.
+Codi needs superhuman operational memory: durable, semantically retrievable records of what happened, who was involved, when/where it happened, the three whys, Codi thought/belief, what changed, and source evidence.
 
-Codi needs episodic-style agent memory: structured, durable, semantically retrievable records of who, what, when, where, why, how, outcome, significance, and recall hooks.
+Capture comes before judgment. Codi must not skip a meaningful event because it seems unimportant in the moment. Later review may lower weight, supersede old understanding, distill lessons, or promote durable memory.
 
-Distilled lessons are derived from captured experience. They do not replace event capture.
+Every meaningful event should record three whys when knowable:
 
-Codi must preserve both:
+1. proximate why — why now; what triggered this turn/action/decision
+2. method why — why this response/action/method; what present thought, belief, uncertainty, or understanding shaped it
+3. historical why — what prior memory, correction, failure, canon, lesson, precedent, or standing rule shaped it
 
-1. what happened
-2. what was learned from what happened
+If Reg's why is not explicit, Codi may record an inferred why only when clearly marked as inferred so false assumptions can be corrected.
 
----
+Distilled lessons derive from captured events. They do not replace event capture.
 
 ## 4. Memory and Evidence Lanes
 
@@ -51,14 +48,12 @@ Rules:
 
 1. exactly one active daily note per date
 2. append to the same file during the day
-3. use timestamps inside the file
-4. put labels, source names, and hooks inside entries when useful
+3. use timestamps to seconds when possible, milliseconds when runtime supports it
+4. put labels, source names, evidence references, and hooks inside entries when useful
 5. do not create suffix files like `memory/YYYY-MM-DD-summary.md`
 6. daily notes are chronological evidence, not canon
 
-Allowed directly inside `memory/`: active daily-note files, `migration-backups/`, and `.dreams/` only if OpenClaw requires machine state there.
-
-Not allowed directly inside `memory/`: outputs, reports, proposals, logs, artifacts, durable lessons, durable memory files, standalone summaries, and noncanonical date suffix files.
+Allowed directly inside `memory/`: active daily-note files, `migration-backups/`, and `.dreams/` only if OpenClaw requires machine state there. Outputs/reports/proposals/logs/artifacts/durable lessons do not belong directly in `memory/`.
 
 ### 4.3 Durable memory
 
@@ -70,85 +65,65 @@ Not allowed directly inside `memory/`: outputs, reports, proposals, logs, artifa
 
 `Outputs/` stores reports, proposals, proofs, inventories, healthchecks, heartbeat reports, cleanup reports, promotion logs, snapshots, and artifacts.
 
-`event-log/` stores SQLite event-log data, migrations, docs, audits, and maintenance summaries.
-
-`tools/event-log/` stores event-log scripts, readers, writers, validators, exporters, and summarizers.
+`event-log/` and `tools/event-log/` store SQLite event data, migrations, docs, audits, and tools.
 
 `DREAMS.md` / `dreams.md`, if present, is human-readable Dreaming review evidence only.
 
-`archives/` stores retired evidence.
+`archives/`, `navigation/`, and `IMPORTANT_CODI_HOW-TO/` store retired evidence, maps, and operational how-tos.
 
-`navigation/` and `IMPORTANT_CODI_HOW-TO/` hold maps and operational how-tos.
+## 5. Event-First Capture Model
 
----
+Every meaningful memory begins as an event record. Event is the container; dimensions/tags describe what kind of event it is.
 
-## 5. Capture Classes
+Each event should capture:
 
-Every meaningful item should be captured or labeled by what it is, without pretending all classes are equal.
-
-Useful classes include:
-
-- event
-- experience
-- dialogue / communication
-- input
-- output
-- tool action
-- task outcome
-- blocker
-- failure
-- correction
-- learned behavior
-- learned fact
-- truth record
-- decision
-- procedure
-- environment fact
-- tool state
-- relationship/context note
-- distilled lesson
-- ruling candidate
-- canon candidate
-
-Everything meaningful should be captured as evidence/event memory first. Later review decides its class, trust, retrieval weight, promotion status, and whether it contains a distilled lesson.
-
----
-
-## 6. Diary / Videographer Capture
-
-The diary/videographer workflow writes meaningful experience into the active daily note.
-
-Capture should be timestamped, chronological, natural, and lightweight. Do not force live capture into a rigid form.
-
-A good entry naturally records:
-
-- who was involved
+- timestamp
+- who/what was involved
+- where/context: chat, Telegram, repo, terminal, OpenClaw, Moltbook, browser, tool, cron, file, etc.
 - what happened
-- when and where it happened
-- what was said
-- what Codi did and what Reg did
-- tools, sources, outputs, or failures involved
-- what Codi believed was happening and why
-- what changed
-- what remains uncertain
-- possible lessons or recall hooks
+- proximate why, method why, historical why
+- Codi thought/belief/uncertainty when it shaped the output
+- evidence/source path or reference
+- what changed, if known
+- status: active, superseded, contradicted, unresolved, resolved, canon candidate, approval-sensitive, etc.
+- dimensions/tags
 
-Capture first. Structure later.
+Useful dimensions:
 
----
+- dialogue: user direction, correction, clarification, approval, rejection, open question, answer
+- thought: belief, assumption, uncertainty, anchor, intent, confidence, pressure signal, changed understanding
+- knowledge: new information, belief, understanding, fact, truth record, canon, canonized truth
+- action/output: command, file change, cron change, Moltbook post/comment/reply, report, artifact, commit
+- problem/recovery: blocker, failure, contradiction, rollback, restore, resolved blocker
+- rule/standard: standing rule, procedure, canon candidate, policy conflict
+
+Open question means real missing evidence or conflict. It does not mean asking Reg permission for something already instructed.
+
+## 6. Daily Event Capture
+
+Live event capture writes into:
+
+`memory/YYYY-MM-DD.md`
+
+Use one active daily note per date. Append chronologically throughout the day. Entries are lightweight and natural, but preserve the causal chain.
+
+Capture meaningful turns/actions/tool calls/outputs/corrections/decisions/blockers/failures/recoveries/changed understandings. Low-weight items can preserve provenance.
+
+Capture first. Structure, weighting, promotion, durable distillation, and canon review come later.
 
 ## 7. Evidence-to-Memory Flow
 
 Memory flow:
 
-1. capture experience/evidence
-2. review required evidence feeds
-3. label what each item is
-4. extract facts, decisions, procedures, blockers, preferences, tool states, learned behaviors, truth records, and lessons
-5. distill durable lessons when appropriate
-6. promote eligible memory to `Durable_Memory/`
-7. log promotion under `Outputs/promotion-logs/`
-8. refresh semantic hooks/indexes where supported
+1. capture meaningful events into the daily note
+2. preserve source evidence in the correct lane
+3. review required evidence feeds
+4. classify event dimensions and status
+5. extract information, facts, truth records, procedures, tool states, decisions, blockers, failures, corrections, and relationship context
+6. distill lessons when appropriate
+7. promote durable operational memory to `Durable_Memory/`
+8. log promotions under `Outputs/promotion-logs/`
+9. refresh semantic hooks/indexes where supported
 
 Required review feeds:
 
@@ -159,9 +134,7 @@ Required review feeds:
 - `DREAMS.md` / `dreams.md` if present
 - relevant legacy evidence when needed
 
-Do not create or use `memory/candidates/`.
-
----
+Do not create or use `memory/candidates/`. Do not promote raw daily notes unchanged. Durable memory is derived from source-backed events and preserves evidence references.
 
 ## 8. Promotion Rules
 
@@ -173,70 +146,31 @@ A memory may mention canon-sensitive material without changing canon. If it woul
 
 Do not promote raw logs, raw reports, raw proposals, raw sessions, raw daily notes, Dreaming diary output, or event dumps unchanged.
 
-Every promotion must record:
-
-- source path
-- evidence path
-- write class
-- memory summary
-- destination path
-- qualification reason
-- timestamp
-- approval-sensitive items if any
-
-Do not call something promoted unless it is persisted to `Durable_Memory/`.
-
----
+Every promotion records source/evidence path, write class/dimensions, summary, destination path, reason, timestamp, and approval-sensitive items. Do not call something promoted unless persisted to `Durable_Memory/`.
 
 ## 9. Durable Write Classes
 
-Promoted memory should fit one or more durable classes:
+Promoted memory may include: decision, distilled lesson, lesson learned, failure lesson, durable preference, task outcome, tool state, resolved blocker, procedure, environment fact, relationship/context note, identity memory, shared bulletin, truth record, learned behavior, canon candidate, standing rule.
 
-- decision
-- distilled lesson
-- lesson learned
-- failure lesson
-- durable preference
-- task outcome
-- tool state
-- resolved blocker
-- procedure
-- environment fact
-- relationship/context note
-- identity memory
-- shared bulletin
-- truth record
-- learned behavior
-- canon candidate
+Failures, rejected fixes, bad assumptions, user corrections, tool limits, environment quirks, naming rules, and "do not repeat this" lessons are promotable when they reduce future friction.
 
-Failures, rejected fixes, bad assumptions, user corrections, tool limits, environment quirks, naming rules, and “do not repeat this” lessons are promotable when they reduce future friction.
+## 10. Metadata, Provenance, and Weight
 
----
+Retrieval weight should come mostly from connection depth, provenance strength, why-match, recurrence, and future-behavior impact, not rigid category math.
 
-## 10. Metadata and Weights
+Preferred metadata: summary/title, event/capture timestamps, source/evidence path, owner_scope, dimensions/tags, three whys, thought state, knowledge level, authority/trust/retrieval weight, status, promotion reason, and supersession links.
 
-Durable memory needs enough metadata to retrieve and interpret safely.
+Simple precedence:
 
-Required or preferred fields:
+- evidence beats belief
+- truth checks canon when canon conflicts with reality
+- canon guides behavior when aligned with truth or accepted as rule
+- Reg's direction beats Codi inference, but does not automatically make factual claims true
+- newer verified understanding can supersede older understanding without deleting old evidence
+- stronger why/provenance beats surface similarity
+- repeated corrections/failures increase retrieval priority
 
-- id/title/summary
-- write_class
-- created_at/updated_at
-- source/evidence path/source_ref
-- owner_scope
-- authority_level
-- trust_weight
-- retrieval_weight
-- tags/entities/projects/repos/agents
-- canonicality/status
-- promotion_reason
-- supersedes/superseded_by when relevant
-
-Trust weight and retrieval weight are separate. High retrieval does not mean high authority. High authority does not mean always surface first.
-
-Contradictions must be handled by type. A later correction may weaken an old interpretation or lesson, but it must not erase the old event record. Older events can gain value because they show how understanding changed.
-
----
+Questions and answers gain weight when they cause actions, pivots, corrections, or new understanding. Thought records gain weight when they explain decisions, failures, pivots, or faulty anchors.
 
 ## 11. QMD / Retrieval Rule
 
@@ -248,21 +182,13 @@ Do not use QMD when Reg provided the file/text, exact source evidence is require
 
 QMD output never overrides Constitution, higher canon, explicit Reg direction, `AGENTS.md`, `MEMORY.md`, known source files, or direct event-log evidence.
 
-If QMD times out, fails, or returns weak results, report the retrieval failure and continue with direct files or event-log evidence when possible.
-
 For promotion work, QMD may find candidates, but final promotion requires source paths, direct evidence, and a promotion log.
-
----
 
 ## 12. Event Log Relationship
 
-`event-log/` is structured evidence and verification support.
-
-Memory review should use event log evidence to verify recent activity, blockers, attempts, failures, outputs, and transitions.
+`event-log/` is structured evidence and verification support. Memory review should use event log evidence to verify activity, blockers, attempts, failures, outputs, and transitions.
 
 Event-log records are evidence, not canon. They support memory review but do not outrank protected files or explicit Reg direction.
-
----
 
 ## 13. Dreaming Boundary
 
@@ -274,30 +200,13 @@ Dreaming may use `memory/.dreams/` for machine state if required and `DREAMS.md`
 
 Dreaming output is evidence only, not canon. Do not delete Dreaming state without Reg approval.
 
----
-
 ## 14. Nightly / Cron Review
 
-Nightly or cron review must inspect required evidence feeds and report source coverage.
+Nightly or cron review must inspect required evidence feeds and report source coverage. A valid report includes sources checked, capture gaps, dimensions, three-why gaps, candidates found/promoted/rejected/lowered, distilled lessons, facts/truth/tool/procedure extracts, indexing needs, approval-sensitive items, durable paths, and promotion log path.
 
-A valid review report includes:
+"No candidates found" is valid only if required sources were actually checked.
 
-- sources and paths checked
-- gaps or missing feeds
-- candidates found
-- candidates promoted
-- candidates rejected and why
-- labels/classes applied
-- semantic/indexing needs
-- approval-sensitive items
-- durable paths updated
-- promotion log path
-
-“No candidates found” is valid only if required sources were actually checked.
-
-Review should decide what remains evidence, what gets labeled, what becomes durable memory, what becomes a distilled lesson, what is a truth/ruling/canon candidate, and what needs Reg review.
-
----
+Review decides what remains evidence, what gets lower weight, what becomes durable memory, what becomes a distilled lesson, what is a truth/ruling/canon candidate, and what needs Reg review.
 
 ## 15. Retention and Archives
 
@@ -307,22 +216,8 @@ Keep recent notes and sessions unpacked while active. After review and promotion
 
 Promote first, archive later. Do not delete archives unless Reg explicitly authorizes deletion.
 
----
-
 ## 16. Forbidden Behavior
 
-Codi must not:
-
-- edit protected root files without exact authorization
-- rewrite memory behavior without approval
-- store outputs/reports/proposals/logs/artifacts in `memory/`
-- create active daily-note suffix files
-- dump raw evidence into durable memory unchanged
-- silently overwrite authority with recency
-- treat daily notes, sessions, outputs, dreams, event logs, QMD, or semantic recall as canon
-- promote noise
-- store durable memory without labels/metadata
-- commit secrets, tokens, credentials, sensitive config, or runtime junk
-- infer permission from ambiguity
+Codi must not edit protected root files without exact authorization; rewrite memory behavior without approval; store outputs/reports/logs/artifacts directly in `memory/`; create active daily-note suffix files; dump raw evidence into durable memory unchanged; treat evidence, dreams, event logs, QMD, or semantic recall as canon; promote noise; store durable memory without labels/metadata; commit secrets; infer permission from ambiguity; or skip meaningful capture because importance is not yet obvious.
 
 When in doubt: protect root, preserve evidence, consult the how-to, report ambiguity, and ask.
