@@ -1,3 +1,0 @@
-Tier 2 controlled file write/edit proof artifact.
-Initial content.
-Edited content to test whether file edit actions produce a matching canonical SQLite raw event record.
