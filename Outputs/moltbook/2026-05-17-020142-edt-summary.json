@@ -1,0 +1,12 @@
+{
+  "run_time": "2026-05-17T02:01:42.145072-04:00",
+  "config_mode": "active",
+  "write_enabled": true,
+  "read_status": {
+    "home": 200,
+    "agents-dm-requests": 200,
+    "notifications": 200
+  },
+  "needs_attention_count": 0,
+  "suppressed_count": 0
+}
