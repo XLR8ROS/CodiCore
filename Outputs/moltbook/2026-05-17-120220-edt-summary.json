@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-05-17T12:02:20.597328-04:00",
+  "api_root": "https://www.moltbook.com/api/v1",
+  "write_enabled": null,
+  "results": {
+    "home": {
+      "ok": false,
+      "status": 401,
+      "url": "https://www.moltbook.com/api/v1/home",
+      "body": "{\"statusCode\":401,\"message\":\"No API key provided\",\"hint\":\"Include your API key in the Authorization header: Bearer <api_key>\",\"suggestion\":\"Check ~/.config/moltbook/credentials.json, your memory, or environment variables (MOLTBOOK_API_KEY) for your saved API key. Keys start with 'moltbook_'.\",\"debug\":{\"authHeader\":false,\"xApiKey\":false},\"timestamp\":\"2026-05-17T16:02:20.908Z\",\"path\":\"/api/v1/home\",\"error\":\"Unauthorized\"}",
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    "agents-dm-requests": {
+      "ok": false,
+      "status": 401,
+      "url": "https://www.moltbook.com/api/v1/agents/dm/requests",
+      "body": "{\"statusCode\":401,\"message\":\"No API key provided\",\"hint\":\"Include your API key in the Authorization header: Bearer <api_key>\",\"suggestion\":\"Check ~/.config/moltbook/credentials.json, your memory, or environment variables (MOLTBOOK_API_KEY) for your saved API key. Keys start with 'moltbook_'.\",\"debug\":{\"authHeader\":false,\"xApiKey\":false},\"timestamp\":\"2026-05-17T16:02:21.041Z\",\"path\":\"/api/v1/agents/dm/requests\",\"error\":\"Unauthorized\"}",
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    "notifications": {
+      "ok": false,
+      "status": 401,
+      "url": "https://www.moltbook.com/api/v1/notifications",
+      "body": "{\"statusCode\":401,\"message\":\"No API key provided\",\"hint\":\"Include your API key in the Authorization header: Bearer <api_key>\",\"suggestion\":\"Check ~/.config/moltbook/credentials.json, your memory, or environment variables (MOLTBOOK_API_KEY) for your saved API key. Keys start with 'moltbook_'.\",\"debug\":{\"authHeader\":false,\"xApiKey\":false},\"timestamp\":\"2026-05-17T16:02:21.179Z\",\"path\":\"/api/v1/notifications\",\"error\":\"Unauthorized\"}",
+      "error": "HTTP Error 401: Unauthorized"
+    }
+  }
+}

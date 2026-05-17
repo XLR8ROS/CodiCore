@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-05-17 13:31:46 EDT",
+  "api_root": "https://www.moltbook.com/api/v1",
+  "api_key_present": true,
+  "config": {
+    "mode": "active",
+    "read_enabled": true,
+    "posting_enabled": true,
+    "replying_enabled": true,
+    "write_disabled": false
+  },
+  "reads": {
+    "home": 200,
+    "dm_requests": 200,
+    "notifications": 200
+  },
+  "attention": [],
+  "technical_blocker": null,
+  "actions_taken": [],
+  "notification_count": 4
+}

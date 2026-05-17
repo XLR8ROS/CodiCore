@@ -1,0 +1,361 @@
+{
+  "created_at_utc": "2026-05-17T08:20:00Z",
+  "workspace": "/Users/reginaldberry/Library/Mobile Documents/com~apple~CloudDocs/XLR8ROS/Agents/Primary/CodiCore/CodiCore",
+  "threshold_hours": 72,
+  "eligible_count": 21,
+  "staged_count": 21,
+  "files": [
+    {
+      "path": "Distilled_Lessons/Distilled_Lessons__2026-05-05-completion-is-verified-state-not-milestone.md",
+      "mtime": 1777981535.5294678,
+      "size": 931,
+      "classification": "stale output",
+      "destination": "files/Distilled_Lessons/Distilled_Lessons__2026-05-05-completion-is-verified-state-not-milestone.md"
+    },
+    {
+      "path": "Distilled_Lessons/Distilled_Lessons__2026-05-05-thorough-verification-before-completion.md",
+      "mtime": 1777981248.4176552,
+      "size": 1304,
+      "classification": "stale output",
+      "destination": "files/Distilled_Lessons/Distilled_Lessons__2026-05-05-thorough-verification-before-completion.md"
+    },
+    {
+      "path": "Distilled_Lessons/Distilled_Lessons__2026-05-05-completion-requires-verified-state.md",
+      "mtime": 1777981563.8825707,
+      "size": 1976,
+      "classification": "stale output",
+      "destination": "files/Distilled_Lessons/Distilled_Lessons__2026-05-05-completion-requires-verified-state.md"
+    },
+    {
+      "path": "Distilled_Lessons/2026-03-31.md",
+      "mtime": 1777997930.6616898,
+      "size": 654,
+      "classification": "stale output",
+      "destination": "files/Distilled_Lessons/2026-03-31.md"
+    },
+    {
+      "path": "memory/migration-backups/20260516-daily-note-normalization/2026-05-05-request-timed-out-before-a-res.md",
+      "mtime": 1778031128.1489718,
+      "size": 32633,
+      "classification": "stale migrated backup",
+      "destination": "files/memory/migration-backups/20260516-daily-note-normalization/2026-05-05-request-timed-out-before-a-res.md"
+    },
+    {
+      "path": "memory/migration-backups/20260516-daily-note-normalization/2026-05-08-trust-breach.md",
+      "mtime": 1778274731.7322655,
+      "size": 4999,
+      "classification": "stale migrated backup",
+      "destination": "files/memory/migration-backups/20260516-daily-note-normalization/2026-05-08-trust-breach.md"
+    },
+    {
+      "path": "memory/migration-backups/20260516-daily-note-normalization/2026-05-14-0305.md",
+      "mtime": 1778742335.3937893,
+      "size": 3966,
+      "classification": "stale migrated backup",
+      "destination": "files/memory/migration-backups/20260516-daily-note-normalization/2026-05-14-0305.md"
+    },
+    {
+      "path": "memory/migration-backups/20260516-daily-note-normalization/2026-05-11-1441.md",
+      "mtime": 1778524874.5577075,
+      "size": 243,
+      "classification": "stale migrated backup",
+      "destination": "files/memory/migration-backups/20260516-daily-note-normalization/2026-05-11-1441.md"
+    },
+    {
+      "path": "memory/migration-backups/20260516-daily-note-normalization/2026-05-10-greeting.md",
+      "mtime": 1778396452.1370926,
+      "size": 221,
+      "classification": "stale migrated backup",
+      "destination": "files/memory/migration-backups/20260516-daily-note-normalization/2026-05-10-greeting.md"
+    },
+    {
+      "path": "memory/migration-backups/20260516-daily-note-normalization/2026-05-10-0851.md",
+      "mtime": 1778417490.594184,
+      "size": 3259,
+      "classification": "stale migrated backup",
+      "destination": "files/memory/migration-backups/20260516-daily-note-normalization/2026-05-10-0851.md"
+    },
+    {
+      "path": "memory/migration-backups/20260516-daily-note-normalization/2026-05-07-closed-book.md",
+      "mtime": 1778128073.1824577,
+      "size": 17622,
+      "classification": "stale migrated backup",
+      "destination": "files/memory/migration-backups/20260516-daily-note-normalization/2026-05-07-closed-book.md"
+    },
+    {
+      "path": "event-log/minor-action-fallback.md",
+      "mtime": 1777654071.2661638,
+      "size": 662,
+      "classification": "stale output",
+      "destination": "files/event-log/minor-action-fallback.md"
+    },
+    {
+      "path": "event-log/source/codi-openclaw-follow.log",
+      "mtime": 1777986995.5568254,
+      "size": 6381,
+      "classification": "stale output",
+      "destination": "files/event-log/source/codi-openclaw-follow.log"
+    },
+    {
+      "path": "event-log/run/codi-log-trigger.stderr.log",
+      "mtime": 1777988092.3459463,
+      "size": 5103,
+      "classification": "stale output",
+      "destination": "files/event-log/run/codi-log-trigger.stderr.log"
+    },
+    {
+      "path": "event-log/run/codi-log-trigger.stdout.log",
+      "mtime": 1777987890.1344502,
+      "size": 0,
+      "classification": "stale output",
+      "destination": "files/event-log/run/codi-log-trigger.stdout.log"
+    },
+    {
+      "path": ".clawhub/lock.json",
+      "mtime": 1775877215.3637214,
+      "size": 121,
+      "classification": "stale output",
+      "destination": "files/.clawhub/lock.json"
+    },
+    {
+      "path": ".openclaw/workspace-state.json",
+      "mtime": 1777963620.3262305,
+      "size": 69,
+      "classification": "stale output",
+      "destination": "files/.openclaw/workspace-state.json"
+    },
+    {
+      "path": "maintenance/stale-staging/2026-05-16/payload/event-log/source/codi-openclaw-follow.log",
+      "mtime": 1777986995.5568254,
+      "size": 6381,
+      "classification": "stale output",
+      "destination": "files/maintenance/stale-staging/2026-05-16/payload/event-log/source/codi-openclaw-follow.log"
+    },
+    {
+      "path": "skills/sqlite/_meta.json",
+      "mtime": 1775877215.361975,
+      "size": 125,
+      "classification": "stale output",
+      "destination": "files/skills/sqlite/_meta.json"
+    },
+    {
+      "path": "skills/sqlite/.clawhub/origin.json",
+      "mtime": 1775877215.3627744,
+      "size": 138,
+      "classification": "stale output",
+      "destination": "files/skills/sqlite/.clawhub/origin.json"
+    },
+    {
+      "path": ".dreams/short-term-recall.json",
+      "mtime": 1777756593.2124746,
+      "size": 16463,
+      "classification": "stale output",
+      "destination": "files/.dreams/short-term-recall.json"
+    }
+  ],
+  "protected_skipped": [
+    {
+      "path": "IDENTITY.md",
+      "mtime": 1775872065.666306
+    },
+    {
+      "path": "README.md",
+      "mtime": 1775484201.621343
+    },
+    {
+      "path": "SKILLS.md",
+      "mtime": 1778030880.9153967
+    },
+    {
+      "path": "USER.md",
+      "mtime": 1778741239.82277
+    },
+    {
+      "path": "SOUL.md",
+      "mtime": 1778034683.0410783
+    },
+    {
+      "path": "TOOLS.md",
+      "mtime": 1775872065.6676943
+    },
+    {
+      "path": "tools/.DS_Store",
+      "mtime": 1777997625.7219343
+    },
+    {
+      "path": "tools/xos_codi_log_trigger.py",
+      "mtime": 1777987530.196867
+    },
+    {
+      "path": "tools/xos_event_writer.py",
+      "mtime": 1777985234.9746165
+    },
+    {
+      "path": "tools/event-log/write_with_event.js",
+      "mtime": 1777656027.1285143
+    },
+    {
+      "path": "tools/event-log/sqlite_bootstrap.js",
+      "mtime": 1777656027.1344547
+    },
+    {
+      "path": "tools/event-log/event_logger.js",
+      "mtime": 1777656027.1284916
+    },
+    {
+      "path": "tools/legacy/README.md",
+      "mtime": 1775871844.0237002
+    },
+    {
+      "path": "tools/legacy/github-tools.md",
+      "mtime": 1775846285.9146993
+    },
+    {
+      "path": "tools/__pycache__/xos_codi_log_trigger.cpython-314.pyc",
+      "mtime": 1777987721.4639947
+    },
+    {
+      "path": "memory/2026-05-03.md",
+      "mtime": 1778025033.1771863
+    },
+    {
+      "path": "memory/2026-04-29.md",
+      "mtime": 1778025033.1353512
+    },
+    {
+      "path": "memory/2026-05-02.md",
+      "mtime": 1778025033.1543481
+    },
+    {
+      "path": "memory/2026-04-06.md",
+      "mtime": 1778025033.1238635
+    },
+    {
+      "path": "memory/2026-04-22.md",
+      "mtime": 1778025033.1321144
+    },
+    {
+      "path": "memory/2026-04-05.md",
+      "mtime": 1778025033.1227393
+    },
+    {
+      "path": "memory/2026-04-21.md",
+      "mtime": 1778025033.1284766
+    },
+    {
+      "path": "memory/2026-04-01.md",
+      "mtime": 1778025033.121001
+    },
+    {
+      "path": "memory/2026-04-10.md",
+      "mtime": 1778025033.1257439
+    },
+    {
+      "path": "memory/2026-04-30.md",
+      "mtime": 1778025033.1376696
+    },
+    {
+      "path": "memory/2026-05-01.md",
+      "mtime": 1778025033.144732
+    },
+    {
+      "path": "memory/2026-05-04.md",
+      "mtime": 1778025033.181933
+    },
+    {
+      "path": "memory/2026-03-31.md",
+      "mtime": 1778025033.1187077
+    },
+    {
+      "path": "Durable_Memory/2026-05-06-performed-verification-and-curiosity-antipatterns.md",
+      "mtime": 1778049487.1819859
+    },
+    {
+      "path": "Durable_Memory/2026-05-07-moltbook-curiosity-pulse-relevance-and-link.md",
+      "mtime": 1778167487.7293036
+    },
+    {
+      "path": "Durable_Memory/2026-05-06-verification-and-uncertainty-doctrine.md",
+      "mtime": 1778049481.2840142
+    },
+    {
+      "path": "Durable_Memory/2026-05-06-review-posture-and-candidate-selection.md",
+      "mtime": 1778049721.382722
+    },
+    {
+      "path": "Durable_Memory/2026-05-07-memory-flow-promotions-and-retrieval-boundaries.md",
+      "mtime": 1778167487.7291112
+    },
+    {
+      "path": "Durable_Memory/2026-05-07-moltbook-watcher-blockers-and-disabled-features.md",
+      "mtime": 1778167487.7293952
+    },
+    {
+      "path": "Durable_Memory/2026-05-07-repo-hygiene-lane-and-verification-rules.md",
+      "mtime": 1778167487.7292109
+    },
+    {
+      "path": "Durable_Memory/2026-05-06-closed-book-boundary-failure.md",
+      "mtime": 1778049304.2690687
+    },
+    {
+      "path": "Navigation/.DS_Store",
+      "mtime": 1777995898.3696303
+    },
+    {
+      "path": "state/bootstrap_import/BOOTSTRAP.md",
+      "mtime": 1775872065.6684086
+    }
+  ],
+  "uncertain": [
+    {
+      "path": ".gitignore",
+      "mtime": 1777827834.4131675,
+      "size": 4876,
+      "classification": "uncertain"
+    },
+    {
+      "path": "event-log/.DS_Store",
+      "mtime": 1777997620.7138224,
+      "size": 6148,
+      "classification": "uncertain"
+    },
+    {
+      "path": "event-log/migrations/001_init.sql",
+      "mtime": 1775890871.562533,
+      "size": 1004,
+      "classification": "uncertain"
+    },
+    {
+      "path": "maintenance/.DS_Store",
+      "mtime": 1778007726.9514682,
+      "size": 6148,
+      "classification": "uncertain"
+    },
+    {
+      "path": "maintenance/stale-staging/2026-05-16/payload/maintenance/.DS_Store",
+      "mtime": 1778007726.9514682,
+      "size": 6148,
+      "classification": "uncertain"
+    },
+    {
+      "path": "skills/.DS_Store",
+      "mtime": 1778007833.506378,
+      "size": 6148,
+      "classification": "uncertain"
+    },
+    {
+      "path": "skills/sqlite/.DS_Store",
+      "mtime": 1778007823.2617567,
+      "size": 6148,
+      "classification": "uncertain"
+    },
+    {
+      "path": ".dreams/events.jsonl",
+      "mtime": 1777756593.2132976,
+      "size": 2860,
+      "classification": "uncertain"
+    }
+  ],
+  "blockers": []
+}
