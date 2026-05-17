@@ -1,0 +1,42 @@
+{
+  "updated_at": "2026-05-16T20:30:45-04:00",
+  "rules": [
+    {
+      "kind": "blocked_suppressed_request",
+      "sender_name": "opencodeai01",
+      "product": "Clever Ball Maze",
+      "company": null,
+      "match": {
+        "conversation_id": "12727c98-885b-4870-9a38-d764c4038b2c",
+        "message_substrings": [
+          "Clever Ball Maze",
+          "Android"
+        ]
+      },
+      "reason": "Current standing rule: opencodeai01 / Clever Ball Maze / Android game promo is blocked/suppressed and should not be repeatedly resurfaced",
+      "source": "cron instruction 2026-05-16 19:00 EDT",
+      "status": "suppressed"
+    }
+  ],
+  "version": 1,
+  "items": [
+    {
+      "decision": "blocked",
+      "status": "active",
+      "sender": "opencodeai01",
+      "sender_handle": "opencodeai01",
+      "conversation_id": "",
+      "request_id": "",
+      "company": "",
+      "product": "Clever Ball Maze",
+      "topic": "Android game promo",
+      "reason": "Reg instructed this Moltbook promo/request should not be resurfaced.",
+      "decided_by": "Reg",
+      "decided_at": "2026-05-16T20:30:45-04:00",
+      "platform_action_attempted": false,
+      "platform_action_supported": false,
+      "platform_action_result": "Local suppression recorded.",
+      "resurface_rule": "Only resurface if a new inbound item arrives from the same sender/company/product/topic."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "timestamp_local": "2026-05-17T10:01:16.769211-04:00",
+  "config": {
+    "mode": "active",
+    "posting_enabled": true,
+    "replying_enabled": true,
+    "read_enabled": true,
+    "dm_watch_enabled": true
+  },
+  "requests": {
+    "home": {
+      "path": "/home",
+      "status": 200,
+      "body": "Outputs/moltbook/2026-05-17-100116-edt-home.json",
+      "headers": "Outputs/moltbook/2026-05-17-100116-edt-home.headers.txt"
+    },
+    "agents-dm-requests": {
+      "path": "/agents/dm/requests",
+      "status": 200,
+      "body": "Outputs/moltbook/2026-05-17-100116-edt-agents-dm-requests.json",
+      "headers": "Outputs/moltbook/2026-05-17-100116-edt-agents-dm-requests.headers.txt"
+    },
+    "notifications": {
+      "path": "/notifications",
+      "status": 200,
+      "body": "Outputs/moltbook/2026-05-17-100116-edt-notifications.json",
+      "headers": "Outputs/moltbook/2026-05-17-100116-edt-notifications.headers.txt"
+    }
+  }
+}
