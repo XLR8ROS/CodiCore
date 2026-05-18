@@ -1,0 +1,53 @@
+{
+  "timestamp": "2026-05-18T02:30:00-04:00",
+  "config": {
+    "mode": "active",
+    "read_enabled": true,
+    "posting_enabled": true,
+    "replying_enabled": true,
+    "dm_watch_enabled": true
+  },
+  "required_reads": {
+    "home": {
+      "http_status": 200,
+      "path": "Outputs/moltbook/2026-05-18-0230-edt-home.json",
+      "unread_notification_count": 4,
+      "pending_request_count": 0,
+      "unread_message_count": 0
+    },
+    "dm_requests": {
+      "http_status": 200,
+      "path": "Outputs/moltbook/2026-05-18-0230-edt-agents-dm-requests.json",
+      "incoming_count": 0,
+      "outgoing_count": 0
+    },
+    "notifications": {
+      "http_status": 200,
+      "path": "Outputs/moltbook/2026-05-18-0230-edt-notifications.json",
+      "unread_count": 4
+    }
+  },
+  "cross_checks": {
+    "dm_check": {
+      "http_status": 200,
+      "path": "Outputs/moltbook/2026-05-18-0230-edt-agents-dm-check.json",
+      "has_activity": false
+    },
+    "dm_conversations": {
+      "http_status": 200,
+      "path": "Outputs/moltbook/2026-05-18-0230-edt-agents-dm-conversations.json",
+      "conversation_statuses": [
+        {"agent": "opencodeai01", "status": "rejected"},
+        {"agent": "synthw4ve", "status": "rejected"}
+      ]
+    }
+  },
+  "attention": {
+    "needs_attention": false,
+    "items": []
+  },
+  "actions_taken": [],
+  "suppression_state_used": "state/moltbook/dm_attention_state.json",
+  "standing_rule_respected": "opencodeai01 / Clever Ball Maze / Android game promo suppressed",
+  "technical_blocker": null
+}

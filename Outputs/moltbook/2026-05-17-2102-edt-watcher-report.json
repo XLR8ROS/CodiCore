@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-05-17T21:02:00-04:00",
+  "config": {
+    "mode": "active",
+    "posting_enabled": true,
+    "replying_enabled": true,
+    "read_enabled": true
+  },
+  "home_pending_request_count": "0",
+  "incoming_count": 0,
+  "unsuppressed_count": 0,
+  "unsuppressed_requests": [],
+  "suppression_state_path": "/Users/reginaldberry/Library/Mobile Documents/com~apple~CloudDocs/XLR8ROS/Agents/Primary/CodiCore/CodiCore/state/moltbook/dm_attention_state.json"
+}

@@ -1,7 +1,7 @@
 # XLR8ROS Navigation
 
 Root: `/Users/reginaldberry/Library/Mobile Documents/com~apple~CloudDocs/XLR8ROS`
-Generated: 2026-05-17 18:04:49
+Generated: 2026-05-18 00:05:42
 
 ```text
 XLR8ROS/
@@ -56,6 +56,7 @@ XLR8ROS/
 │               │   │   ├── 02
 │               │   │   │   ├── 1afd9b948283c24c4e89f654f5fcbe28143048
 │               │   │   │   ├── 21b33bb0258d091c1167906979f27a0fb78d7e
+│               │   │   │   ├── 702b15a55f4f6085ac4efa03f4da69e50dbe94
 │               │   │   │   ├── 996923d601b7ecf23051076b9652be02c82d00
 │               │   │   │   ├── b46a16e5c1eab14fdbd0d68b1c08524a6d309d
 │               │   │   │   ├── bdeeaabb01e880030140250c2a36504cf825a7
@@ -64,13 +65,15 @@ XLR8ROS/
 │               │   │   │   ├── 026c95cb22e5bf27c9a5cd17e08879fab9228f
 │               │   │   │   ├── 2cd6b209dcb3fc8866799d5e656e529d271266
 │               │   │   │   ├── 363b1a3b811b1ec84852b42f531268d2d7201e
-│               │   │   │   └── cb381383830a7f7faf5b696b07b3bd6768930e
+│               │   │   │   ├── cb381383830a7f7faf5b696b07b3bd6768930e
+│               │   │   │   └── e7d8eecbda81206942e0ca8b964985e35f52b5
 │               │   │   ├── 04
 │               │   │   │   ├── 0ea64c86a70b4c9d07dde01d2ff2071950d0dd
 │               │   │   │   ├── 780b911b77e4509665b4732e293a23d7cd6e2f
 │               │   │   │   ├── 7ad6cf7ba8b95dc2d2d4c22075ba86edb35d11
 │               │   │   │   ├── a247f63ec6b72356a0118fb7555b07880d5564
 │               │   │   │   ├── b838c1242e12695f86da5b4fde15139135d9f0
+│               │   │   │   ├── c069e29c959237f7c6b11c2061a6d45ad608bf
 │               │   │   │   └── c5e093c53695d801d2fd393a7b7464be350744
 │               │   │   ├── 05
 │               │   │   │   ├── 0b3e277183a4f56b2a5e4413bc4611dbed79ef
@@ -79,6 +82,7 @@ XLR8ROS/
 │               │   │   │   ├── 2515a3d252b80a041e4acbf9f6ad37c090b904
 │               │   │   │   ├── 46858c15e594994f71ade52db1915f98aa59d6
 │               │   │   │   ├── 660ad0ee9827a36c61b4514aa425948c84d237
+│               │   │   │   ├── 776ee962f6616afa10a3aeb1f9b5ac9b175e27
 │               │   │   │   ├── 8e4571fe025aa0d7efc7b8a5929c538bdeb831
 │               │   │   │   └── 9c94080158dbaaae394dcc77a0fc855579e6da
 │               │   │   ├── 07
@@ -97,7 +101,8 @@ XLR8ROS/
 │               │   │   ├── 0a
 │               │   │   │   ├── 2cee13a89b1859b3f1e23bd1ad177c989d5422
 │               │   │   │   ├── 7c5932a67c98a4742507329e093bb979521fc6
-│               │   │   │   └── 7f7fc14eabb757938152b056d656a95f3e6b02
+│               │   │   │   ├── 7f7fc14eabb757938152b056d656a95f3e6b02
+│               │   │   │   └── a45d2753d71daa5df005eb9574aecd708057ea
 │               │   │   ├── 0b
 │               │   │   │   ├── 01e9f4c360152013eb0b54dbf39d088786c6c0
 │               │   │   │   ├── d9717a6196bc9f3347e3cf0927c5220186167c
@@ -111,6 +116,7 @@ XLR8ROS/
 │               │   │   ├── 0d
 │               │   │   │   ├── 3e37740366a6a89fc24e389976246a536b088d
 │               │   │   │   ├── 68ea045f4db3c3f3527b77ab3bfb4477a79ad6
+│               │   │   │   ├── 76ee335de59be991ad1c87871ce28f10571591
 │               │   │   │   ├── a883269b0f5e68420f1c105675a0fb2ea1352c
 │               │   │   │   ├── abbb13fa54eb8fb796403d1587d204e8f9edeb
 │               │   │   │   ├── c0955856ca2680ed2c02d8efe4a1f6023af753
@@ -177,8 +183,10 @@ XLR8ROS/
 │               │   │   │   └── f0ef09dbd332715a0bac141b97b8cb6f34b175
 │               │   │   ├── 17
 │               │   │   │   ├── 0b705163d83358ad905de3f3eaeec54f191457
+│               │   │   │   ├── 39d181c761cf8419942218f5575e7f281e6062
 │               │   │   │   ├── 3c1f327abacfe471ee730f9a74115ca435c158
 │               │   │   │   ├── 54ec13adebea79fa0f2c0c526864e4f9afae24
+│               │   │   │   ├── 96ece540b17e3b7ef40fa1dc9afc8c9c3eacfb
 │               │   │   │   ├── f8833f641e33f195c8b24f409e53b767a65cc6
 │               │   │   │   └── ff74a60a5121e24368d2a483212abd968a1a58
 │               │   │   ├── 18
@@ -216,6 +224,7 @@ XLR8ROS/
 │               │   │   ├── 1e
 │               │   │   │   ├── 05965affece7d67c85ce97f66d875b127e91ad
 │               │   │   │   ├── b0428fd9bbed4e6fedbc2febf6347c9633a1e4
+│               │   │   │   ├── df6d04c24662952c4a0eef57e37ecebf7f2e4d
 │               │   │   │   └── f65b21e409b9ffd82ad166e8a2e7348620a089
 │               │   │   ├── 1f
 │               │   │   │   ├── 0b8f77a2226e81d0bb92ce8ca4188e284cc2cb
@@ -284,6 +293,7 @@ XLR8ROS/
 │               │   │   │   └── e36ef51125690fa532b1664daeffcbf4073438
 │               │   │   ├── 2f
 │               │   │   │   ├── 34d08f6fc3dea082ac2c6349c2183933e8271b
+│               │   │   │   ├── 8bf14d8e51d871594dc20fff3e714d90db57a5
 │               │   │   │   ├── 8d7eed72807ad95c14646ee12a9ab7fe4140f4
 │               │   │   │   ├── 9c2ed49dd9ac919b8e5e0774f4cb96e0a38b5a
 │               │   │   │   ├── f4eb13d06ab3f5290ad12368a291d615b1ea29
@@ -295,7 +305,8 @@ XLR8ROS/
 │               │   │   │   ├── 86c7fafacd9463ab8869c32f170aaa31061504
 │               │   │   │   ├── 99d26eff816e12914a292f900aba8f96e77f18
 │               │   │   │   ├── b64b70a2da41a551fb4084b6ca83192519d116
-│               │   │   │   └── e8a5a0b10aaa10f44b3c7fad95a98b36b1edf4
+│               │   │   │   ├── e8a5a0b10aaa10f44b3c7fad95a98b36b1edf4
+│               │   │   │   └── ef5ac96cdea51cdc178b6e0578fa413eaff226
 │               │   │   ├── 31
 │               │   │   │   ├── 2155514522f3c6ca6a091068f3b4393f348c32
 │               │   │   │   ├── 4f35a72b12f86873ff56c6acdf8d5f80751966
@@ -337,6 +348,7 @@ XLR8ROS/
 │               │   │   │   ├── d0ff44dc84ada691916bdd1b9a199f23c1f657
 │               │   │   │   └── e1bfeaa09741de2179ef1d584b2c0ec7b7abef
 │               │   │   ├── 39
+│               │   │   │   ├── 10fff43f96a7adb5c1a0462ec30866eb4e2cec
 │               │   │   │   ├── 4367927abd9c573647f2085ec95f431606c2ab
 │               │   │   │   └── 7ec443e196afcbd027d734e224f6bd9c05f103
 │               │   │   ├── 3a
@@ -388,11 +400,13 @@ XLR8ROS/
 │               │   │   │   ├── a14635bda78564a9ef50e3f2cc91b395b37a5e
 │               │   │   │   └── a80ba9f0bc54f44075e24e429b37eaa2ba092f
 │               │   │   ├── 41
+│               │   │   │   ├── 0a13803dbaec34ad4027511263d24b08652c7a
 │               │   │   │   ├── 0b8ed7958271fa46e77a8c673a6bbf8f0e80bd
 │               │   │   │   ├── 13bcab246799ad5e9364c1a0d1ad62160a964a
 │               │   │   │   ├── 2fbe5cc7aa98d73332525b1ebf2869c531615a
 │               │   │   │   ├── ae3e28b9599899e0dac6546f03c800d5255d36
 │               │   │   │   ├── d27d045072165a88f1fe156ec8fceb3d936326
+│               │   │   │   ├── d3a372aa38c51edbb9d289e597490ff86e730b
 │               │   │   │   ├── e6a97472438a8c0b7f95c48da55e9091942434
 │               │   │   │   └── f84b5edb2738a7d65529092c9ddcfba84f5d07
 │               │   │   ├── 42
@@ -413,6 +427,7 @@ XLR8ROS/
 │               │   │   │   ├── 1cd9229f82d4d5985223f068a72d98ae02d126
 │               │   │   │   ├── 22ae686c61c3eebb9a179ec09fe607678e781a
 │               │   │   │   ├── 24b525b5d937ecf87d53eea0104cd78e42179b
+│               │   │   │   ├── 4c8deb02b70dbc8427f3f9ce72ee3b870cb426
 │               │   │   │   ├── 6f6159a591f72cc94522856e6664eaab11b7f4
 │               │   │   │   └── e70184039c35ea8c1370f0ebc5b3aec2c67fed
 │               │   │   ├── 46
@@ -431,6 +446,7 @@ XLR8ROS/
 │               │   │   ├── 49
 │               │   │   │   ├── 165af71887b33bcdb45bdc5f6755ff7b033c90
 │               │   │   │   ├── 34a9650c881687bcc32b6c4ff7afd30592b863
+│               │   │   │   ├── 570c590cbce10629d83f620117e47493409825
 │               │   │   │   ├── 658c79e763f01c5b5ca1134d372f5ea4389943
 │               │   │   │   ├── 99c864d49c474b1fd76fabc3a8c323f7b870a6
 │               │   │   │   ├── d2edcbf00e665cbfa5a83e3cd78ee2686805b5
@@ -597,6 +613,7 @@ XLR8ROS/
 │               │   │   │   ├── 250aed580881f2dfd2632e648b19e563f8a905
 │               │   │   │   ├── 5af89190a307f825b9d7ceb840cf4bcc82d62b
 │               │   │   │   ├── 5cc55a4fce56649a42fce04a15b6fe85226813
+│               │   │   │   ├── 70bb67c34673e13aa2b2fcef823655d8abb9f3
 │               │   │   │   ├── 715568ba5fac25b0755a244ce4ebaf41bbcc52
 │               │   │   │   ├── 905921c534f31a22207e9fa3fa877176d05846
 │               │   │   │   ├── 925cf24eba38d4c40a710d02f5711f6e74a59e
@@ -612,6 +629,7 @@ XLR8ROS/
 │               │   │   │   └── 914f1bbc7f758586e31cfacdb2071e14d399b4
 │               │   │   ├── 6c
 │               │   │   │   ├── 1e4aef81f4e001402a37a959e9acd151c25c70
+│               │   │   │   ├── 58e85930cf976ca2d7cedc7a1b2c84426f5bc5
 │               │   │   │   ├── 83ab1e25e8a48c0fd0d79c014337c78cb48cf8
 │               │   │   │   ├── 92936d00c4f4394228543063cb72c125fb4324
 │               │   │   │   └── c8009b53626934bf00328db224b647959d0494
@@ -625,7 +643,8 @@ XLR8ROS/
 │               │   │   │   └── e60bf1400281ceeeb107d8b4f20bbb0d3b85a3
 │               │   │   ├── 6f
 │               │   │   │   ├── 02e1aa688c71e202a86d3a28d745a9c4d75370
-│               │   │   │   └── cc37742d2b9fd91415ef47f73be1e435032692
+│               │   │   │   ├── cc37742d2b9fd91415ef47f73be1e435032692
+│               │   │   │   └── f075e742e89bf5dabbe5a1a09a2d7ae36db44f
 │               │   │   ├── 70
 │               │   │   │   ├── 12e2d752a24711ee17900fbef45208532428e6
 │               │   │   │   ├── 227e9b81f8892e121e0f5b2c71e7f5b74ab6ef
@@ -686,6 +705,7 @@ XLR8ROS/
 │               │   │   │   ├── 84a492798b2849bed6943a561f31c0ee3edbb3
 │               │   │   │   ├── 9600e07595eb0b931101964ede12d152bacb5a
 │               │   │   │   ├── b642f209e1b14ecbf95958244cfa9c66fe7200
+│               │   │   │   ├── c2c296a6cf68158f90299cb425820eac511200
 │               │   │   │   └── e372301ab78b192dc7dda40aa3876fead9c632
 │               │   │   ├── 7b
 │               │   │   │   ├── 1701465ce7429d477092038f778fd7676779ea
@@ -723,6 +743,7 @@ XLR8ROS/
 │               │   │   │   └── e6d8139d8da795506d90220020f600e086556b
 │               │   │   ├── 80
 │               │   │   │   ├── 1a71fa6430e6c7541f325bf72c050c9fc991bb
+│               │   │   │   ├── 3a162004673f4431daa7dc6eb4e08c215fddae
 │               │   │   │   ├── 8deac007b495e741733dff8bef78184aeb8836
 │               │   │   │   ├── b3e29e076de18e6b551035de00fb68517559ea
 │               │   │   │   └── d70355a56de430d02ee85cd4a937c70bd896c7
@@ -755,7 +776,8 @@ XLR8ROS/
 │               │   │   │   ├── 1ee57f35fc65e6362d9b3a52f2bd4217ab1f40
 │               │   │   │   ├── 653eb38603a6a0bfb8c7bfe977301e177974b4
 │               │   │   │   ├── 78bf5835c7eb9358f337bdfd07cb5ffcab8043
-│               │   │   │   └── a3c39ef0bb6c797cee7919962398aa6da10009
+│               │   │   │   ├── a3c39ef0bb6c797cee7919962398aa6da10009
+│               │   │   │   └── f534c0d4a84d58cceb36469ca324752c1d07cf
 │               │   │   ├── 86
 │               │   │   │   ├── 36ee4858665853afaa4ae4b5ee3817d6fb2320
 │               │   │   │   ├── 3d978debb2dccc803249732034bbac39516929
@@ -767,6 +789,7 @@ XLR8ROS/
 │               │   │   │   └── a7225dfc6b935c596b32a613311e5732963dbd
 │               │   │   ├── 88
 │               │   │   │   ├── 32527be3aa69974e9221b7f09c9f11a6e3e915
+│               │   │   │   ├── a2895c41f58ece1684aa59e91affd1b7e15330
 │               │   │   │   ├── e25fc0236aecf5cb0533170e4cf95ec44d8be6
 │               │   │   │   └── f2c6eb672377c13cc58b7a873daed4a4f4812f
 │               │   │   ├── 89
@@ -810,6 +833,7 @@ XLR8ROS/
 │               │   │   │   ├── 0a8b40c3383958611874a2b64afb3fd599b46d
 │               │   │   │   ├── 32ae4b68866eab05fc3909c2fe575edf661e56
 │               │   │   │   ├── 4625acc4ed547b1f7644073e7a1a49e35f6ac8
+│               │   │   │   ├── 6a87e2a743293767f82019de6cd03f596db28f
 │               │   │   │   └── 83e96be43dbbc010271cb77ea707dbb4688852
 │               │   │   ├── 91
 │               │   │   │   ├── 0b103ba4e04613451d6e4b3f434aae05b25396
@@ -874,10 +898,12 @@ XLR8ROS/
 │               │   │   │   ├── 573e6033b9b0d11b172e1437bce853161d9ecf
 │               │   │   │   ├── 65d34bdf66ae21478214d6c285e51a3b145d1e
 │               │   │   │   ├── 7fa8ceace7641fb3fc903097a4df339d406b48
+│               │   │   │   ├── ae641631e0203e8ce198fa58f2e9f880cfe109
 │               │   │   │   └── c83a5fe2c6a8b56974073d1ae40b4685e0a593
 │               │   │   ├── 9c
 │               │   │   │   ├── 56940adaad0e6938d09ded633aef5831750434
 │               │   │   │   ├── 72b60391088cf19e17e6e40a59aecf58262af3
+│               │   │   │   ├── 83c3885a4dc5d5786342bb49949df89d9eda95
 │               │   │   │   ├── e3bb9d332b295d55512e4ebcedfad33748e885
 │               │   │   │   └── fc7dddffe22c0aaf9f6c29ce7ddc43f4f42645
 │               │   │   ├── 9d
@@ -923,7 +949,8 @@ XLR8ROS/
 │               │   │   │   ├── 43dbe5c5696029ae94c7c03d3628a2fd3281bd
 │               │   │   │   ├── a8d4e49591ff3d0f6018d2dc3f01bd1fa54d01
 │               │   │   │   ├── ad28e3ca0dad09a3183ec5365a0d935b9fb34e
-│               │   │   │   └── bc81fb0484984fd804234cf5590dbb49d2a344
+│               │   │   │   ├── bc81fb0484984fd804234cf5590dbb49d2a344
+│               │   │   │   └── c927132a3d914a79ebee21340bdbdfea1dd561
 │               │   │   ├── a6
 │               │   │   │   ├── 44f974c60a0325baa49e64e8f44847708b504b
 │               │   │   │   ├── 548a23c4faa0b4406d557f08bde7f8b6499f67
@@ -961,8 +988,10 @@ XLR8ROS/
 │               │   │   ├── ac
 │               │   │   │   ├── 131f866db74a514b4454005aed44e50f0e74df
 │               │   │   │   ├── 13ed2de9d949031bf9992badefa213ff01a52f
+│               │   │   │   ├── 1ee16e465d70ef3678f487041d58785298dc9d
 │               │   │   │   ├── 384f920bd5ca957f6159bbb421cf686bf7fe6a
 │               │   │   │   ├── 4e82e0054c446cdbc0866e0160b142a1067c8d
+│               │   │   │   ├── a8adb2c8ecc53dbe73a421e34186955b48a016
 │               │   │   │   ├── c39e8fc7ac8d5dba6a3cd420dbab7ac267b471
 │               │   │   │   └── ed89ff5d116608ace1288a32ef2f650388d599
 │               │   │   ├── ad
@@ -1043,6 +1072,7 @@ XLR8ROS/
 │               │   │   │   ├── 81026447e7e0c1ddb5e1e686742eccca2ffbad
 │               │   │   │   └── eeee36908530d6d070053124a01becf3e48b20
 │               │   │   ├── ba
+│               │   │   │   ├── 2c53681359cf6c55a96fe448007fd28d325a7f
 │               │   │   │   ├── 3b4b7e3026ebddd57ec3aae287b53909ef59b3
 │               │   │   │   └── 978e2f1a2ecf7cee043df94911f4287a9f2840
 │               │   │   ├── bb
@@ -1112,6 +1142,7 @@ XLR8ROS/
 │               │   │   │   └── db112e3148add38e2493a380e595067e926c96
 │               │   │   ├── c8
 │               │   │   │   ├── 477385baf75a17ee1c4695735ce64a295dba5a
+│               │   │   │   ├── 57e73c44488524206fa0eaeb3e6b2776b183a2
 │               │   │   │   ├── 630b5cd35535c580b7dba45d99635bd773f5a9
 │               │   │   │   ├── 685a750405c0734693289b4f7440eb6219f615
 │               │   │   │   └── f1c9a2c62abdbd76131e574780e0e66db502f6
@@ -1124,6 +1155,7 @@ XLR8ROS/
 │               │   │   │   └── 837b0e6cf8c097bb2c4e6f4222eb6ce615464c
 │               │   │   ├── cb
 │               │   │   │   ├── 13261cea2a410a2c95c23467997fbd2f983e55
+│               │   │   │   ├── 3b649029ec128b3a98d147d891897708ab63a6
 │               │   │   │   └── dd9e80e3b89700d1da13e16a72a6252cf7ba53
 │               │   │   ├── cc
 │               │   │   │   ├── 2740e3f587c768127baa9b85a29e61299c8d86
@@ -1169,6 +1201,7 @@ XLR8ROS/
 │               │   │   │   └── d4f871bcf01c33a70ee59782f2aa455cc1deec
 │               │   │   ├── d4
 │               │   │   │   ├── 12e486edcffe25bb910921fa31573a036b1d9d
+│               │   │   │   ├── 24cc6154da2064a48831e718798a603c3ba08e
 │               │   │   │   ├── 3f32b9075aa35d3e38d760950145596206110c
 │               │   │   │   ├── 510d04dbfe10a9335f4880b2f9dc3511f3cd5f
 │               │   │   │   ├── ca1080875e06cb01ccd5cfc27340fd7f288b26
@@ -1237,6 +1270,7 @@ XLR8ROS/
 │               │   │   │   ├── 64dd667c5aa46528f9a7d5a94009e1d8901e40
 │               │   │   │   └── bc7e6b78c6cd4818bf4286f44c0df97d55d91c
 │               │   │   ├── e1
+│               │   │   │   ├── 514de4aedaf8b1cfc7aa4304f8802ff30fc1ab
 │               │   │   │   ├── 730a08e8a9246b31f240ec6ee1cb0207ba8eef
 │               │   │   │   ├── 7dac3be1f71a2da6a4d6819551190dcb926322
 │               │   │   │   ├── cc94ff63cc5965238cfae39adb26f6dd2a9b09
@@ -1255,6 +1289,7 @@ XLR8ROS/
 │               │   │   │   └── e77710c96ca570321d3312c32fb940b1d63d05
 │               │   │   ├── e4
 │               │   │   │   ├── 46203c2adfc34e9e243819aa11b3ed03e4ebc9
+│               │   │   │   ├── 90a5bfe55487c95fbf704ec58ec7768dac3e63
 │               │   │   │   ├── 94188236f0a9c98baf4692ececb79c2bc5ccfa
 │               │   │   │   └── d999176db9c331e0f7b41cf37955c73532d0fb
 │               │   │   ├── e5
@@ -1531,7 +1566,8 @@ XLR8ROS/
 │               │   ├── 2026-05-16-2033.md
 │               │   ├── 2026-05-16-2136.md
 │               │   ├── 2026-05-16.md
-│               │   └── 2026-05-17.md
+│               │   ├── 2026-05-17.md
+│               │   └── 2026-05-18.md
 │               ├── Navigation
 │               │   └── NAVIGATION.md
 │               ├── Outputs
@@ -1883,9 +1919,79 @@ XLR8ROS/
 │               │   │   ├── 2026-05-17-170000-edt-codi-moltbook-reply-watcher.md
 │               │   │   ├── 2026-05-17-1730-edt-codi-moltbook-reply-watcher.md
 │               │   │   ├── 2026-05-17-180206-edt-codi-moltbook-reply-watcher.md
+│               │   │   ├── 2026-05-17-183059-edt-agents-dm-requests.headers.txt
+│               │   │   ├── 2026-05-17-183059-edt-agents-dm-requests.json
+│               │   │   ├── 2026-05-17-183059-edt-codi-moltbook-reply-watcher.md
+│               │   │   ├── 2026-05-17-183059-edt-home.headers.txt
+│               │   │   ├── 2026-05-17-183059-edt-home.json
+│               │   │   ├── 2026-05-17-183059-edt-notifications.headers.txt
+│               │   │   ├── 2026-05-17-183059-edt-notifications.json
+│               │   │   ├── 2026-05-17-190128-edt-agents-dm-requests.headers.txt
+│               │   │   ├── 2026-05-17-190128-edt-agents-dm-requests.json
+│               │   │   ├── 2026-05-17-190128-edt-codi-moltbook-reply-watcher.md
+│               │   │   ├── 2026-05-17-190128-edt-home.headers.txt
+│               │   │   ├── 2026-05-17-190128-edt-home.json
+│               │   │   ├── 2026-05-17-190128-edt-notifications.headers.txt
+│               │   │   ├── 2026-05-17-190128-edt-notifications.json
+│               │   │   ├── 2026-05-17-190128-edt-summary.json
+│               │   │   ├── 2026-05-17-1930-edt-codi-moltbook-reply-watcher.md
+│               │   │   ├── 2026-05-17-200118-edt-agents-dm-requests.headers.txt
+│               │   │   ├── 2026-05-17-200118-edt-agents-dm-requests.json
+│               │   │   ├── 2026-05-17-200118-edt-audio-unavailable.txt
+│               │   │   ├── 2026-05-17-200118-edt-codi-moltbook-reply-watcher.md
+│               │   │   ├── 2026-05-17-200118-edt-home.headers.txt
+│               │   │   ├── 2026-05-17-200118-edt-home.json
+│               │   │   ├── 2026-05-17-200118-edt-notifications.headers.txt
+│               │   │   ├── 2026-05-17-200118-edt-notifications.json
+│               │   │   ├── 2026-05-17-203117-edt-agents-dm-requests.headers.txt
+│               │   │   ├── 2026-05-17-203117-edt-agents-dm-requests.json
+│               │   │   ├── 2026-05-17-203117-edt-codi-moltbook-reply-watcher.md
+│               │   │   ├── 2026-05-17-203117-edt-home.headers.txt
+│               │   │   ├── 2026-05-17-203117-edt-home.json
+│               │   │   ├── 2026-05-17-203117-edt-notifications.headers.txt
+│               │   │   ├── 2026-05-17-203117-edt-notifications.json
+│               │   │   ├── 2026-05-17-2102-edt-codi-moltbook-reply-watcher.md
+│               │   │   ├── 2026-05-17-2102-edt-summary.json
+│               │   │   ├── 2026-05-17-2102-edt-watcher-report.json
+│               │   │   ├── 2026-05-17-213000-edt-agents-dm-requests.headers.txt
+│               │   │   ├── 2026-05-17-213000-edt-agents-dm-requests.json
+│               │   │   ├── 2026-05-17-213000-edt-codi-moltbook-reply-watcher.md
+│               │   │   ├── 2026-05-17-213000-edt-home.headers.txt
+│               │   │   ├── 2026-05-17-213000-edt-home.json
+│               │   │   ├── 2026-05-17-213000-edt-notifications.headers.txt
+│               │   │   ├── 2026-05-17-213000-edt-notifications.json
+│               │   │   ├── 2026-05-17-220117-edt-agents-dm-requests.headers.txt
+│               │   │   ├── 2026-05-17-220117-edt-agents-dm-requests.json
+│               │   │   ├── 2026-05-17-220117-edt-codi-moltbook-reply-watcher.md
+│               │   │   ├── 2026-05-17-220117-edt-home.headers.txt
+│               │   │   ├── 2026-05-17-220117-edt-home.json
+│               │   │   ├── 2026-05-17-220117-edt-notifications.headers.txt
+│               │   │   ├── 2026-05-17-220117-edt-notifications.json
+│               │   │   ├── 2026-05-17-223100-edt-agents-dm-requests.headers.txt
+│               │   │   ├── 2026-05-17-223100-edt-agents-dm-requests.json
+│               │   │   ├── 2026-05-17-223100-edt-codi-moltbook-reply-watcher.md
+│               │   │   ├── 2026-05-17-223100-edt-home.headers.txt
+│               │   │   ├── 2026-05-17-223100-edt-home.json
+│               │   │   ├── 2026-05-17-223100-edt-notifications.headers.txt
+│               │   │   ├── 2026-05-17-223100-edt-notifications.json
+│               │   │   ├── 2026-05-17-230101-edt-agents-dm-requests.json
+│               │   │   ├── 2026-05-17-230101-edt-codi-moltbook-reply-watcher.md
+│               │   │   ├── 2026-05-17-230101-edt-home.json
+│               │   │   ├── 2026-05-17-230101-edt-notifications.json
+│               │   │   ├── 2026-05-17-2330-edt-agents-dm-requests.headers.txt
+│               │   │   ├── 2026-05-17-2330-edt-agents-dm-requests.json
+│               │   │   ├── 2026-05-17-2330-edt-codi-moltbook-reply-watcher.md
+│               │   │   ├── 2026-05-17-2330-edt-home.headers.txt
+│               │   │   ├── 2026-05-17-2330-edt-home.json
+│               │   │   ├── 2026-05-17-2330-edt-notifications.headers.txt
+│               │   │   ├── 2026-05-17-2330-edt-notifications.json
 │               │   │   ├── 2026-05-17-codi-moltbook-curiosity-pulse.md
+│               │   │   ├── 2026-05-17-codi-moltbook-daily-report.md
+│               │   │   ├── 2026-05-17-codi-moltbook-daily-review.md
 │               │   │   ├── 2026-05-17-curiosity-pulse.md
-│               │   │   └── 2026-05-17_moltbook_reply_watcher.md
+│               │   │   ├── 2026-05-17_moltbook_reply_watcher.md
+│               │   │   ├── 2026-05-18-0001-edt-codi-moltbook-reply-watcher.md
+│               │   │   └── 2026-05-18-moltbook-curiosity-pulse.md
 │               │   └── promotion-logs
 │               │       ├── 2026-05-16-durable-memory-promotion-log.md
 │               │       └── 2026-05-17-durable-memory-promotion-log.md
@@ -1911,13 +2017,28 @@ XLR8ROS/
 │               │       │   │   ├── notifications.headers.txt
 │               │       │   │   ├── notifications.json
 │               │       │   │   └── summary.json
-│               │       │   └── 2026-05-17-1700-reply-watcher
-│               │       │       ├── dm_requests.headers.txt
-│               │       │       ├── dm_requests.json
-│               │       │       ├── home.headers.txt
-│               │       │       ├── home.json
-│               │       │       ├── notifications.headers.txt
-│               │       │       └── notifications.json
+│               │       │   ├── 2026-05-17-1700-reply-watcher
+│               │       │   │   ├── dm_requests.headers.txt
+│               │       │   │   ├── dm_requests.json
+│               │       │   │   ├── home.headers.txt
+│               │       │   │   ├── home.json
+│               │       │   │   ├── notifications.headers.txt
+│               │       │   │   └── notifications.json
+│               │       │   ├── 2026-05-17-2102-reply-watcher
+│               │       │   │   ├── agents_dm_requests.headers.txt
+│               │       │   │   ├── agents_dm_requests.json
+│               │       │   │   ├── home.headers.txt
+│               │       │   │   ├── home.json
+│               │       │   │   ├── notifications.headers.txt
+│               │       │   │   └── notifications.json
+│               │       │   ├── 2026-05-18-0001-reply-watcher
+│               │       │   │   ├── dm_requests.headers.txt
+│               │       │   │   ├── dm_requests.json
+│               │       │   │   ├── home.headers.txt
+│               │       │   │   ├── home.json
+│               │       │   │   ├── notifications.headers.txt
+│               │       │   │   └── notifications.json
+│               │       │   └── latest-reply-watcher-summary.json
 │               │       ├── config.json
 │               │       └── dm_attention_state.json
 │               ├── tools
@@ -2397,6 +2518,7 @@ XLR8ROS/
 │   │       │   │   │   ├── 19aed873a335fd99290e4e9b5d2e873e31dbcc
 │   │       │   │   │   ├── 3a8c4dc80fd6f315c4ccfbc7709476e1501c45
 │   │       │   │   │   ├── 46bc67a6ddc0e2edfffae0545f3188713f331f
+│   │       │   │   │   ├── 57ed9abb217571c00c930de400cbef9bfc8f5f
 │   │       │   │   │   ├── 80b3c348b9892b50f615856cdd69251be28d93
 │   │       │   │   │   ├── 94d275808e891db6f81d238b1c441e5cfaff7e
 │   │       │   │   │   ├── b737f55eff7df3c6c6f145dcf1699a0ac2b06a
@@ -2482,6 +2604,7 @@ XLR8ROS/
 │   │       │   │   │   └── ce1e9c75eb6046576a63419ef3da39931cfc53
 │   │       │   │   ├── 70
 │   │       │   │   │   ├── 2029aff61013fb61f5d81d8b8f54869e76ceb5
+│   │       │   │   │   ├── 62dfc53b4615a1cc8964a52bc4928a3138ebfa
 │   │       │   │   │   ├── 823a01c4aaf7f00321dea26c05994c18cb836a
 │   │       │   │   │   ├── dce546f643b1702f369ffc2606025637611985
 │   │       │   │   │   └── f834bb00e73213de738a42751989b8b21e0fdf
@@ -2651,6 +2774,7 @@ XLR8ROS/
 │   │       │   │   │   └── ebcf973f3da94d1b34c19430e8eed43f508bc9
 │   │       │   │   ├── 9e
 │   │       │   │   │   ├── 689f57fd6784cc3436eec8815aa5dde099dfe5
+│   │       │   │   │   ├── ecc6c7c3d6dadb17efe3bb4e6ace62449d5e72
 │   │       │   │   │   └── f1fb174e35cad13bc9c9fe52e703b381847c6e
 │   │       │   │   ├── 9f
 │   │       │   │   │   ├── 4a6417ba79ad5a06dbf3e37253c3998e2b15f5
@@ -2702,7 +2826,8 @@ XLR8ROS/
 │   │       │   │   │   └── 6dbca5df19c32d4ca5085b30cdd2f41576987a
 │   │       │   │   ├── aa
 │   │       │   │   │   ├── 59953c4c8f9c64e775da6fc1c17d149d50ecbe
-│   │       │   │   │   └── 7084de2c6406f9599735c3345a886bcc4a29fb
+│   │       │   │   │   ├── 7084de2c6406f9599735c3345a886bcc4a29fb
+│   │       │   │   │   └── d002292ce5939e7b6e049136b76f9ba6439a86
 │   │       │   │   ├── ab
 │   │       │   │   │   ├── 14e9ac105eff56d3c3660888aa4eb0ff0cc62c
 │   │       │   │   │   ├── 2db26d562dee11b622e196f5646b57f8bfbd43
@@ -2853,6 +2978,7 @@ XLR8ROS/
 │   │       │   │   │   ├── 825698d0e5c72439b896a1fd61bc5aaf0d8b42
 │   │       │   │   │   └── ae157eae9ac7bbba9a7f57d53ea3a5951e9b99
 │   │       │   │   ├── ce
+│   │       │   │   │   ├── 1ab328e16c3e807f577531083731a11cf62ed1
 │   │       │   │   │   └── 7cd408a785f9dfa9dd4a3d6773e597c0cceca0
 │   │       │   │   ├── cf
 │   │       │   │   │   ├── 341e0138d73e6085b3cee366bb833c50777776
