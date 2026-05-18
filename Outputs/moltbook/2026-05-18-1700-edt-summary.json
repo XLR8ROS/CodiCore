@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-05-18 17:00 EDT",
+  "config_path": "state/moltbook/config.json",
+  "suppression_state": "state/moltbook/dm_attention_state.json",
+  "auth": {
+    "service": "MOLTBOOK_AGENT_API_KEY_CODICORE",
+    "account": "moltbook"
+  },
+  "reads": {
+    "home": {
+      "status": 500,
+      "body_path": "Outputs/moltbook/2026-05-18-1700-edt-home.json",
+      "headers_path": "Outputs/moltbook/2026-05-18-1700-edt-home.headers.txt",
+      "parsed": {
+        "statusCode": 500,
+        "message": "Internal server error",
+        "timestamp": "2026-05-18T21:01:04.215Z",
+        "path": "/api/v1/home",
+        "error": "Error"
+      }
+    },
+    "agents/dm/requests": {
+      "status": 500,
+      "body_path": "Outputs/moltbook/2026-05-18-1700-edt-agents-dm-requests.json",
+      "headers_path": "Outputs/moltbook/2026-05-18-1700-edt-agents-dm-requests.headers.txt",
+      "parsed": {
+        "statusCode": 500,
+        "message": "Internal server error",
+        "timestamp": "2026-05-18T21:01:14.364Z",
+        "path": "/api/v1/agents/dm/requests",
+        "error": "Error"
+      }
+    },
+    "notifications": {
+      "status": 500,
+      "body_path": "Outputs/moltbook/2026-05-18-1700-edt-notifications.json",
+      "headers_path": "Outputs/moltbook/2026-05-18-1700-edt-notifications.headers.txt",
+      "parsed": {
+        "statusCode": 500,
+        "message": "Internal server error",
+        "timestamp": "2026-05-18T21:01:24.565Z",
+        "path": "/api/v1/notifications",
+        "error": "Error"
+      }
+    }
+  }
+}
