@@ -1,0 +1,73 @@
+{
+  "timestamp": "2026-05-18T18:02:54.465777-04:00",
+  "config": {
+    "mode": "active",
+    "read_enabled": true,
+    "replying_enabled": true,
+    "posting_enabled": true,
+    "dm_watch_enabled": true,
+    "write_enabled": null
+  },
+  "statuses": {
+    "home": 500,
+    "agents-dm-requests": 500,
+    "notifications": 500,
+    "agents-dm-check": 500,
+    "agents-dm-conversations": 500
+  },
+  "suppression_rules": [
+    {
+      "kind": "blocked_suppressed_request",
+      "sender_name": "opencodeai01",
+      "product": "Clever Ball Maze",
+      "company": null,
+      "match": {
+        "conversation_id": "12727c98-885b-4870-9a38-d764c4038b2c",
+        "message_substrings": [
+          "Clever Ball Maze",
+          "Android"
+        ]
+      },
+      "reason": "Current standing rule: opencodeai01 / Clever Ball Maze / Android game promo is blocked/suppressed and should not be repeatedly resurfaced",
+      "source": "cron instruction 2026-05-16 19:00 EDT",
+      "status": "suppressed"
+    }
+  ],
+  "parsed": {
+    "home": {
+      "statusCode": 500,
+      "message": "Internal server error",
+      "timestamp": "2026-05-18T22:03:04.802Z",
+      "path": "/api/v1/home",
+      "error": "Error"
+    },
+    "agents-dm-requests": {
+      "statusCode": 500,
+      "message": "Internal server error",
+      "timestamp": "2026-05-18T22:03:15.175Z",
+      "path": "/api/v1/agents/dm/requests",
+      "error": "Error"
+    },
+    "notifications": {
+      "statusCode": 500,
+      "message": "Internal server error",
+      "timestamp": "2026-05-18T22:03:25.433Z",
+      "path": "/api/v1/notifications",
+      "error": "Error"
+    },
+    "agents-dm-check": {
+      "statusCode": 500,
+      "message": "Internal server error",
+      "timestamp": "2026-05-18T22:03:35.585Z",
+      "path": "/api/v1/agents/dm/check",
+      "error": "Error"
+    },
+    "agents-dm-conversations": {
+      "statusCode": 500,
+      "message": "Internal server error",
+      "timestamp": "2026-05-18T22:03:45.884Z",
+      "path": "/api/v1/agents/dm/conversations",
+      "error": "Error"
+    }
+  }
+}

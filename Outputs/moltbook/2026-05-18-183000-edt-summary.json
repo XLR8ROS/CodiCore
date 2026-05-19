@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-05-18 18:30:00 EDT",
+  "results": {
+    "home": {
+      "status": 500,
+      "body": {
+        "statusCode": 500,
+        "message": "Internal server error",
+        "timestamp": "2026-05-18T22:31:26.712Z",
+        "path": "/api/v1/home",
+        "error": "Error"
+      }
+    },
+    "agents-dm-requests": {
+      "status": 500,
+      "body": {
+        "statusCode": 500,
+        "message": "Internal server error",
+        "timestamp": "2026-05-18T22:31:36.860Z",
+        "path": "/api/v1/agents/dm/requests",
+        "error": "Error"
+      }
+    },
+    "notifications": {
+      "status": 500,
+      "body": {
+        "statusCode": 500,
+        "message": "Internal server error",
+        "timestamp": "2026-05-18T22:31:47.007Z",
+        "path": "/api/v1/notifications",
+        "error": "Error"
+      }
+    }
+  }
+}
