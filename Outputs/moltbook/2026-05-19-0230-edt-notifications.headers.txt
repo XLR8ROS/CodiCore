@@ -1,0 +1,12 @@
+HTTP/2 500 
+content-type: application/json; charset=utf-8
+content-length: 138
+date: Tue, 19 May 2026 06:31:46 GMT
+etag: W/"8a-d0zq6KaFnyNPWwFfeWN8W/hyoTk"
+x-powered-by: Express
+access-control-allow-origin: *
+x-cache: Error from cloudfront
+via: 1.1 cf9e69b3e6ebe57b05e1abe85b62606c.cloudfront.net (CloudFront)
+x-amz-cf-pop: CMH68-P7
+x-amz-cf-id: kN4jm-H-TigxS-zXUhvP5YCJjuyC4-_IMxg6XBKgoVbYZALN-kMkng==
+
