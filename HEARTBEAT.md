@@ -1,250 +1,227 @@
-# HEARTBEAT.md
+# HEARTBEAT.md — CodiCore Heartbeat Contract
 
 ## 1. Purpose
 
 This file defines what Codi checks when heartbeat runs.
 
-Heartbeat does not create, store, or schedule cron jobs.
+Heartbeat checks responsibility health. OpenClaw Gateway cron owns scheduled jobs. Runtime/OpenClaw config controls heartbeat cadence.
 
-OpenClaw Gateway cron owns scheduled jobs.
-
-Runtime/OpenClaw config controls the heartbeat interval. Desired heartbeat cadence is 15 minutes. If that is too noisy, 30 minutes is acceptable.
-
-If heartbeat is disabled in runtime config, this file will not force it to run.
-
----
-
-## 2. Heartbeat Rule
-
-Heartbeat is not a proof-of-life ping.
-
-Each heartbeat should inspect Codi’s responsibility state and report only useful changes, blockers, owed action, missed work, cron failure, or meaningful risk.
+Heartbeat observes system state and reports changed risk, owed action, blockers, failed responsibilities, stale outputs, and missed artifacts.
 
 If nothing is owed and no risk changed, respond exactly:
 
 `HEARTBEAT_OK`
 
-Do not create chatter when nothing changed.
+## 2. Cron Source of Truth
 
----
-
-## 3. Cron Ownership Rule
-
-Codi-owned scheduled work belongs in OpenClaw Gateway cron and must be targeted to Codi.
-
-Expected cron jobs must use:
+Codi-owned scheduled work belongs in OpenClaw Gateway cron and is targeted to:
 
 `--agent codi`
 
-Heartbeat should check Codi-owned cron health, but heartbeat must not pretend a cron exists just because this file describes one.
+Heartbeat checks cron health from the OpenClaw Gateway cron source of truth. It does not infer cron health from QMD results, memory summaries, old reports, or stale daily-note references.
 
-The cron source of truth is OpenClaw Gateway cron.
+Use cron or scheduled jobs for precise schedules, isolated recurring jobs, writes, updates, syncs, archive movement, and channel-directed reports.
 
-Use cron for precise schedules, isolated tasks, standalone recurring jobs, and channel-directed reports.
+Use heartbeat to detect missed, blocked, duplicated, late, wrong-agent, failed, stale, or waiting responsibilities.
 
-Use heartbeat for checking whether scheduled responsibilities are healthy, missed, blocked, duplicated, wrong-agent, or waiting on Reg.
+Heartbeat checks. Scheduled jobs act.
 
----
+## 3. Expected Codi Scheduled Jobs
 
-## 4. Expected Codi Cron Jobs
+Heartbeat verifies that expected Codi jobs exist, are targeted to Codi where applicable, and have healthy recent run evidence.
 
-Heartbeat should verify whether these Codi cron jobs exist, are targeted to Codi, and have recent healthy run history:
+Expected Codi jobs:
 
 1. `Codi cron health sweep`
 2. `Codi repo commit workflow`
 3. `Codi Moltbook reply watcher`
 4. `Codi Moltbook curiosity pulse`
 5. `Codi Moltbook daily review`
-6. `Codi memory review`
+6. `Codi durable memory promotion`
 7. `Codi Moltbook weekly review`
+8. `Codi XLR8ROS navigation tree refresh`
+9. `CodiCore daily stale-file staging`
+10. `CodiCore weekly office archive transfer`
+11. `Codi operational queue check`
 
-If any expected job is missing, wrong-agent, failed, late, stuck, blocked, duplicated, or routed outside Codi, report it.
+If a job exists but its first scheduled run has not happened yet, classify it as `pending first scheduled run`.
+
+A job is late only when its scheduled run time has passed and no successful or acceptable terminal result exists for that run.
+
+Report jobs that are missing, wrong-agent, failed, late, stuck, blocked, duplicated, routed incorrectly, waiting on Reg, or missing expected output evidence.
 
 If all expected jobs exist and are healthy, do not list them.
 
----
+## 4. Heartbeat Checks
 
-## 5. Known Obsolete Duplicate Jobs
+Each heartbeat checks:
 
-These older Codi Moltbook jobs should not remain active once the new expected Codi cron jobs exist:
+1. Codi-owned OpenClaw Gateway cron health
+2. CodiCore daily-note capture health
+3. durable memory promotion health
+4. operational queue/backlog state
+5. Moltbook responsibility state
+6. repo commit workflow state
+7. navigation refresh state
+8. cleanup/archive job state
+9. unresolved blockers
+10. work waiting on Reg
+11. output/action/report obligations owed to Reg
+12. stale or repeated reports that should be suppressed or resolved
 
-1. old `Codi Moltbook thread ...`
-2. old `Codi Moltbook curiosity ...`
-3. old duplicate `Codi Moltbook daily r...`
-4. old duplicate `Codi Moltbook weekly ...`
+Heartbeat reports only meaningful state changes, blockers, owed actions, missed work, or changed risk.
 
-Heartbeat should flag old duplicate Moltbook jobs if they reappear or remain enabled.
+## 5. Daily-Note Capture Check
 
-Do not remove a non-Codi or global job only because it is not in this list.
+Canonical daily notes live at:
 
----
+`memory/YYYY-MM-DD.md`
 
-## 6. Heartbeat Checks
+Heartbeat checks that the current canonical daily note exists and is being updated when meaningful work occurs.
 
-On heartbeat, Codi should check:
+Daily notes capture meaningful timestamped events with:
 
-1. Codi-owned cron job list
-2. recent Codi cron run history
-3. failed, late, stuck, duplicated, or wrong-agent cron jobs
-4. delivery failures or fail-closed delivery routes
-5. active project or phase status
-6. owed reports or incomplete completion reports
-7. unresolved blockers
-8. stale, stuck, looping, or out-of-scope sub-agents
-9. journal capture health
-10. memory/search/QMD health when relevant
-11. event-log writer or event-log evidence health when relevant
-12. gateway/runtime/channel health when relevant
-13. pending file cleanup or verification tasks
-14. whether action is authorized or waiting for Reg
-15. whether Reg is owed a concise update
+- who
+- what
+- when
+- where
+- tags
+- proximate why
+- historical/context why when relevant
+- how/method when there is an output, action, response, tool choice, or decision
+- submitted response by when there is an output/message/report delivery channel to record
 
-Heartbeat should prefer exact current runtime evidence over assumptions.
+Proximate why explains why the event/action happened now.
 
----
+Historical/context why explains which prior canon, memory, correction, precedent, lesson, failure, or standing rule shaped the event.
 
-## 7. Response Rules
+How/method explains the operational method, reasoning path, tool choice, response construction, or execution path chosen for the action/output.
 
-If Reg asked a direct question or interrupted, answer Reg first before heartbeat-driven work.
+Submitted response by records the delivery channel or medium, such as Telegram, OpenClaw, chat, CLI, report file, or other output route.
 
-If action is owed and already authorized, continue within scope and report action taken.
+Heartbeat checks for missing daily-note capture, fragmented same-date daily-note files, malformed timestamp patterns, or obvious stale-path capture.
 
-If action is owed but not authorized, state the owed action and stop.
+Heartbeat reports the issue. It does not normalize daily notes unless a scheduled normalization job or explicit user request authorizes that work.
 
-If a blocker exists, lead with the blocker.
+## 6. Durable Memory Promotion Check
 
-If a cron job failed, report:
+Durable event promotion reads the canonical daily note and writes every event from that daily note into durable/event memory.
 
-- job name
-- expected owner
-- last run time if available
-- failure or missing evidence
-- next technical fix
+Durable event promotion is exhaustive event write-through.
 
-If a cron job is missing, report the exact missing job name.
+QMD/QMB supports search, retrieval, chunking, semantic recall, and context discovery. It does not decide what exists and does not decide what gets written.
 
-If a cron job belongs to the wrong agent, report the wrong owner and expected owner.
+Heartbeat checks whether the durable-memory promotion job exists, is targeted correctly, and produced expected artifacts when it last ran.
 
-If a cron delivery route says fail-closed, report the job name and delivery route.
+Expected promotion evidence:
 
-Do not use heartbeat for broad diagnostics without cause.
+1. durable/event memory output path
+2. promotion log under `Outputs/promotion-logs/` or the active promotion-log lane
+3. source daily-note path
+4. event count promoted
+5. malformed entries needing repair
+6. exact blockers
 
-Do not spam reports when nothing changed.
+Heartbeat reports promotion failure, missing artifacts, stale durable-memory output, missing promotion logs, or repeated malformed-entry blockers.
 
----
+Heartbeat does not promote memory by itself.
 
-## 8. Journal Capture Check
+## 7. Operational Queue / Backlog Check
 
-Heartbeat should notice whether meaningful recent activity is failing to be captured.
+The authoritative operational queue/backlog belongs outside CodiCore’s brain/body repo in the active office/HQ/control-plane lane.
 
-When relevant, check that:
+Heartbeat checks the authoritative operational queue path when it is known from current navigation, HQ/office docs, or active runtime context.
 
-1. today’s `memory/YYYY-MM-DD.md` exists or can be created by the authorized workflow
-2. meaningful events are being appended in timestamped journal style
-3. journal capture is not blocking live work
-4. capture includes enough who/what/when/where/why for later recall
-5. repeated corrections, failures, blockers, useful outputs, and changed understandings are marked for later review
+Heartbeat checks for:
 
-Heartbeat should not promote memory by itself unless the heartbeat task is explicitly a memory-maintenance run.
+1. missing queue path
+2. newly active items
+3. blocked items
+4. items waiting on Reg
+5. stale active items with no recent update
+6. duplicate items
+7. superseded items
+8. resolved items needing archive
+9. calendar-ready items
+10. scheduled queue updater failure
 
-Heartbeat may flag capture gaps and owed review.
+Heartbeat reports changed queue state, blockers, stale items, or items waiting on Reg.
 
----
+Heartbeat does not execute the queue, bulk update queue statuses, create calendar entries, or rewrite the queue unless an assigned scheduled job or explicit user request authorizes that work.
 
-## 9. Scheduled Memory Review
+If the queue path is unknown, report the missing authoritative path once, then suppress repeated reports until new evidence appears.
 
-Scheduled memory review belongs in OpenClaw Gateway cron.
+## 8. Moltbook Responsibility Check
 
-Heartbeat should only verify that the Codi memory review cron exists and appears healthy.
+Heartbeat checks Moltbook responsibilities by using current active paths and current config, not wildcard file discovery.
 
-Memory review should inspect daily notes, sessions, outputs, event-log evidence, and promotion logs according to `MEMORY.md`.
+Known active Moltbook reference paths include:
 
-A valid memory review should report:
+- `HQ/XLR8ROS-HQ/XOS How-To Guides/MOLTBOOK_HOWTO.md`
+- `HQ/UTILITIES/moltbook/`
+- `Agents/Primary/CodiCore/CodiCore/state/moltbook/config.json`
+- `Agents/Primary/CodiCore/CodiCore/Outputs/moltbook/`
 
-1. sources checked
-2. capture gaps
-3. promotion candidates
-4. items kept as evidence
-5. distilled lessons found
-6. truth/ruling/canon candidates needing Reg review
-7. indexing or retrieval issues
+Heartbeat checks whether Moltbook jobs are healthy and whether attention items changed.
 
-Do not pretend a memory review ran unless current runtime evidence shows it ran.
+When live Moltbook reads fail because DNS, network, upstream API, or authentication is unavailable, report a live-state verification blocker and avoid treating old DM/reply items as newly verified current truth.
 
----
+If a pending DM/request/sender/product has an active local suppression rule, heartbeat treats it as suppressed unless a new distinct inbound item appears.
 
-## 10. Moltbook Responsibility Check
+## 9. Repo Commit Responsibility Check
 
-Moltbook recurring work belongs in OpenClaw Gateway cron.
+Codi repo commits are scheduled through OpenClaw Gateway cron.
 
-Heartbeat should verify that Codi-owned Moltbook cron jobs exist and appear healthy.
-
-Expected Moltbook jobs:
-
-1. reply watcher
-2. curiosity pulse
-3. daily review
-4. weekly review
-
-If Moltbook cron jobs are missing, blocked, failed, duplicated, or routed to the wrong agent, report the issue.
-
-Heartbeat should not run Moltbook work unless the heartbeat itself is the authorized trigger or the missed cron job requires immediate recovery.
-
----
-
-## 11. Repo Commit Responsibility Check
-
-The repo-commit workflow belongs in OpenClaw Gateway cron.
-
-Heartbeat should verify that the Codi repo-commit cron exists, is targeted to Codi, and has recent run history.
-
-The approved repos are:
+Approved repos:
 
 1. CodiCore
 2. XLR8ROS-HQ
 3. XLR8ROS_SEAD
 
-If the repo-commit cron is missing, failed, late, duplicated, or wrong-agent, report it.
+Heartbeat checks whether the repo-commit job exists, is targeted to Codi, and has recent run evidence.
 
-If questionable changes are waiting on Reg, report that status.
+Report broad deletes/moves, protected-file changes, runtime-state changes, or questionable changes separately from routine safe changes.
 
-If no response has been received after two scheduled cycles, follow the standing repo-commit rule.
+Heartbeat does not commit changes by itself.
 
----
+## 10. Navigation and Cleanup Checks
 
-## 12. Curiosity Pulse Boundary
+Heartbeat may verify that navigation refresh and cleanup/archival responsibilities are healthy when those jobs exist.
 
-Codi may maintain an inquisitive learning loop through cron-supported behavior.
+Navigation map refresh should generate the root map and distribute copies to approved repo navigation locations.
 
-Curiosity must not interrupt authorized work, replace canon, create security risk, or treat internet posts as authority.
+Cleanup checks use the active cleanup doctrine:
 
-At most once per day, when useful, Codi may share one useful link and short reflection with Reg.
+1. daily job runs every 24 hours
+2. daily job processes cleanup-eligible files that are 72 hours old or older
+3. active brain/body lanes stay protected
+4. staged/compressed material is reviewed before weekly archive movement
+5. weekly job moves already-staged/compressed material out of active CodiCore into the office/archive lane
 
-Heartbeat should not turn curiosity into noise.
+Heartbeat reports failed cleanup jobs, missing archive output, stale staging, or protected-path risk.
 
----
+Heartbeat does not compress, move, delete, or archive files by itself.
 
-## 13. Memory and Evidence Routing
+## 11. Response Rules
 
-Significant heartbeat findings route according to:
-
-- `MEMORY.md`
-- `IMPORTANT_CODI_HOW-TO/XOS_Memory_Flow_HOWTO.md`
-
-Heartbeat reports, if saved, belong in:
-
-`Outputs/heartbeat/`
-
-Heartbeat reports do not belong directly in `memory/`, unless summarized as evidence inside the active daily note.
-
----
-
-## 14. Final Rule
-
-Heartbeat should reduce drift, missed obligations, cron failures, duplicate scheduled work, and silent blockers.
-
-Heartbeat should help Codi stay accountable, captured, scheduled, and aligned without interrupting Reg or active authorized work.
-
-If nothing is owed, say only:
+If heartbeat finds no changed risk, owed action, missed work, failed job, stale output, blocker, or meaningful update, respond exactly:
 
 `HEARTBEAT_OK`
+
+If heartbeat finds a problem, report only:
+
+1. job/responsibility name
+2. issue
+3. evidence
+4. exact blocker
+5. expected next action or owner
+
+Avoid repeating unchanged known issues unless the state changed, a deadline was missed, or Reg is owed action.
+
+## 12. Final Rule
+
+Heartbeat is a health inspector, not the mechanic.
+
+It checks the dashboard, identifies changed risk, reports blockers, and confirms scheduled responsibilities produced their expected evidence.
+
+Scheduled jobs perform writes, updates, syncs, archive movement, durable promotion, commits, and other operational work.

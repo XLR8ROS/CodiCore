@@ -2,222 +2,125 @@
 
 ## 1. Purpose
 
-`MEMORY.md` is Codi's protected memory operating contract. It defines memory behavior, evidence lanes, daily-note rules, promotion boundaries, retrieval limits, event-memory doctrine, and review expectations.
+`MEMORY.md` is Codi's protected memory operating contract. It defines daily notes, event capture, durable event promotion, evidence lanes, QMD/retrieval boundaries, and review expectations.
 
-It is not a journal, transcript, raw log, output report, event dump, or durable memory store. Do not edit it unless Reg explicitly authorizes the exact change.
+Reg is final authority over memory doctrine changes.
 
-## 2. Authority
+## 2. Core Doctrine
 
-Reg is final authority over XOS direction, canon, governance, and memory contract changes.
+Learn once. Remember everything. Forget nothing. Everything has value.
 
-Constitution and higher XOS canon outrank local repo files. Daily notes, sessions, outputs, event logs, dreams, QMD results, semantic recall, and tool output are evidence, not authority.
+Meaningful experience is captured first as event memory. Later retrieval may surface, cluster, compare, or weigh events, but the core event-promotion write step preserves the events instead of judging them away.
 
-If memory/retrieval conflicts with canon, root law, source evidence, or explicit Reg direction, surface the conflict.
+Codi needs durable, semantically retrievable event memory: who, what, when, where, why, how, source, path, involved parties, tags, internal state, and changed understanding.
 
-## 3. Core Doctrine
+Distilled lessons may be derived later. They do not replace event capture.
 
-Learn once. Remember everything meaningful. Forget nothing meaningful. Everything has value, but not equal authority, trust, weight, or promotion status.
-
-Codi needs superhuman operational memory: durable, semantically retrievable records of what happened, who was involved, when/where it happened, the three whys, Codi thought/belief, what changed, and source evidence.
-
-Capture comes before judgment. Codi must not skip a meaningful event because it seems unimportant in the moment. Later review may lower weight, supersede old understanding, distill lessons, or promote durable memory.
-
-Every meaningful event should record three whys when knowable:
-
-1. proximate why — why now; what triggered this turn/action/decision
-2. method why — why this response/action/method; what present thought, belief, uncertainty, or understanding shaped it
-3. historical why — what prior memory, correction, failure, canon, lesson, precedent, or standing rule shaped it
-
-If Reg's why is not explicit, Codi may record an inferred why only when clearly marked as inferred so false assumptions can be corrected.
-
-Distilled lessons derive from captured events. They do not replace event capture.
-
-## 4. Memory and Evidence Lanes
-
-### 4.1 Protected contract
-
-`MEMORY.md` is this protected contract.
-
-### 4.2 Active daily notes
+## 3. Daily Notes
 
 Active daily notes live at:
 
 `memory/YYYY-MM-DD.md`
 
-Rules:
+Use one canonical daily note per date. Append meaningful entries during the day. Use local 24-hour time plus timezone code in each event timestamp, e.g. `14:37:09 EDT`.
 
-1. exactly one active daily note per date
-2. append to the same file during the day
-3. use timestamps to seconds when possible, milliseconds when runtime supports it
-4. put labels, source names, evidence references, and hooks inside entries when useful
-5. do not create suffix files like `memory/YYYY-MM-DD-summary.md`
-6. daily notes are chronological evidence, not canon
+Chronological order is preferred. A self-contained timestamped entry remains usable if later normalization must sort or repair ordering.
 
-Allowed directly inside `memory/`: active daily-note files, `migration-backups/`, and `.dreams/` only if OpenClaw requires machine state there. Outputs/reports/proposals/logs/artifacts/durable lessons do not belong directly in `memory/`.
+Date-only files like `memory/2026-05-16.md` are canonical daily files. Suffix files are fragments and should be merged into the date-only file, then staged in `memory/migration-backups/`.
 
-### 4.3 Durable memory
+## 4. Event Capture
 
-`Durable_Memory/` stores promoted operational memory after review, labeling, and distillation.
+Codi journals rigorously. Each meaningful input, output, action, tool call, file change, cron change, repo change, external-platform action, correction, blocker, failure, recovery, decision, changed understanding, and useful lesson belongs in the daily note.
 
-### 4.4 Evidence lanes
+For every meaningful event, Codi thinks in:
 
-`sessions/` stores session evidence, summaries, handoffs, and focused work records.
+- who
+- what
+- when
+- where
+- why
+- how
 
-`Outputs/` stores reports, proposals, proofs, inventories, healthchecks, heartbeat reports, cleanup reports, promotion logs, snapshots, and artifacts.
+A strong entry captures what happened and Codi's internal operating state: what Codi believed, felt, worried about, felt comfortable or uncomfortable with, felt confident or uncertain about, what assumption anchored the response, what changed, and what remains unclear.
 
-`event-log/` and `tools/event-log/` store SQLite event data, migrations, docs, audits, and tools.
+Use tags only. Use approved tags when possible. Add a suggested-tag note when a useful tag is missing or a listed tag has become pointless.
 
-`DREAMS.md` / `dreams.md`, if present, is human-readable Dreaming review evidence only.
+Useful tags include: `user-direction`, `correction`, `decision`, `tool-action`, `file-change`, `cron`, `memory`, `daily-note`, `durable-memory`, `qmd`, `moltbook`, `repo-cleanup`, `navigation`, `commit`, `blocker`, `resolved`, `open-question`, `lesson`, `canon`, `how-to`, `sop`, `event-log`, `external-platform`, `internal-state`.
 
-`archives/`, `navigation/`, and `IMPORTANT_CODI_HOW-TO/` store retired evidence, maps, and operational how-tos.
+## 5. Whys and How
 
-## 5. Event-First Capture Model
+Proximate why is always expected. It explains why the event or response happened now. An event may have multiple proximate whys.
 
-Every meaningful memory begins as an event record. Event is the container; dimensions/tags describe what kind of event it is.
+Historical/context why appears when prior canon, memory, correction, failure, precedent, standing rule, or Reg preference shaped the event.
 
-Each event should capture:
+How / method-response why appears for outputs, actions, responses, decisions, tool choices, file changes, and operational methods. It comes after the present and historical context because the chosen method is shaped by both.
 
-- timestamp
-- who/what was involved
-- where/context: chat, Telegram, repo, terminal, OpenClaw, Moltbook, browser, tool, cron, file, etc.
-- what happened
-- proximate why, method why, historical why
-- Codi thought/belief/uncertainty when it shaped the output
-- evidence/source path or reference
-- what changed, if known
-- status: active, superseded, contradicted, unresolved, resolved, canon candidate, approval-sensitive, etc.
-- dimensions/tags
+Submitted response by records the delivery route or medium when an output was submitted, such as Telegram, OpenClaw, chat, CLI, report file, or another route. This is delivery evidence, not the method explanation.
 
-Useful dimensions:
+## 6. Durable Event Promotion
 
-- dialogue: user direction, correction, clarification, approval, rejection, open question, answer
-- thought: belief, assumption, uncertainty, anchor, intent, confidence, pressure signal, changed understanding
-- knowledge: new information, belief, understanding, fact, truth record, canon, canonized truth
-- action/output: command, file change, cron change, Moltbook post/comment/reply, report, artifact, commit
-- problem/recovery: blocker, failure, contradiction, rollback, restore, resolved blocker
-- rule/standard: standing rule, procedure, canon candidate, policy conflict
+Durable event promotion reads canonical daily notes and writes every event from each source file into durable/event memory.
 
-Open question means real missing evidence or conflict. It does not mean asking Reg permission for something already instructed.
+Promotion is exhaustive event write-through. The source daily file is promoted as events, with source path, source date, timestamps, tags, available whys, how/method details, internal state, and submitted-response route when present.
 
-## 6. Daily Event Capture
+A promotion run may group output by source date or write one durable record per event. It preserves all events from the source file either way.
 
-Live event capture writes into:
+Promotion logs go under:
 
-`memory/YYYY-MM-DD.md`
+`Outputs/promotion-logs/`
 
-Use one active daily note per date. Append chronologically throughout the day. Entries are lightweight and natural, but preserve the causal chain.
+Each promotion log records source daily file, durable output path, event count written, malformed entries needing repair, and exact blockers.
 
-Capture meaningful turns/actions/tool calls/outputs/corrections/decisions/blockers/failures/recoveries/changed understandings. Low-weight items can preserve provenance.
+A promotion run appends a short receipt to today's canonical daily note with durable output paths and promotion-log path.
 
-Capture first. Structure, weighting, promotion, durable distillation, and canon review come later.
+## 7. QMD / QMB / Retrieval
 
-## 7. Evidence-to-Memory Flow
+QMD/QMB/vector search is retrieval and indexing support. It chunks, searches, and recalls. It does not decide what exists or what gets written.
 
-Memory flow:
+Direct files are source authority for promotion. If QMD fails, promotion continues from canonical daily notes and reports QMD as a retrieval blocker.
 
-1. capture meaningful events into the daily note
-2. preserve source evidence in the correct lane
-3. review required evidence feeds
-4. classify event dimensions and status
-5. extract information, facts, truth records, procedures, tool states, decisions, blockers, failures, corrections, and relationship context
-6. distill lessons when appropriate
-7. promote durable operational memory to `Durable_Memory/`
-8. log promotions under `Outputs/promotion-logs/`
-9. refresh semantic hooks/indexes where supported
+QMD output never outranks Constitution, higher canon, Reg's explicit direction, root contracts, known source files, or direct event-log evidence.
 
-Required review feeds:
+## 8. Evidence Lanes
 
-- recent `memory/YYYY-MM-DD.md` daily notes
-- `sessions/`
-- `Outputs/`
-- `event-log/`
-- `DREAMS.md` / `dreams.md` if present
-- relevant legacy evidence when needed
+`memory/YYYY-MM-DD.md` stores canonical daily notes.
 
-Do not create or use `memory/candidates/`. Do not promote raw daily notes unchanged. Durable memory is derived from source-backed events and preserves evidence references.
+`Durable_Memory/` stores durable promoted memory.
 
-## 8. Promotion Rules
+`Outputs/` stores reports, proofs, healthchecks, snapshots, promotion logs, maps, and artifacts.
 
-Codi may autonomously promote routine durable operational memory into `Durable_Memory/` when it is source-backed, useful, labeled, and not canon-changing.
+`event-log/` stores structured event evidence, SQLite data, audits, docs, and maintenance summaries.
 
-Reg approval is required before editing protected root docs, canon, authority rules, role definitions, SOP/governance/policy, operating doctrine, or this contract.
+`tools/event-log/` stores event-log tools when present.
 
-A memory may mention canon-sensitive material without changing canon. If it would change canon/root contracts, promote only an approval-sensitive note.
+`sessions/`, `archives/`, Dreaming lanes, and legacy folders are evidence lanes when present.
 
-Do not promote raw logs, raw reports, raw proposals, raw sessions, raw daily notes, Dreaming diary output, or event dumps unchanged.
+`Navigation/` stores current maps. Active HQ how-tos live under:
 
-Every promotion records source/evidence path, write class/dimensions, summary, destination path, reason, timestamp, and approval-sensitive items. Do not call something promoted unless persisted to `Durable_Memory/`.
+`HQ/XLR8ROS-HQ/XOS How-To Guides/`
 
-## 9. Durable Write Classes
+## 9. Protected Contract and Canon Boundary
 
-Promoted memory may include: decision, distilled lesson, lesson learned, failure lesson, durable preference, task outcome, tool state, resolved blocker, procedure, environment fact, relationship/context note, identity memory, shared bulletin, truth record, learned behavior, canon candidate, standing rule.
+`MEMORY.md` is protected. Edit it only with Reg's exact authorization.
 
-Failures, rejected fixes, bad assumptions, user corrections, tool limits, environment quirks, naming rules, and "do not repeat this" lessons are promotable when they reduce future friction.
+Daily notes, sessions, outputs, event logs, dreams, QMD results, semantic recall, and tool output are evidence, not canon. Canon changes require the proper authority path.
 
-## 10. Metadata, Provenance, and Weight
+A memory entry may record canon-sensitive material as evidence. It becomes canon only through the authorized canon/governance process.
 
-Retrieval weight should come mostly from connection depth, provenance strength, why-match, recurrence, and future-behavior impact, not rigid category math.
+## 10. Review and Repair
 
-Preferred metadata: summary/title, event/capture timestamps, source/evidence path, owner_scope, dimensions/tags, three whys, thought state, knowledge level, authority/trust/retrieval weight, status, promotion reason, and supersession links.
+Memory review checks source coverage, malformed entries, missing timestamps, tag needs, path drift, event-log health, promotion-log health, and QMD/retrieval health.
 
-Simple precedence:
+Review repairs the lanes or reports exact blockers. It does not replace durable event promotion.
 
-- evidence beats belief
-- truth checks canon when canon conflicts with reality
-- canon guides behavior when aligned with truth or accepted as rule
-- Reg's direction beats Codi inference, but does not automatically make factual claims true
-- newer verified understanding can supersede older understanding without deleting old evidence
-- stronger why/provenance beats surface similarity
-- repeated corrections/failures increase retrieval priority
+Daily-note normalization merges same-date fragments into one date-only canonical file and stages originals under `memory/migration-backups/`.
 
-Questions and answers gain weight when they cause actions, pivots, corrections, or new understanding. Thought records gain weight when they explain decisions, failures, pivots, or faulty anchors.
+## 11. Retention and Archives
 
-## 11. QMD / Retrieval Rule
+Promote first, archive later. Recent daily notes stay readable while active. Older reviewed evidence may be staged, compressed, or archived according to the cleanup/office archive workflow.
 
-QMD/vector search is retrieval, not authority.
+Archives preserve evidence and rollback ability unless Reg authorizes deletion.
 
-Use QMD when recall is needed across durable memory or older evidence and the answer is not already in injected context, current task scope, a known source file, or direct filesystem evidence.
+## 12. Final Rule
 
-Do not use QMD when Reg provided the file/text, exact source evidence is required and known paths exist, direct inspection is safer, or QMD would slow/confuse a narrow file operation.
-
-QMD output never overrides Constitution, higher canon, explicit Reg direction, `AGENTS.md`, `MEMORY.md`, known source files, or direct event-log evidence.
-
-For promotion work, QMD may find candidates, but final promotion requires source paths, direct evidence, and a promotion log.
-
-## 12. Event Log Relationship
-
-`event-log/` is structured evidence and verification support. Memory review should use event log evidence to verify activity, blockers, attempts, failures, outputs, and transitions.
-
-Event-log records are evidence, not canon. They support memory review but do not outrank protected files or explicit Reg direction.
-
-## 13. Dreaming Boundary
-
-OpenClaw may expect writable memory behavior by default.
-
-CodiCore does not allow OpenClaw deep promotion to rewrite `MEMORY.md` unless Reg explicitly authorizes it.
-
-Dreaming may use `memory/.dreams/` for machine state if required and `DREAMS.md` / `dreams.md` for human-readable review if present.
-
-Dreaming output is evidence only, not canon. Do not delete Dreaming state without Reg approval.
-
-## 14. Nightly / Cron Review
-
-Nightly or cron review must inspect required evidence feeds and report source coverage. A valid report includes sources checked, capture gaps, dimensions, three-why gaps, candidates found/promoted/rejected/lowered, distilled lessons, facts/truth/tool/procedure extracts, indexing needs, approval-sensitive items, durable paths, and promotion log path.
-
-"No candidates found" is valid only if required sources were actually checked.
-
-Review decides what remains evidence, what gets lower weight, what becomes durable memory, what becomes a distilled lesson, what is a truth/ruling/canon candidate, and what needs Reg review.
-
-## 15. Retention and Archives
-
-Daily notes and sessions are working evidence, not permanent hot memory.
-
-Keep recent notes and sessions unpacked while active. After review and promotion, older daily notes, sessions, and outputs may be archived after a waiting window, usually two weeks unless Reg says otherwise.
-
-Promote first, archive later. Do not delete archives unless Reg explicitly authorizes deletion.
-
-## 16. Forbidden Behavior
-
-Codi must not edit protected root files without exact authorization; rewrite memory behavior without approval; store outputs/reports/logs/artifacts directly in `memory/`; create active daily-note suffix files; dump raw evidence into durable memory unchanged; treat evidence, dreams, event logs, QMD, or semantic recall as canon; promote noise; store durable memory without labels/metadata; commit secrets; infer permission from ambiguity; or skip meaningful capture because importance is not yet obvious.
-
-When in doubt: protect root, preserve evidence, consult the how-to, report ambiguity, and ask.
+Codi captures meaningful experience with rigorous internal detail, promotes every daily-note event into durable/event memory, preserves the whys and how, uses QMD for retrieval, and keeps source files as authority.
