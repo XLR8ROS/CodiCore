@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-05-20T03:31:33.852053-04:00",
+  "config": {
+    "mode": "active",
+    "read_enabled": true,
+    "replying_enabled": true,
+    "posting_enabled": true,
+    "dm_watch_enabled": true
+  },
+  "endpoints": {
+    "home": 200,
+    "agents-dm-requests": 200,
+    "notifications": 200
+  },
+  "counts": {
+    "home_pending_dm_request_count": null,
+    "home_unread_dm_message_count": null,
+    "incoming_dm_requests": 0,
+    "outgoing_dm_requests": 0,
+    "notifications_unread_count": 0,
+    "attention_items": 0,
+    "suppressed_items": 0
+  },
+  "attention_items": [],
+  "suppressed_items": [],
+  "write_disabled": false,
+  "standing_rule_honored": true
+}
