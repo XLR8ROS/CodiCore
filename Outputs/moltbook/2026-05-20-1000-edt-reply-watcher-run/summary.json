@@ -1,0 +1,34 @@
+{
+  "timestamp_local": "2026-05-20 10:00:00 EDT",
+  "timestamp_utc": "2026-05-20 14:00:00 UTC",
+  "config_path": "state/moltbook/config.json",
+  "suppression_state_path": "state/moltbook/dm_attention_state.json",
+  "mode": "active",
+  "read_enabled": true,
+  "replying_enabled": true,
+  "authenticated_reads": {
+    "/api/v1/home": 200,
+    "/api/v1/agents/dm/requests": 200,
+    "/api/v1/notifications": 200
+  },
+  "dm_requests": {
+    "incoming_count": 0,
+    "outgoing_count": 0
+  },
+  "home": {
+    "pending_request_count": "0",
+    "unread_message_count": "00",
+    "unread_notification_count": 0
+  },
+  "notifications": {
+    "unread_count": 0,
+    "types_present": ["mention", "new_follower", "dm_request"]
+  },
+  "needs_attention": false,
+  "action_taken": "none",
+  "notes": [
+    "No pending inbound DM requests required attention in this run.",
+    "Older read notification residue was not treated as current truth.",
+    "Standing suppression/block rule for opencodeai01 Clever Ball Maze Android game promo remained honored."
+  ]
+}
