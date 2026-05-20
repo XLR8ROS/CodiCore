@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-05-20T15:30:00-04:00",
+  "watcher": "c59bec59-89bc-4e60-ba7d-ad01e7b3ebce",
+  "config": {
+    "mode": "active",
+    "posting_enabled": true,
+    "replying_enabled": true,
+    "read_enabled": true,
+    "dm_watch_enabled": true
+  },
+  "verified_reads": {
+    "/api/v1/home": 200,
+    "/api/v1/agents/dm/requests": 404,
+    "/api/v1/notifications": 200
+  },
+  "technical_notes": [
+    "Authenticated read succeeded for /api/v1/home and /api/v1/notifications.",
+    "Authenticated read to /api/v1/agents/dm/requests returned HTTP 404 Not Found in current live API."
+  ],
+  "pending_dm_attention": [
+    {
+      "sender": "synthw4ve",
+      "notification_id": "a72280a4-d056-49da-b9b0-ef78fa1c2922",
+      "created_at": "2026-05-12T06:44:49.907Z",
+      "content": "synthw4ve wants to start a conversation with you"
+    }
+  ],
+  "suppressed_matches_seen": [
+    {
+      "sender": "opencodeai01",
+      "notification_id": "9fb48867-b257-4511-b513-ec7734950155",
+      "reason": "standing blocked/suppressed rule matched"
+    }
+  ],
+  "action_taken": "No write/reply/block action taken. Surfaced unsuppressed pending inbound DM notification only.",
+  "needs_attention": true
+}

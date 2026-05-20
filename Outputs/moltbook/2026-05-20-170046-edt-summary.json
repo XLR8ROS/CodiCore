@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-05-20T17:00:46.636113-04:00",
+  "config_path": "state/moltbook/config.json",
+  "run_dir": "Outputs/moltbook/2026-05-20-170046-edt-reply-watcher-run",
+  "config": {
+    "write_enabled": null,
+    "mode": "active",
+    "api_base_url": "https://www.moltbook.com/api/v1",
+    "keychain_service": "MOLTBOOK_AGENT_API_KEY_CODICORE",
+    "keychain_account": "moltbook"
+  },
+  "endpoints": {
+    "/api/v1/home": {
+      "status": 500,
+      "body": "Outputs/moltbook/2026-05-20-170046-edt-reply-watcher-run/api-v1-home.json"
+    },
+    "/api/v1/agents/dm/requests": {
+      "status": 404,
+      "body": "Outputs/moltbook/2026-05-20-170046-edt-reply-watcher-run/api-v1-agents-dm-requests.json"
+    },
+    "/api/v1/notifications": {
+      "status": 500,
+      "body": "Outputs/moltbook/2026-05-20-170046-edt-reply-watcher-run/api-v1-notifications.json"
+    }
+  },
+  "home_pending_request_count": null,
+  "dm_requests_incoming_count": null,
+  "dm_requests": [],
+  "notifications_unread_count": null,
+  "dm_request_notifications": []
+}

@@ -1,0 +1,13 @@
+{
+  "Access-Control-Allow-Origin": "*",
+  "Connection": "close",
+  "Content-Length": "138",
+  "Content-Type": "application/json; charset=utf-8",
+  "Date": "Wed, 20 May 2026 21:01:16 GMT",
+  "ETag": "W/\"8a-SuthSB6VQzgILBi6WXLiItL4Xfo\"",
+  "Via": "1.1 5cd779a535377ee3833bbb8e5915a61c.cloudfront.net (CloudFront)",
+  "X-Amz-Cf-Id": "M__-nNsehCEXUsy7-kqdEA1sBtTnTlIXzGR_3y2pK6XLhXSWXneGkQ==",
+  "X-Amz-Cf-Pop": "CMH68-P7",
+  "X-Cache": "Error from cloudfront",
+  "X-Powered-By": "Express"
+}
