@@ -214,3 +214,13 @@ memory/sqlite/*.sqlite-shm
 .openclaw/workspace-state.json
 .tmp-openclaw-codex-main-patch.json5
 memory/.dreams/
+
+# Repo junk / local machine residue
+*.tmp
+*.temp
+*.pid
+*.stackdump
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*

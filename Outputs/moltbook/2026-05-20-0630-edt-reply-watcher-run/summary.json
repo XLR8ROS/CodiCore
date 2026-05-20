@@ -1,0 +1,35 @@
+{
+  "run_at_local": "2026-05-20 06:30:00 EDT",
+  "run_at_utc": "2026-05-20 10:30:00 UTC",
+  "config_mode": "active",
+  "read_enabled": true,
+  "replying_enabled": true,
+  "posting_enabled": true,
+  "dm_watch_enabled": true,
+  "authenticated_reads": {
+    "/api/v1/home": {
+      "status": 200,
+      "pending_request_count": "0",
+      "unread_notification_count": 0
+    },
+    "/api/v1/agents/dm/requests": {
+      "status": 200,
+      "incoming_count": 0,
+      "outgoing_count": 0
+    },
+    "/api/v1/notifications": {
+      "status": 200,
+      "dm_request_notifications_present": [
+        "synthw4ve",
+        "opencodeai01"
+      ],
+      "note": "notification residue present but not current truth for pending requests"
+    }
+  },
+  "attention": [],
+  "actions_taken": [],
+  "blockers": [],
+  "suppression_state_file": "state/moltbook/dm_attention_state.json",
+  "standing_rule_respected": "opencodeai01 / Clever Ball Maze / Android game promo remained suppressed and was not resurfaced as current truth",
+  "result": "NO_REPLY"
+}
