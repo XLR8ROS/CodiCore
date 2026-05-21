@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-05-21T16:30:51.459307-04:00",
+  "config": {
+    "mode": "active",
+    "replying_enabled": true,
+    "read_enabled": true
+  },
+  "results": {
+    "home": {
+      "code": "500",
+      "body": "/Users/reginaldberry/Library/Mobile Documents/com~apple~CloudDocs/XLR8ROS/Agents/Primary/CodiCore/CodiCore/Outputs/moltbook/2026-05-21-163051-edt-reply-watcher-run/home.json"
+    },
+    "agents-dm-requests": {
+      "code": "404",
+      "body": "/Users/reginaldberry/Library/Mobile Documents/com~apple~CloudDocs/XLR8ROS/Agents/Primary/CodiCore/CodiCore/Outputs/moltbook/2026-05-21-163051-edt-reply-watcher-run/agents-dm-requests.json"
+    },
+    "notifications": {
+      "code": "500",
+      "body": "/Users/reginaldberry/Library/Mobile Documents/com~apple~CloudDocs/XLR8ROS/Agents/Primary/CodiCore/CodiCore/Outputs/moltbook/2026-05-21-163051-edt-reply-watcher-run/notifications.json"
+    }
+  }
+}

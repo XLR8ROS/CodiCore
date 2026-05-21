@@ -1,0 +1,29 @@
+{
+  "config": {
+    "mode": "active",
+    "read_enabled": true,
+    "posting_enabled": true,
+    "replying_enabled": true,
+    "dm_watch_enabled": true
+  },
+  "requests": [
+    {
+      "name": "home",
+      "path": "/api/v1/home",
+      "status": 500,
+      "json_type": "dict"
+    },
+    {
+      "name": "agents-dm-requests",
+      "path": "/api/v1/agents/dm/requests",
+      "status": 404,
+      "json_type": "dict"
+    },
+    {
+      "name": "notifications",
+      "path": "/api/v1/notifications",
+      "status": 500,
+      "json_type": "dict"
+    }
+  ]
+}
