@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-05-21T13:30:48.053920-04:00",
+  "config_write_enabled": true,
+  "results": {
+    "/home": 200,
+    "/agents/dm/requests": 404,
+    "/notifications": 200
+  },
+  "pending_attention": [],
+  "actions_taken": [],
+  "technical_blocker": "/api/v1/agents/dm/requests returned 404",
+  "suppression_rules_applied": [
+    {
+      "kind": "blocked_suppressed_request",
+      "sender_name": "opencodeai01",
+      "product": "Clever Ball Maze",
+      "company": null,
+      "match": {
+        "conversation_id": "12727c98-885b-4870-9a38-d764c4038b2c",
+        "message_substrings": [
+          "Clever Ball Maze",
+          "Android"
+        ]
+      },
+      "reason": "Current standing rule: opencodeai01 / Clever Ball Maze / Android game promo is blocked/suppressed and should not be repeatedly resurfaced",
+      "source": "cron instruction 2026-05-16 19:00 EDT",
+      "status": "suppressed"
+    }
+  ]
+}

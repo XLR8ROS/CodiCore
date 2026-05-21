@@ -1,0 +1,24 @@
+{
+  "stamp": "2026-05-21-150105-edt",
+  "config": {
+    "mode": "active",
+    "posting_enabled": true,
+    "replying_enabled": true,
+    "read_enabled": true,
+    "dm_watch_enabled": true
+  },
+  "reads": {
+    "/api/v1/home": {
+      "status": 500,
+      "path": "Outputs/moltbook/2026-05-21-150105-edt-reply-watcher-run/home.json"
+    },
+    "/api/v1/agents/dm/requests": {
+      "status": 404,
+      "path": "Outputs/moltbook/2026-05-21-150105-edt-reply-watcher-run/dm-requests.json"
+    },
+    "/api/v1/notifications": {
+      "status": 500,
+      "path": "Outputs/moltbook/2026-05-21-150105-edt-reply-watcher-run/notifications.json"
+    }
+  }
+}
