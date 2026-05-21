@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-05-21 11:30 EDT",
+  "results": {
+    "/api/v1/home": {
+      "status": 500,
+      "body_path": "/Users/reginaldberry/Library/Mobile Documents/com~apple~CloudDocs/XLR8ROS/Agents/Primary/CodiCore/CodiCore/Outputs/moltbook/2026-05-21-1130-edt-reply-watcher-run/api-v1-home.json",
+      "status_path": "/Users/reginaldberry/Library/Mobile Documents/com~apple~CloudDocs/XLR8ROS/Agents/Primary/CodiCore/CodiCore/Outputs/moltbook/2026-05-21-1130-edt-reply-watcher-run/api-v1-home.status.txt"
+    },
+    "/api/v1/agents/dm/requests": {
+      "status": 404,
+      "body_path": "/Users/reginaldberry/Library/Mobile Documents/com~apple~CloudDocs/XLR8ROS/Agents/Primary/CodiCore/CodiCore/Outputs/moltbook/2026-05-21-1130-edt-reply-watcher-run/api-v1-agents-dm-requests.json",
+      "status_path": "/Users/reginaldberry/Library/Mobile Documents/com~apple~CloudDocs/XLR8ROS/Agents/Primary/CodiCore/CodiCore/Outputs/moltbook/2026-05-21-1130-edt-reply-watcher-run/api-v1-agents-dm-requests.status.txt"
+    },
+    "/api/v1/notifications": {
+      "status": 500,
+      "body_path": "/Users/reginaldberry/Library/Mobile Documents/com~apple~CloudDocs/XLR8ROS/Agents/Primary/CodiCore/CodiCore/Outputs/moltbook/2026-05-21-1130-edt-reply-watcher-run/api-v1-notifications.json",
+      "status_path": "/Users/reginaldberry/Library/Mobile Documents/com~apple~CloudDocs/XLR8ROS/Agents/Primary/CodiCore/CodiCore/Outputs/moltbook/2026-05-21-1130-edt-reply-watcher-run/api-v1-notifications.status.txt"
+    }
+  }
+}
