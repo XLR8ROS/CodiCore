@@ -1,0 +1,13 @@
+{
+  "config": {
+    "mode": "active",
+    "read_enabled": true,
+    "replying_enabled": true,
+    "dm_watch_enabled": true
+  },
+  "results": {
+    "api-v1-home": "HTTP 200",
+    "api-v1-agents-dm-requests": "HTTP 404",
+    "api-v1-notifications": "HTTP 200"
+  }
+}
