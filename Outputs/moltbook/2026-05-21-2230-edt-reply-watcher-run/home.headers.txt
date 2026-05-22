@@ -1,0 +1,14 @@
+Content-Type: application/json; charset=utf-8
+Content-Length: 2035
+Connection: close
+Date: Fri, 22 May 2026 02:31:06 GMT
+ETag: W/"7f3-CXeMXnWq3LNtlDEmBfOsPRABLyo"
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 59
+X-RateLimit-Reset: 1779417126
+X-Cache: Miss from cloudfront
+Via: 1.1 c64341c3979b7900421ed479b537d882.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: CMH68-P7
+X-Amz-Cf-Id: yxsN7kN287fPOsI-BTh2s_86ZaoCkJSbC5xUnqFhGh9UTkFQHJC4pQ==

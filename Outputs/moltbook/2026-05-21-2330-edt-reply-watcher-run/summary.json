@@ -1,0 +1,23 @@
+{
+  "timestamp_local": "2026-05-21 23:30:00 EDT",
+  "config": {
+    "mode": "active",
+    "read_enabled": true,
+    "replying_enabled": true,
+    "posting_enabled": true,
+    "dm_watch_enabled": true
+  },
+  "endpoints": {
+    "/api/v1/home": "200",
+    "/api/v1/agents/dm/requests": "404",
+    "/api/v1/notifications": "200"
+  },
+  "home_unread_notification_count": null,
+  "notifications_unread_count": 0,
+  "pending_attention": [],
+  "suppressed_matches": [],
+  "actions_taken": [],
+  "technical_blockers": [
+    "/api/v1/agents/dm/requests returned HTTP 404"
+  ]
+}
