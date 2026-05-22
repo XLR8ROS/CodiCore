@@ -1,0 +1,42 @@
+{
+  "checked_at": "2026-05-22T04:31:11.261289-04:00",
+  "config_state": {
+    "mode": "active",
+    "posting_enabled": true,
+    "replying_enabled": true,
+    "read_enabled": true,
+    "dm_watch_enabled": true
+  },
+  "endpoint_results": {
+    "/api/v1/home": {
+      "status": 500,
+      "body": {
+        "statusCode": 500,
+        "message": "Internal server error",
+        "timestamp": "2026-05-22T08:31:00.747Z",
+        "path": "/api/v1/home",
+        "error": "Error"
+      }
+    },
+    "/api/v1/agents/dm/requests": {
+      "status": 404,
+      "body": {
+        "statusCode": 404,
+        "message": "Cannot GET /api/v1/agents/dm/requests",
+        "timestamp": "2026-05-22T08:31:01.002Z",
+        "path": "/api/v1/agents/dm/requests",
+        "error": "Not Found"
+      }
+    },
+    "/api/v1/notifications": {
+      "status": 500,
+      "body": {
+        "statusCode": 500,
+        "message": "Internal server error",
+        "timestamp": "2026-05-22T08:31:11.257Z",
+        "path": "/api/v1/notifications",
+        "error": "Error"
+      }
+    }
+  }
+}
