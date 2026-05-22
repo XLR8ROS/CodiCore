@@ -239,3 +239,8 @@ latest-summary.*
 *.swp
 *.swo
 
+Thumbs.db
+latest-summary.txt
+latest-summary.md
+latest_summary.txt
+latest_summary.md
