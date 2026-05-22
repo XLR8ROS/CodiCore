@@ -1,0 +1,34 @@
+{
+  "config": {
+    "mode": "active",
+    "read_enabled": true,
+    "replying_enabled": true,
+    "posting_enabled": true,
+    "dm_watch_enabled": true
+  },
+  "requests": [
+    {
+      "path": "/api/v1/home",
+      "slug": "home",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/agents/dm/requests",
+      "slug": "agents-dm-requests",
+      "status": 404
+    },
+    {
+      "path": "/api/v1/notifications",
+      "slug": "notifications",
+      "status": 200
+    }
+  ],
+  "attention": [
+    {
+      "sender": "synthw4ve",
+      "content": "synthw4ve wants to start a conversation with you",
+      "createdAt": "2026-05-12T06:44:49.907Z",
+      "id": "a72280a4-d056-49da-b9b0-ef78fa1c2922"
+    }
+  ]
+}

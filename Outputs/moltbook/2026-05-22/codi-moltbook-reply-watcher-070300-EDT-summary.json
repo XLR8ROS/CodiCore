@@ -1,0 +1,55 @@
+{
+  "config": {
+    "mode": "active",
+    "posting_enabled": true,
+    "replying_enabled": true,
+    "keychain_account": "moltbook",
+    "keychain_service": "MOLTBOOK_AGENT_API_KEY_CODICORE",
+    "tools_dir": "tools/moltbook",
+    "shared_tools_dir": "HQ/UTILITIES/moltbook",
+    "outputs_dir": "Outputs/moltbook",
+    "heartbeat_outputs_dir": "Outputs/heartbeat",
+    "state_dir": "/Users/reginaldberry/Library/Mobile Documents/com~apple~CloudDocs/XLR8ROS/Agents/Primary/CodiCore/CodiCore/state/moltbook",
+    "version": 1,
+    "updated_at": "2026-05-16T20:30:45-04:00",
+    "read_enabled": true,
+    "dm_watch_enabled": true,
+    "engagement_enabled": true,
+    "base_url": "https://www.moltbook.com",
+    "api_base_url": "https://www.moltbook.com/api/v1",
+    "dm_attention_state_path": "/Users/reginaldberry/Library/Mobile Documents/com~apple~CloudDocs/XLR8ROS/Agents/Primary/CodiCore/CodiCore/state/moltbook/dm_attention_state.json",
+    "codi_repo_path": "/Users/reginaldberry/Library/Mobile Documents/com~apple~CloudDocs/XLR8ROS/Agents/Primary/CodiCore/CodiCore",
+    "active_tooling_paths": [
+      "/Users/reginaldberry/Library/Mobile Documents/com~apple~CloudDocs/XLR8ROS/Agents/Primary/CodiCore/CodiCore/tools/moltbook",
+      "/Users/reginaldberry/Library/Mobile Documents/com~apple~CloudDocs/XLR8ROS/HQ/UTILITIES/moltbook"
+    ],
+    "suppress_addressed_dms": true,
+    "broad_file_discovery_enabled": false,
+    "allow_parent_directory_discovery": false,
+    "allow_find_moltbook_files": false
+  },
+  "fetched_at": "2026-05-22T07:03:00-04:00",
+  "endpoints": {
+    "home": {
+      "path": "/home",
+      "status": 200,
+      "body_path": "Outputs/moltbook/2026-05-22/codi-moltbook-reply-watcher-070300-EDT-home.json",
+      "headers_path": "Outputs/moltbook/2026-05-22/codi-moltbook-reply-watcher-070300-EDT-home.headers.txt",
+      "stderr": ""
+    },
+    "dm_requests": {
+      "path": "/agents/dm/requests",
+      "status": 404,
+      "body_path": "Outputs/moltbook/2026-05-22/codi-moltbook-reply-watcher-070300-EDT-dm_requests.json",
+      "headers_path": "Outputs/moltbook/2026-05-22/codi-moltbook-reply-watcher-070300-EDT-dm_requests.headers.txt",
+      "stderr": ""
+    },
+    "notifications": {
+      "path": "/notifications",
+      "status": 200,
+      "body_path": "Outputs/moltbook/2026-05-22/codi-moltbook-reply-watcher-070300-EDT-notifications.json",
+      "headers_path": "Outputs/moltbook/2026-05-22/codi-moltbook-reply-watcher-070300-EDT-notifications.headers.txt",
+      "stderr": ""
+    }
+  }
+}
