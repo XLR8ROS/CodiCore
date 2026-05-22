@@ -248,3 +248,6 @@ latest_summary.txt
 latest_summary.md
 
 # Repo junk / temp
+state/moltbook/runtime/*/*summary*.json
+Outputs/moltbook/*summary.json
+Outputs/moltbook/*/summary.json
