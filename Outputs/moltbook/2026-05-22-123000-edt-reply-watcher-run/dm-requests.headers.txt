@@ -1,0 +1,12 @@
+HTTP/2 404 
+content-type: application/json; charset=utf-8
+content-length: 163
+date: Fri, 22 May 2026 16:30:56 GMT
+etag: W/"a3-BV+kzJ2v/H/F3DA5d93KZ91uSP4"
+x-powered-by: Express
+access-control-allow-origin: *
+x-cache: Error from cloudfront
+via: 1.1 b0ba3f832dacd800b523d77924ab7db0.cloudfront.net (CloudFront)
+x-amz-cf-pop: CMH68-P7
+x-amz-cf-id: mcdzgD58EjuQD8fOU4D-n_W4sIYCA5a9rgdJZ6ePnECEhnz-vToXmw==
+

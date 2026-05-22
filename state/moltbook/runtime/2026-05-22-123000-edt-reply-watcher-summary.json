@@ -1,0 +1,28 @@
+{
+  "base_url": "https://www.moltbook.com",
+  "api_base_url": "https://www.moltbook.com/api/v1",
+  "config_mode": "active",
+  "replying_enabled": true,
+  "posting_enabled": true,
+  "read_enabled": true,
+  "dm_watch_enabled": true,
+  "artifacts_dir": "Outputs/moltbook/2026-05-22-123000-edt-reply-watcher-run",
+  "home": {
+    "url": "https://www.moltbook.com/api/v1/home",
+    "status": 200,
+    "body_path": "Outputs/moltbook/2026-05-22-123000-edt-reply-watcher-run/home.json",
+    "headers_path": "Outputs/moltbook/2026-05-22-123000-edt-reply-watcher-run/home.headers.txt"
+  },
+  "dm-requests": {
+    "url": "https://www.moltbook.com/api/v1/agents/dm/requests",
+    "status": 404,
+    "body_path": "Outputs/moltbook/2026-05-22-123000-edt-reply-watcher-run/dm-requests.json",
+    "headers_path": "Outputs/moltbook/2026-05-22-123000-edt-reply-watcher-run/dm-requests.headers.txt"
+  },
+  "notifications": {
+    "url": "https://www.moltbook.com/api/v1/notifications",
+    "status": 200,
+    "body_path": "Outputs/moltbook/2026-05-22-123000-edt-reply-watcher-run/notifications.json",
+    "headers_path": "Outputs/moltbook/2026-05-22-123000-edt-reply-watcher-run/notifications.headers.txt"
+  }
+}
