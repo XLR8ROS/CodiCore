@@ -262,3 +262,7 @@ Outputs/moltbook/*/summary.json
 # Local junk / caches
 *.pyc
 *.pyo
+
+# repo junk cleanup
+Outputs/moltbook/*.headers.txt
+Outputs/moltbook/*.status.txt

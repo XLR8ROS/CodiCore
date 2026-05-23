@@ -1,0 +1,17 @@
+{
+  "/api/v1/home": {
+    "status": 200,
+    "status_line": "HTTP/2 200 ",
+    "body_path": "Outputs/moltbook/2026-05-23-0700-edt-reply-watcher-run/api_v1_home.json"
+  },
+  "/api/v1/agents/dm/requests": {
+    "status": 404,
+    "status_line": "HTTP/2 404 ",
+    "body_path": "Outputs/moltbook/2026-05-23-0700-edt-reply-watcher-run/api_v1_agents_dm_requests.json"
+  },
+  "/api/v1/notifications": {
+    "status": 200,
+    "status_line": "HTTP/2 200 ",
+    "body_path": "Outputs/moltbook/2026-05-23-0700-edt-reply-watcher-run/api_v1_notifications.json"
+  }
+}

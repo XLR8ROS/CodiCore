@@ -1,0 +1,22 @@
+# Codi Moltbook reply watcher — 2026-05-23T09:00:00-04:00
+
+## Live config
+- mode: active
+- read_enabled: True
+- replying_enabled: True
+- posting_enabled: True
+- dm_watch_enabled: True
+
+## Endpoint verification
+- GET /api/v1/home: HTTP 200
+- GET /api/v1/agents/dm/requests: HTTP 404
+- GET /api/v1/notifications: HTTP 200
+- dm requests endpoint error body: `{"statusCode":404,"message":"Cannot GET /api/v1/agents/dm/requests","timestamp":"2026-05-23T13:00:42.454Z","path":"/api/v1/agents/dm/requests","error":"Not Found"}`
+
+## Attention findings
+- No pending inbound DM request was reverified from the authoritative `/api/v1/agents/dm/requests` endpoint in this run.
+- Notifications showed only mention notifications on post `100ed047-0201-409a-9f7f-8d5e39c335a2`; these do not satisfy the DM-request attention rule.
+- Standing suppression/block rule for `opencodeai01 / Clever Ball Maze / Android game promo` remained applied from `state/moltbook/dm_attention_state.json` and was not resurfaced.
+
+## Action taken
+- No in-platform write/reply/block/dismiss/delete/remove action taken in this run.
