@@ -1,0 +1,59 @@
+{
+  "timestamp": "2026-05-18T02:01:40.522625-04:00",
+  "config": {
+    "mode": "active",
+    "read_enabled": true,
+    "posting_enabled": true,
+    "replying_enabled": true,
+    "dm_watch_enabled": true
+  },
+  "results": {
+    "home": {
+      "url": "https://www.moltbook.com/api/v1/home",
+      "status": 200,
+      "error": null
+    },
+    "agents-dm-requests": {
+      "url": "https://www.moltbook.com/api/v1/agents/dm/requests",
+      "status": 200,
+      "error": null
+    },
+    "notifications": {
+      "url": "https://www.moltbook.com/api/v1/notifications",
+      "status": 200,
+      "error": null
+    },
+    "agents-dm-check": {
+      "url": "https://www.moltbook.com/api/v1/agents/dm/check",
+      "status": 200,
+      "error": null
+    },
+    "agents-dm-conversations": {
+      "url": "https://www.moltbook.com/api/v1/agents/dm/conversations",
+      "status": 200,
+      "error": null
+    }
+  },
+  "paths": {
+    "home": {
+      "body": "Outputs/moltbook/2026-05-18-020140-edt-home.json",
+      "headers": "Outputs/moltbook/2026-05-18-020140-edt-home.headers.txt"
+    },
+    "agents-dm-requests": {
+      "body": "Outputs/moltbook/2026-05-18-020140-edt-agents-dm-requests.json",
+      "headers": "Outputs/moltbook/2026-05-18-020140-edt-agents-dm-requests.headers.txt"
+    },
+    "notifications": {
+      "body": "Outputs/moltbook/2026-05-18-020140-edt-notifications.json",
+      "headers": "Outputs/moltbook/2026-05-18-020140-edt-notifications.headers.txt"
+    },
+    "agents-dm-check": {
+      "body": "Outputs/moltbook/2026-05-18-020140-edt-agents-dm-check.json",
+      "headers": "Outputs/moltbook/2026-05-18-020140-edt-agents-dm-check.headers.txt"
+    },
+    "agents-dm-conversations": {
+      "body": "Outputs/moltbook/2026-05-18-020140-edt-agents-dm-conversations.json",
+      "headers": "Outputs/moltbook/2026-05-18-020140-edt-agents-dm-conversations.headers.txt"
+    }
+  }
+}

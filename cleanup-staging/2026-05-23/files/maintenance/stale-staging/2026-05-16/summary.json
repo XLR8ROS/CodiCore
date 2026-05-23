@@ -1,0 +1,134 @@
+{
+  "bundle_path": "maintenance/stale-staging/2026-05-16-stale-bundle.tar.gz",
+  "staged_count": 2,
+  "protected_skipped": [
+    "AGENTS.md",
+    "Durable_Memory",
+    "HEARTBEAT.md",
+    "IDENTITY.md",
+    "MEMORY.md",
+    "Navigation",
+    "README.md",
+    "SKILLS.md",
+    "SOUL.md",
+    "TOOLS.md",
+    "USER.md",
+    "canonical_workflow.zip",
+    "event-log/README.md",
+    "event-log/events.sqlite",
+    "memory/2026-03-31.md",
+    "memory/2026-04-01.md",
+    "memory/2026-04-05.md",
+    "memory/2026-04-06.md",
+    "memory/2026-04-10.md",
+    "memory/2026-04-21.md",
+    "memory/2026-04-22.md",
+    "memory/2026-04-29.md",
+    "memory/2026-04-30.md",
+    "memory/2026-05-01.md",
+    "memory/2026-05-02.md",
+    "memory/2026-05-03.md",
+    "memory/2026-05-04.md",
+    "memory/2026-05-05.md",
+    "memory/2026-05-07.md",
+    "memory/2026-05-08.md",
+    "memory/2026-05-10.md",
+    "memory/2026-05-11.md",
+    "memory/2026-05-14.md",
+    "memory/2026-05-15.md",
+    "memory/2026-05-16.md",
+    "state",
+    "tools"
+  ],
+  "uncertain_items": [
+    {
+      "path": ".gitignore",
+      "reason": "classification uncertain"
+    },
+    {
+      "path": "Distilled_Lessons/Distilled_Lessons__2026-05-05-completion-is-verified-state-not-milestone.md",
+      "reason": "classification uncertain"
+    },
+    {
+      "path": "Distilled_Lessons/Distilled_Lessons__2026-05-05-thorough-verification-before-completion.md",
+      "reason": "classification uncertain"
+    },
+    {
+      "path": "Distilled_Lessons/Distilled_Lessons__2026-05-05-completion-requires-verified-state.md",
+      "reason": "classification uncertain"
+    },
+    {
+      "path": "Distilled_Lessons/2026-03-31.md",
+      "reason": "classification uncertain"
+    },
+    {
+      "path": "memory/.DS_Store",
+      "reason": "non-canonical item under memory/ left in place"
+    },
+    {
+      "path": "memory/migration-backups/20260516-daily-note-normalization/2026-05-05-request-timed-out-before-a-res.md",
+      "reason": "non-canonical item under memory/ left in place"
+    },
+    {
+      "path": "memory/migration-backups/20260516-daily-note-normalization/2026-05-08-trust-breach.md",
+      "reason": "non-canonical item under memory/ left in place"
+    },
+    {
+      "path": "memory/migration-backups/20260516-daily-note-normalization/2026-05-11-1441.md",
+      "reason": "non-canonical item under memory/ left in place"
+    },
+    {
+      "path": "memory/migration-backups/20260516-daily-note-normalization/2026-05-10-greeting.md",
+      "reason": "non-canonical item under memory/ left in place"
+    },
+    {
+      "path": "memory/migration-backups/20260516-daily-note-normalization/2026-05-10-0851.md",
+      "reason": "non-canonical item under memory/ left in place"
+    },
+    {
+      "path": "memory/migration-backups/20260516-daily-note-normalization/2026-05-07-closed-book.md",
+      "reason": "non-canonical item under memory/ left in place"
+    },
+    {
+      "path": "event-log/.DS_Store",
+      "reason": "classification uncertain"
+    },
+    {
+      "path": "event-log/minor-action-fallback.md",
+      "reason": "classification uncertain"
+    },
+    {
+      "path": "event-log/migrations/001_init.sql",
+      "reason": "classification uncertain"
+    },
+    {
+      "path": "event-log/run/codi-log-trigger.stderr.log",
+      "reason": "classification uncertain"
+    },
+    {
+      "path": "event-log/run/codi-log-trigger.stdout.log",
+      "reason": "classification uncertain"
+    },
+    {
+      "path": "skills/.DS_Store",
+      "reason": "classification uncertain"
+    },
+    {
+      "path": "skills/sqlite/_meta.json",
+      "reason": "classification uncertain"
+    },
+    {
+      "path": "skills/sqlite/.DS_Store",
+      "reason": "classification uncertain"
+    },
+    {
+      "path": ".dreams/short-term-recall.json",
+      "reason": "classification uncertain"
+    },
+    {
+      "path": ".dreams/events.jsonl",
+      "reason": "classification uncertain"
+    }
+  ],
+  "blockers": []
+}

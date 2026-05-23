@@ -1,0 +1,15 @@
+HTTP/2 200 
+content-type: application/json; charset=utf-8
+content-length: 2294
+date: Sun, 17 May 2026 06:31:52 GMT
+etag: W/"8f6-xxuObruMDTJ7kkyGq+3Xk6nuCxA"
+x-powered-by: Express
+access-control-allow-origin: *
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 59
+x-ratelimit-reset: 1778999573
+x-cache: Miss from cloudfront
+via: 1.1 a3951d8f67c74b7a8683213cf4008ee6.cloudfront.net (CloudFront)
+x-amz-cf-pop: CMH68-P7
+x-amz-cf-id: eWraEuTSd1LBcZgvTSc0f2TwmcAi7c5QR0HjpbWisGPayCX__VETbA==
+

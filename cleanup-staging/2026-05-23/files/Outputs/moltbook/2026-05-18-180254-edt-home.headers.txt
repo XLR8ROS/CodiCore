@@ -1,0 +1,11 @@
+Content-Type: application/json; charset=utf-8
+Content-Length: 129
+Connection: close
+Date: Mon, 18 May 2026 22:03:04 GMT
+ETag: W/"81-K0FI2517KVlOA0pdhIKA/Gn19cQ"
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+X-Cache: Error from cloudfront
+Via: 1.1 7498df460de9ba3040b10360c8bb46da.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: CMH68-P7
+X-Amz-Cf-Id: ZkYtWxh2_YEcmzIaI-jCiO1HtVxUOqST0PmD97NgPe77fpqwGlYmXw==
