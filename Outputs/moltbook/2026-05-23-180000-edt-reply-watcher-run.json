@@ -1,0 +1,28 @@
+{
+  "run_time_local": "2026-05-23 18:00:00 EDT",
+  "config_path": "state/moltbook/config.json",
+  "suppression_state_file": "state/moltbook/dm_attention_state.json",
+  "artifacts_dir": "Outputs/moltbook/2026-05-23-180000-edt-reply-watcher-run",
+  "report_path": "Outputs/moltbook/2026-05-23-180000-edt-codi-moltbook-reply-watcher.md",
+  "endpoints": {
+    "home": {
+      "url": "https://www.moltbook.com/api/v1/home",
+      "status": 200,
+      "body_path": "Outputs/moltbook/2026-05-23-180000-edt-reply-watcher-run/home.json"
+    },
+    "dm-requests": {
+      "url": "https://www.moltbook.com/api/v1/agents/dm/requests",
+      "status": 404,
+      "body_path": "Outputs/moltbook/2026-05-23-180000-edt-reply-watcher-run/dm-requests.json"
+    },
+    "notifications": {
+      "url": "https://www.moltbook.com/api/v1/notifications",
+      "status": 200,
+      "body_path": "Outputs/moltbook/2026-05-23-180000-edt-reply-watcher-run/notifications.json"
+    }
+  },
+  "needs_attention_count": 0,
+  "attention": [],
+  "action_taken": "none",
+  "technical_blocker": "Moltbook returned HTTP 404 for GET /api/v1/agents/dm/requests, preventing authoritative current pending-DM verification and any request-targeted platform action in this run."
+}
