@@ -258,3 +258,7 @@ latest_summary.md
 state/moltbook/runtime/*/*summary*.json
 Outputs/moltbook/*summary.json
 Outputs/moltbook/*/summary.json
+
+# Local junk / caches
+*.pyc
+*.pyo
