@@ -1,0 +1,10 @@
+{
+  "status": 404,
+  "body": {
+    "statusCode": 404,
+    "message": "Cannot GET /api/v1/agents/dm/requests",
+    "timestamp": "2026-05-23T14:00:57.235Z",
+    "path": "/api/v1/agents/dm/requests",
+    "error": "Not Found"
+  }
+}
