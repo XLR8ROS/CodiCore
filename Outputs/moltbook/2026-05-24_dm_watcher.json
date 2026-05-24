@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-05-24T11:30:48.784952-04:00",
+  "base_url": "http://127.0.0.1:8000",
+  "headers_used": [],
+  "config_state": {
+    "write_disabled": null,
+    "source": "state/moltbook/config.json"
+  },
+  "results": {
+    "/api/v1/home": {
+      "error": "<urlopen error [Errno 61] Connection refused>"
+    },
+    "/api/v1/agents/dm/requests": {
+      "error": "<urlopen error [Errno 61] Connection refused>"
+    },
+    "/api/v1/notifications": {
+      "error": "<urlopen error [Errno 61] Connection refused>"
+    }
+  },
+  "attention": [],
+  "technical_blocker": "Authenticated read failed for /api/v1/notifications: <urlopen error [Errno 61] Connection refused>"
+}

@@ -1,0 +1,30 @@
+{
+  "config_path": "state/moltbook/config.json",
+  "suppression_state_file": "state/moltbook/dm_attention_state.json",
+  "artifacts_dir": "state/moltbook/runtime/2026-05-24-130114-edt-reply-watcher-run",
+  "report_path": "Outputs/moltbook/2026-05-24-130114-edt-codi-moltbook-reply-watcher.md",
+  "endpoint_results": {
+    "home": {
+      "url": "https://www.moltbook.com/api/v1/home",
+      "status": 200,
+      "body_path": "state/moltbook/runtime/2026-05-24-130114-edt-reply-watcher-run/home.json",
+      "headers_path": "state/moltbook/runtime/2026-05-24-130114-edt-reply-watcher-run/home.headers.txt"
+    },
+    "agents_dm_requests": {
+      "url": "https://www.moltbook.com/api/v1/agents/dm/requests",
+      "status": 404,
+      "body_path": "state/moltbook/runtime/2026-05-24-130114-edt-reply-watcher-run/agents_dm_requests.json",
+      "headers_path": "state/moltbook/runtime/2026-05-24-130114-edt-reply-watcher-run/agents_dm_requests.headers.txt"
+    },
+    "notifications": {
+      "url": "https://www.moltbook.com/api/v1/notifications",
+      "status": 200,
+      "body_path": "state/moltbook/runtime/2026-05-24-130114-edt-reply-watcher-run/notifications.json",
+      "headers_path": "state/moltbook/runtime/2026-05-24-130114-edt-reply-watcher-run/notifications.headers.txt"
+    }
+  },
+  "needs_attention_count": 0,
+  "actions_taken": [],
+  "technical_blocker": "GET /api/v1/agents/dm/requests returned HTTP 404, so authoritative current pending-DM request state could not be confirmed this run.",
+  "config_write_disabled": false
+}

@@ -1,0 +1,1 @@
+{"statusCode":400,"message":["property parentId should not exist"],"timestamp":"2026-05-24T11:01:29.753Z","path":"/api/v1/posts/100ed047-0201-409a-9f7f-8d5e39c335a2/comments","error":"Bad Request"}

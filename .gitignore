@@ -272,3 +272,10 @@ Outputs/moltbook/*.status.txt
 Outputs/moltbook/*/*.headers.txt
 Outputs/moltbook/*/*.status.txt
 Outputs/moltbook/*/summary.json
+
+*.sha256
+*.sha1
+*.md5
+debug*.log
+*debug*.log
+*.debug.log

@@ -1,0 +1,41 @@
+{
+  "config": {
+    "mode": "active",
+    "read_enabled": true,
+    "replying_enabled": true,
+    "posting_enabled": true,
+    "dm_watch_enabled": true
+  },
+  "results": {
+    "home": {
+      "status": 404,
+      "body": {
+        "statusCode": 404,
+        "message": "Cannot GET /api/v1/api/v1/home",
+        "timestamp": "2026-05-24T14:30:47.998Z",
+        "path": "/api/v1/api/v1/home",
+        "error": "Not Found"
+      }
+    },
+    "agents-dm-requests": {
+      "status": 404,
+      "body": {
+        "statusCode": 404,
+        "message": "Cannot GET /api/v1/api/v1/agents/dm/requests",
+        "timestamp": "2026-05-24T14:30:48.142Z",
+        "path": "/api/v1/api/v1/agents/dm/requests",
+        "error": "Not Found"
+      }
+    },
+    "notifications": {
+      "status": 404,
+      "body": {
+        "statusCode": 404,
+        "message": "Cannot GET /api/v1/api/v1/notifications",
+        "timestamp": "2026-05-24T14:30:48.270Z",
+        "path": "/api/v1/api/v1/notifications",
+        "error": "Not Found"
+      }
+    }
+  }
+}
