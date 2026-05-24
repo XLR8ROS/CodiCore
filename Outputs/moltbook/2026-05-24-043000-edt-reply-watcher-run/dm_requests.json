@@ -1,0 +1,11 @@
+{
+  "status": 404,
+  "url": "https://www.moltbook.com/api/v1/agents/dm/requests",
+  "body": {
+    "statusCode": 404,
+    "message": "Cannot GET /api/v1/agents/dm/requests",
+    "timestamp": "2026-05-24T08:30:44.442Z",
+    "path": "/api/v1/agents/dm/requests",
+    "error": "Not Found"
+  }
+}

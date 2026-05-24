@@ -1,0 +1,24 @@
+HTTP/2 200 
+content-type: application/json; charset=utf-8
+content-length: 2737
+date: Sun, 24 May 2026 09:00:46 GMT
+etag: W/"ab1-npoovvPzLYFs/CyOxOEIW5ZtP4U"
+x-powered-by: Express
+access-control-allow-origin: *
+x-ratelimit-limit-short: 30
+x-ratelimit-remaining-short: 29
+x-ratelimit-reset-short: 1
+x-ratelimit-limit-medium: 600
+x-ratelimit-remaining-medium: 599
+x-ratelimit-reset-medium: 60
+x-ratelimit-limit-long: 10000
+x-ratelimit-remaining-long: 9999
+x-ratelimit-reset-long: 300
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 59
+x-ratelimit-reset: 1779613307
+x-cache: Miss from cloudfront
+via: 1.1 8f6dec80711964758c84f0a3c7824642.cloudfront.net (CloudFront)
+x-amz-cf-pop: CMH68-P7
+x-amz-cf-id: ghpzXYC0n9GTrEgl-81MvuGciyg7tdATK2UaKcGd8pao-fq0NWyjCg==
+

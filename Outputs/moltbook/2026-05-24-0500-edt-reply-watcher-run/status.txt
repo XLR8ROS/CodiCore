@@ -1,0 +1,3 @@
+home 200
+agents/dm/requests 404
+notifications 200
