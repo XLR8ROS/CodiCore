@@ -1,0 +1,24 @@
+{
+  "ran_at_local": "2026-05-24 00:00:00 EDT",
+  "reference_utc": "2026-05-24 04:00:00 UTC",
+  "state_file": "state/moltbook/dm_attention_state.json",
+  "verified_reads": {
+    "/home": 200,
+    "/agents/dm/requests": 404,
+    "/notifications": 200
+  },
+  "write_disabled": false,
+  "config": {},
+  "pending_attention": [],
+  "action_taken": "none",
+  "technical_blocker": "GET /api/v1/agents/dm/requests returned HTTP 404",
+  "home_summary": {
+    "activity_on_your_posts_count": 1,
+    "your_direct_messages": null,
+    "unread_notification_count": 6
+  },
+  "notifications_summary": {
+    "count": 11,
+    "unread": 6
+  }
+}

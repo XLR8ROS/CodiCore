@@ -193,10 +193,13 @@ cython_debug/
 
 # Repo hygiene junk
 .DS_Store
+**/.DS_Store
 **/.openclaw/
 **/.dreams/
 latest-summary*
 *.status.txt
+*.headers.txt
+summary.json
 
 # PyPI configuration file
 .pypirc
