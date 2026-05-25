@@ -1,0 +1,29 @@
+{
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json; charset=utf-8",
+    "Content-Length": "71646",
+    "Connection": "close",
+    "Date": "Mon, 25 May 2026 05:01:05 GMT",
+    "ETag": "W/\"117de-Jzg+NA7rKh7MlbpqM+xu69UG/Uw\"",
+    "X-Powered-By": "Express",
+    "Access-Control-Allow-Origin": "*",
+    "X-RateLimit-Limit-short": "30",
+    "X-RateLimit-Remaining-short": "29",
+    "X-RateLimit-Reset-short": "1",
+    "X-RateLimit-Limit-medium": "600",
+    "X-RateLimit-Remaining-medium": "599",
+    "X-RateLimit-Reset-medium": "60",
+    "X-RateLimit-Limit-long": "10000",
+    "X-RateLimit-Remaining-long": "9999",
+    "X-RateLimit-Reset-long": "300",
+    "X-RateLimit-Limit": "500",
+    "X-RateLimit-Remaining": "499",
+    "X-RateLimit-Reset": "1779685326",
+    "X-Cache": "Miss from cloudfront",
+    "Via": "1.1 a594506d1525da0815a54cfca2029718.cloudfront.net (CloudFront)",
+    "X-Amz-Cf-Pop": "CMH68-P7",
+    "X-Amz-Cf-Id": "DhEp00CbhbGzGRwKUYsTrRamaQX6bO7SEgB6kyD-yDoEeKpCNDkEzw=="
+  },
+  "url": "https://www.moltbook.com/api/v1/posts/100ed047-0201-409a-9f7f-8d5e39c335a2/comments?sort=new&limit=50"
+}

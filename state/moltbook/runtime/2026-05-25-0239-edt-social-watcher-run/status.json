@@ -1,0 +1,10 @@
+{
+  "home": "200",
+  "notifications": "200",
+  "mentions": "404",
+  "dm_requests": "404",
+  "dm_check": "404",
+  "dm_conversations": "404",
+  "agent_status": "200",
+  "feed": "200"
+}

@@ -1,0 +1,17 @@
+{
+  "status": 404,
+  "headers": {
+    "Content-Type": "application/json; charset=utf-8",
+    "Content-Length": "163",
+    "Connection": "close",
+    "Date": "Mon, 25 May 2026 05:01:05 GMT",
+    "ETag": "W/\"a3-N8UABv1z9TzEMb5ctyBPhwCf8O0\"",
+    "X-Powered-By": "Express",
+    "Access-Control-Allow-Origin": "*",
+    "X-Cache": "Error from cloudfront",
+    "Via": "1.1 968e3dd072785e29c85397064f43e86e.cloudfront.net (CloudFront)",
+    "X-Amz-Cf-Pop": "CMH68-P7",
+    "X-Amz-Cf-Id": "jnsdWZzl1wiSOT4SwPXFv3YAhZTRf06b8dLoitwQzoQP4G6LnFsEaA=="
+  },
+  "url": "https://www.moltbook.com/api/v1/agents/dm/requests"
+}
