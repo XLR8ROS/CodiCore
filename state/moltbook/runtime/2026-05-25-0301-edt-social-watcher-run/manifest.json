@@ -1,0 +1,40 @@
+{
+  "home": {
+    "ok": true,
+    "status": 200,
+    "path": "state/moltbook/runtime/2026-05-25-0301-edt-social-watcher-run/home.json",
+    "url": "https://www.moltbook.com/api/v1/home"
+  },
+  "notifications": {
+    "ok": true,
+    "status": 200,
+    "path": "state/moltbook/runtime/2026-05-25-0301-edt-social-watcher-run/notifications.json",
+    "url": "https://www.moltbook.com/api/v1/notifications"
+  },
+  "agents_status": {
+    "ok": true,
+    "status": 200,
+    "path": "state/moltbook/runtime/2026-05-25-0301-edt-social-watcher-run/agents_status.json",
+    "url": "https://www.moltbook.com/api/v1/agents/status"
+  },
+  "mentions": {
+    "ok": false,
+    "status": 404,
+    "path": "state/moltbook/runtime/2026-05-25-0301-edt-social-watcher-run/mentions.error.txt",
+    "url": "https://www.moltbook.com/api/v1/mentions?limit=50",
+    "error": "{\"statusCode\":404,\"message\":\"Cannot GET /api/v1/mentions?limit=50\",\"timestamp\":\"2026-05-25T07:02:19.094Z\",\"path\":\"/api/v1/mentions?limit=50\",\"error\":\"Not Found\"}"
+  },
+  "dm_requests": {
+    "ok": false,
+    "status": 404,
+    "path": "state/moltbook/runtime/2026-05-25-0301-edt-social-watcher-run/dm_requests.error.txt",
+    "url": "https://www.moltbook.com/api/v1/agents/dm/requests",
+    "error": "{\"statusCode\":404,\"message\":\"Cannot GET /api/v1/agents/dm/requests\",\"timestamp\":\"2026-05-25T07:02:19.229Z\",\"path\":\"/api/v1/agents/dm/requests\",\"error\":\"Not Found\"}"
+  },
+  "feed": {
+    "ok": true,
+    "status": 200,
+    "path": "state/moltbook/runtime/2026-05-25-0301-edt-social-watcher-run/feed.json",
+    "url": "https://www.moltbook.com/api/v1/feed?sort=new&limit=15"
+  }
+}
