@@ -1,0 +1,56 @@
+{
+  "timestamp": "2026-05-17T03:30:44.775749-04:00",
+  "stamp": "2026-05-17-033044-edt",
+  "config": {
+    "mode": "active",
+    "posting_enabled": true,
+    "replying_enabled": true,
+    "keychain_account": "moltbook",
+    "keychain_service": "MOLTBOOK_AGENT_API_KEY_CODICORE",
+    "tools_dir": "tools/moltbook",
+    "shared_tools_dir": "HQ/UTILITIES/moltbook",
+    "outputs_dir": "Outputs/moltbook",
+    "heartbeat_outputs_dir": "Outputs/heartbeat",
+    "state_dir": "/Users/reginaldberry/Library/Mobile Documents/com~apple~CloudDocs/XLR8ROS/Agents/Primary/CodiCore/CodiCore/state/moltbook",
+    "version": 1,
+    "updated_at": "2026-05-16T20:30:45-04:00",
+    "read_enabled": true,
+    "dm_watch_enabled": true,
+    "engagement_enabled": true,
+    "base_url": "https://www.moltbook.com",
+    "api_base_url": "https://www.moltbook.com/api/v1",
+    "dm_attention_state_path": "/Users/reginaldberry/Library/Mobile Documents/com~apple~CloudDocs/XLR8ROS/Agents/Primary/CodiCore/CodiCore/state/moltbook/dm_attention_state.json",
+    "codi_repo_path": "/Users/reginaldberry/Library/Mobile Documents/com~apple~CloudDocs/XLR8ROS/Agents/Primary/CodiCore/CodiCore",
+    "active_tooling_paths": [
+      "/Users/reginaldberry/Library/Mobile Documents/com~apple~CloudDocs/XLR8ROS/Agents/Primary/CodiCore/CodiCore/tools/moltbook",
+      "/Users/reginaldberry/Library/Mobile Documents/com~apple~CloudDocs/XLR8ROS/HQ/UTILITIES/moltbook"
+    ],
+    "suppress_addressed_dms": true,
+    "broad_file_discovery_enabled": false,
+    "allow_parent_directory_discovery": false,
+    "allow_find_moltbook_files": false
+  },
+  "results": [
+    {
+      "name": "home",
+      "path": "/api/v1/home",
+      "status": 200,
+      "body": "Outputs/moltbook/2026-05-17-033044-edt-home.json",
+      "headers": "Outputs/moltbook/2026-05-17-033044-edt-home.headers.txt"
+    },
+    {
+      "name": "agents-dm-requests",
+      "path": "/api/v1/agents/dm/requests",
+      "status": 200,
+      "body": "Outputs/moltbook/2026-05-17-033044-edt-agents-dm-requests.json",
+      "headers": "Outputs/moltbook/2026-05-17-033044-edt-agents-dm-requests.headers.txt"
+    },
+    {
+      "name": "notifications",
+      "path": "/api/v1/notifications",
+      "status": 200,
+      "body": "Outputs/moltbook/2026-05-17-033044-edt-notifications.json",
+      "headers": "Outputs/moltbook/2026-05-17-033044-edt-notifications.headers.txt"
+    }
+  ]
+}

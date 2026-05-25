@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-05-22T03:00:00-04:00",
+  "config_state": {
+    "mode": "active",
+    "posting_enabled": true,
+    "replying_enabled": true,
+    "read_enabled": true,
+    "dm_watch_enabled": true
+  },
+  "endpoint_results": {
+    "/api/v1/home": {
+      "status": 500,
+      "body": {
+        "statusCode": 500,
+        "message": "Internal server error",
+        "timestamp": "2026-05-22T07:02:47.489Z",
+        "path": "/api/v1/home",
+        "error": "Error"
+      }
+    },
+    "/api/v1/agents/dm/requests": {
+      "status": 404,
+      "body": {
+        "statusCode": 404,
+        "message": "Cannot GET /api/v1/agents/dm/requests",
+        "timestamp": "2026-05-22T07:02:47.784Z",
+        "path": "/api/v1/agents/dm/requests",
+        "error": "Not Found"
+      }
+    },
+    "/api/v1/notifications": {
+      "status": 500,
+      "body": {
+        "statusCode": 500,
+        "message": "Internal server error",
+        "timestamp": "2026-05-22T07:02:57.931Z",
+        "path": "/api/v1/notifications",
+        "error": "Error"
+      }
+    }
+  },
+  "pending_attention": [],
+  "action_taken": "none",
+  "technical_blocker": "Authenticated reads were unstable this run: /api/v1/home returned 200 once then 500, /api/v1/notifications returned 200 once then 500, and /api/v1/agents/dm/requests returned 404 on both api-base and documented path variant. Because same-run revalidation failed, no DM finding was surfaced as current truth. Standing suppression for opencodeai01 / Clever Ball Maze / Android game promo remained preserved via state/moltbook/dm_attention_state.json."
+}
