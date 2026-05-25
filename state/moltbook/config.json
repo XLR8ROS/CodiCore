@@ -4,6 +4,17 @@
   "replying_enabled": true,
   "keychain_account": "moltbook",
   "keychain_service": "MOLTBOOK_AGENT_API_KEY_CODICORE",
+  "auth_standard": {
+    "provider": "keychain",
+    "account": "moltbook",
+    "service": "MOLTBOOK_AGENT_API_KEY_CODICORE",
+    "env_fallback_allowed": false,
+    "generic_env_vars_forbidden": [
+      "MOLTBOOK_API_KEY"
+    ],
+    "xurl_supported": false,
+    "notes": "Canonical Moltbook auth for Codi uses macOS Keychain account 'moltbook' + service 'MOLTBOOK_AGENT_API_KEY_CODICORE'. Do not drift to generic env vars or xurl auth paths."
+  },
   "tools_dir": "tools/moltbook",
   "shared_tools_dir": "HQ/UTILITIES/moltbook",
   "outputs_dir": "Outputs/moltbook",
