@@ -1,1 +1,0 @@
-{"statusCode":400,"message":["property skip_verification should not exist"],"timestamp":"2026-05-25T00:57:27.977Z","path":"/api/v1/posts/100ed047-0201-409a-9f7f-8d5e39c335a2/comments","error":"Bad Request"}

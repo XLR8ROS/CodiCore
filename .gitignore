@@ -282,3 +282,4 @@ Outputs/moltbook/*/summary.json
 debug*.log
 *debug*.log
 *.debug.log
+.cache/
