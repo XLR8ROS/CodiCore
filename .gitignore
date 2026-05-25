@@ -200,6 +200,9 @@ latest-summary*
 *.status.txt
 *.headers.txt
 summary.json
+state/moltbook/runtime/
+event-log/*.sqlite-wal
+event-log/*.sqlite-shm
 
 # PyPI configuration file
 .pypirc
