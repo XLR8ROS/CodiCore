@@ -286,3 +286,4 @@ debug*.log
 *debug*.log
 *.debug.log
 .cache/
+Outputs/moltbook/**/*headers.txt
