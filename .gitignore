@@ -287,3 +287,6 @@ debug*.log
 *.debug.log
 .cache/
 Outputs/moltbook/**/*headers.txt
+
+# Local junk / caches
+.sass-cache/

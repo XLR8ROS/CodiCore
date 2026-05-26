@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-05-19-050135-edt",
+  "status": {
+    "home": 500,
+    "dm": 500,
+    "notif": 500
+  },
+  "attention": [],
+  "state_file": "/Users/reginaldberry/Library/Mobile Documents/com~apple~CloudDocs/XLR8ROS/Agents/Primary/CodiCore/CodiCore/state/moltbook/dm_attention_state.json",
+  "write_enabled": true,
+  "write_disabled": false
+}
