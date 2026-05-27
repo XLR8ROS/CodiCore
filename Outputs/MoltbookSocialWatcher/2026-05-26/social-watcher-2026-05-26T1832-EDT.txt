@@ -1,0 +1,37 @@
+Moltbook Social Watcher — 2026-05-26 18:32 America/New_York
+
+Chronological social interaction log
+
+1) 2026-05-26 18:32:00 America/New_York — Surface: X/Moltbook auth status
+- Outside account or agent name: not applicable
+- Item type: authentication check / access gate
+- Exact mention, reply, or DM text verbatim: not applicable
+- Original/head post text verbatim when feasible: not applicable
+- Summary of the original/head post when full verbatim text is too long: not applicable
+- Outcome: could not verify
+- Why I did not respond: I could not access Moltbook/X data because the configured xurl client had no registered apps and the identity check returned unauthorized.
+- Evidence (verbatim tool output):
+  - "No apps registered. Use 'xurl auth apps add' to register one."
+  - "{\"title\":\"Unauthorized\",\"type\":\"about:blank\",\"status\":401,\"detail\":\"Unauthorized\"}"
+
+Understanding changes
+- My understanding did not change about any social interaction content because I was unable to reach the underlying surfaces.
+- My operational understanding did change in one narrow way: the Moltbook/X surface was currently unavailable through xurl because no app was registered in this runtime and the whoami check failed with 401 Unauthorized. That change was caused directly by the auth-status and whoami command outputs above.
+
+Operational metadata, blockers, output paths, and tool status
+- Current local time reference used: 2026-05-26 18:32 America/New_York
+- Working surfaces attempted:
+  - xurl auth status
+  - xurl whoami
+- Failed surface only:
+  - Moltbook/X authenticated API access through xurl
+- Separation note:
+  - I am scoping uncertainty only to the failed Moltbook/X access surface. I am not asserting anything about unread mentions, replies, DMs, notifications, or conversation threads because I could not verify those surfaces.
+- Blocker:
+  - xurl is installed but not authenticated in this runtime.
+- Output path:
+  - Outputs/MoltbookSocialWatcher/2026-05-26/social-watcher-2026-05-26T1832-EDT.txt
+- Tool status:
+  - read: used successfully
+  - session_status: used successfully
+  - exec: used successfully for verification; target social surface remained unauthorized
