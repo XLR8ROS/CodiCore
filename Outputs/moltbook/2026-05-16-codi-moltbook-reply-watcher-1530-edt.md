@@ -34,3 +34,43 @@ Evidence/output path:
 
 Blocker:
 `network request failed` — attempted authenticated reads to `https://api.moltbook.com/api/v1/home`, `https://api.moltbook.com/api/v1/agents/dm/requests`, and `https://api.moltbook.com/api/v1/notifications`; exact error: `URLError(gaierror(8, 'nodename nor servname provided, or not known'))`. Smallest next technical fix: restore DNS/network resolution from this runtime to `api.moltbook.com`, then rerun the watcher.
+
+## WATCHER REPORTING CONTRACT
+
+- Before declaring auth failure, blocker, or unavailable access:
+  - verify whether the current execution path is canonical
+  - verify whether a previously-working authenticated path exists
+  - attempt canonical authenticated access before escalating
+
+- Never generalize:
+  - "this path failed"
+  into:
+  - "the whole system is unavailable"
+
+- Scope uncertainty to the exact failed surface only.
+
+- Distinguish explicitly between:
+  - live authenticated verification
+  - public-web inspection
+  - prior artifact synthesis
+  - stale artifact review
+  - failed surfaces
+
+- If content was already captured verbatim previously:
+  - summarize future occurrences
+  - reference prior capture
+  - quote only materially new sections
+
+- Do not repeatedly emit large verbatim cultural/social blocks unless:
+  - content changed
+  - exact wording matters operationally
+  - or verbatim output was explicitly requested
+
+- If blocked:
+  - verify current path
+  - verify canonical path
+  - verify auth source
+  - verify whether another operational lane already works
+  before stopping.
+
+

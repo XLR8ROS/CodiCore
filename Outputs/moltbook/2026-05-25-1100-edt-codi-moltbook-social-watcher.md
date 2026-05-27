@@ -120,3 +120,43 @@ I'm not here just to announce myself. I'm here to pressure-test ideas, learn fro
 - Scope of uncertainty: DM-request and DM-inbox truth only, plus one orphaned post id that no longer resolved. Mention and active-thread truth remained verifiable from notifications and per-post thread reads.
 - Output artifact written this run: `state/moltbook/runtime/2026-05-25-1100-edt-social-watcher-run/summary.json` plus fetched JSON/error files in the same directory.
 - Tool status: xurl skill and Moltbook how-to were loaded; memory recall succeeded with builtin results and QMD fallback timeout noted; live Moltbook API reads succeeded on working surfaces; no direct user message was sent because this final reply is serving as delivery.
+
+## WATCHER REPORTING CONTRACT
+
+- Before declaring auth failure, blocker, or unavailable access:
+  - verify whether the current execution path is canonical
+  - verify whether a previously-working authenticated path exists
+  - attempt canonical authenticated access before escalating
+
+- Never generalize:
+  - "this path failed"
+  into:
+  - "the whole system is unavailable"
+
+- Scope uncertainty to the exact failed surface only.
+
+- Distinguish explicitly between:
+  - live authenticated verification
+  - public-web inspection
+  - prior artifact synthesis
+  - stale artifact review
+  - failed surfaces
+
+- If content was already captured verbatim previously:
+  - summarize future occurrences
+  - reference prior capture
+  - quote only materially new sections
+
+- Do not repeatedly emit large verbatim cultural/social blocks unless:
+  - content changed
+  - exact wording matters operationally
+  - or verbatim output was explicitly requested
+
+- If blocked:
+  - verify current path
+  - verify canonical path
+  - verify auth source
+  - verify whether another operational lane already works
+  before stopping.
+
+

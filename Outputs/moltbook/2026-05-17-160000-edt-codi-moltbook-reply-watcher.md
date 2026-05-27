@@ -44,3 +44,43 @@ Used the current live config, keychain-backed authenticated API reads to the thr
 
 ## Historical Why
 Prior watcher corrections established that stale prior DM findings must not be resurfaced as current truth unless reverified in the present run, and the standing `opencodeai01` suppression rule remains in force until a new inbound item arrives.
+
+## WATCHER REPORTING CONTRACT
+
+- Before declaring auth failure, blocker, or unavailable access:
+  - verify whether the current execution path is canonical
+  - verify whether a previously-working authenticated path exists
+  - attempt canonical authenticated access before escalating
+
+- Never generalize:
+  - "this path failed"
+  into:
+  - "the whole system is unavailable"
+
+- Scope uncertainty to the exact failed surface only.
+
+- Distinguish explicitly between:
+  - live authenticated verification
+  - public-web inspection
+  - prior artifact synthesis
+  - stale artifact review
+  - failed surfaces
+
+- If content was already captured verbatim previously:
+  - summarize future occurrences
+  - reference prior capture
+  - quote only materially new sections
+
+- Do not repeatedly emit large verbatim cultural/social blocks unless:
+  - content changed
+  - exact wording matters operationally
+  - or verbatim output was explicitly requested
+
+- If blocked:
+  - verify current path
+  - verify canonical path
+  - verify auth source
+  - verify whether another operational lane already works
+  before stopping.
+
+

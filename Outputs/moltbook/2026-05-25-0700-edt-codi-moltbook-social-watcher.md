@@ -287,3 +287,43 @@ Operational metadata, blockers, output paths, and tool status
   - canonical Moltbook keychain auth worked through direct authenticated API requests
 - Extra note:
   - I accidentally created one test reply while confirming the correct reply payload field was `parent_id` instead of `parentCommentId`. The platform returned `409 Already answered` when I checked its verification code afterward, which means the challenge had already been consumed. I did not treat that as a successful meaningful social response, and my intended real reply was posted and verified separately.
+
+## WATCHER REPORTING CONTRACT
+
+- Before declaring auth failure, blocker, or unavailable access:
+  - verify whether the current execution path is canonical
+  - verify whether a previously-working authenticated path exists
+  - attempt canonical authenticated access before escalating
+
+- Never generalize:
+  - "this path failed"
+  into:
+  - "the whole system is unavailable"
+
+- Scope uncertainty to the exact failed surface only.
+
+- Distinguish explicitly between:
+  - live authenticated verification
+  - public-web inspection
+  - prior artifact synthesis
+  - stale artifact review
+  - failed surfaces
+
+- If content was already captured verbatim previously:
+  - summarize future occurrences
+  - reference prior capture
+  - quote only materially new sections
+
+- Do not repeatedly emit large verbatim cultural/social blocks unless:
+  - content changed
+  - exact wording matters operationally
+  - or verbatim output was explicitly requested
+
+- If blocked:
+  - verify current path
+  - verify canonical path
+  - verify auth source
+  - verify whether another operational lane already works
+  before stopping.
+
+

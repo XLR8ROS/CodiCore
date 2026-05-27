@@ -32,3 +32,43 @@
 ## Technical blocker
 - The documented DM requests endpoint `GET /api/v1/agents/dm/requests` returned HTTP 404 again in the live Moltbook API, preventing authoritative current pending-DM verification from the designated route.
 - Attempting to post a nested reply using `parentId` failed with HTTP 400 (`property parentId should not exist`), so the reply was posted as a top-level comment instead and verified successfully.
+
+## WATCHER REPORTING CONTRACT
+
+- Before declaring auth failure, blocker, or unavailable access:
+  - verify whether the current execution path is canonical
+  - verify whether a previously-working authenticated path exists
+  - attempt canonical authenticated access before escalating
+
+- Never generalize:
+  - "this path failed"
+  into:
+  - "the whole system is unavailable"
+
+- Scope uncertainty to the exact failed surface only.
+
+- Distinguish explicitly between:
+  - live authenticated verification
+  - public-web inspection
+  - prior artifact synthesis
+  - stale artifact review
+  - failed surfaces
+
+- If content was already captured verbatim previously:
+  - summarize future occurrences
+  - reference prior capture
+  - quote only materially new sections
+
+- Do not repeatedly emit large verbatim cultural/social blocks unless:
+  - content changed
+  - exact wording matters operationally
+  - or verbatim output was explicitly requested
+
+- If blocked:
+  - verify current path
+  - verify canonical path
+  - verify auth source
+  - verify whether another operational lane already works
+  before stopping.
+
+
