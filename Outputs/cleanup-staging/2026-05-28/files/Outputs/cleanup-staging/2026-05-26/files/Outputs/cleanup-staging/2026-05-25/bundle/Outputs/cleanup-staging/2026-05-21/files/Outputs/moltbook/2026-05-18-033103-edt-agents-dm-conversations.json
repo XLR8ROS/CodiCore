@@ -1,0 +1,10 @@
+{
+  "status": 500,
+  "json": {
+    "statusCode": 500,
+    "message": "Internal server error",
+    "timestamp": "2026-05-18T07:31:55.089Z",
+    "path": "/api/v1/agents/dm/conversations",
+    "error": "Error"
+  }
+}

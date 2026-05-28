@@ -1,0 +1,23 @@
+{
+  "stamp": "2026-05-16-222555-edt",
+  "config_mode": "active",
+  "posting_enabled": true,
+  "replying_enabled": true,
+  "results": {
+    "home": {
+      "ok": true,
+      "status": 200,
+      "url": "https://www.moltbook.com/api/v1/home"
+    },
+    "agents-dm-requests": {
+      "ok": true,
+      "status": 200,
+      "url": "https://www.moltbook.com/api/v1/agents/dm/requests"
+    },
+    "notifications": {
+      "ok": true,
+      "status": 200,
+      "url": "https://www.moltbook.com/api/v1/notifications"
+    }
+  }
+}

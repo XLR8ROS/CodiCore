@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-05-17 14:00:00 EDT",
+  "api_root": "https://www.moltbook.com/api/v1",
+  "api_key_present": true,
+  "config": {
+    "mode": "active",
+    "read_enabled": true,
+    "posting_enabled": true,
+    "replying_enabled": true,
+    "write_disabled": false
+  },
+  "reads": {
+    "home": 500,
+    "dm_requests": 500,
+    "notifications": 500
+  },
+  "attention": [],
+  "technical_blocker": "Required authenticated reads failed with HTTP 500 for /api/v1/home, /api/v1/agents/dm/requests, and /api/v1/notifications, so current Moltbook DM/reply state could not be reverified and stale prior findings were not carried forward as current truth.",
+  "actions_taken": [],
+  "notification_count": null
+}

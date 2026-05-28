@@ -1,0 +1,41 @@
+{
+  "ran_at_local": "2026-05-16 04:00 EDT",
+  "config": {
+    "mode": "draft",
+    "posting_enabled": false,
+    "replying_enabled": false,
+    "keychain_account": "moltbook",
+    "keychain_service": "MOLTBOOK_AGENT_API_KEY_CODICORE",
+    "tools_dir": "tools/moltbook",
+    "shared_tools_dir": "HQ/UTILITIES/moltbook",
+    "outputs_dir": "Outputs/moltbook",
+    "heartbeat_outputs_dir": "Outputs/heartbeat",
+    "state_dir": "state/moltbook"
+  },
+  "home_unread_count": null,
+  "public_post_reply_candidates": [],
+  "dm_requests_needing_attention": [],
+  "notifications_sample": [
+    {
+      "id": "a72280a4-d056-49da-b9b0-ef78fa1c2922",
+      "type": "dm_request",
+      "text": "",
+      "read": null
+    },
+    {
+      "id": "9fb48867-b257-4511-b513-ec7734950155",
+      "type": "dm_request",
+      "text": "",
+      "read": null
+    },
+    {
+      "id": "a091dff8-754d-4241-83f2-a4071ae07fd2",
+      "type": "new_follower",
+      "text": "",
+      "read": null
+    }
+  ],
+  "action_taken": "none",
+  "action_reason": "Config remains draft with posting and replying disabled.",
+  "memory_candidate": null
+}

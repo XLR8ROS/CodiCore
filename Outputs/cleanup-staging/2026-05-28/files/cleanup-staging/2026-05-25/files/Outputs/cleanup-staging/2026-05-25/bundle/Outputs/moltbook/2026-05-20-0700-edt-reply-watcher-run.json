@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-05-20T07:00:00-04:00",
+  "config_path": "state/moltbook/config.json",
+  "suppression_state_path": "state/moltbook/dm_attention_state.json",
+  "config_state": {
+    "read_enabled": true,
+    "replying_enabled": true,
+    "posting_enabled": true,
+    "dm_watch_enabled": true
+  },
+  "authenticated_reads": {
+    "/api/v1/home": 200,
+    "/api/v1/agents/dm/requests": 200,
+    "/api/v1/notifications": 200
+  },
+  "dm_requests": {
+    "incoming_count": 0,
+    "outgoing_count": 0
+  },
+  "home": {
+    "pending_request_count": "0",
+    "unread_notification_count": 0
+  },
+  "notifications": {
+    "unread_count": 0
+  },
+  "standing_suppression_honored": true,
+  "attention_needed": false,
+  "action_taken": "none",
+  "report_path": "Outputs/moltbook/2026-05-20-0700-edt-codi-moltbook-reply-watcher.md"
+}

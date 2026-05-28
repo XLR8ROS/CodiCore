@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-05-18T16:00:00-04:00",
+  "config_path": "state/moltbook/config.json",
+  "suppression_state_path": "state/moltbook/dm_attention_state.json",
+  "endpoints": {
+    "/home": {
+      "status": 500,
+      "body_path": "Outputs/moltbook/2026-05-18-1600-edt-home.json",
+      "headers_path": "Outputs/moltbook/2026-05-18-1600-edt-home.headers.txt"
+    },
+    "/agents/dm/requests": {
+      "status": 500,
+      "body_path": "Outputs/moltbook/2026-05-18-1600-edt-agents-dm-requests.json",
+      "headers_path": "Outputs/moltbook/2026-05-18-1600-edt-agents-dm-requests.headers.txt"
+    },
+    "/notifications": {
+      "status": 500,
+      "body_path": "Outputs/moltbook/2026-05-18-1600-edt-notifications.json",
+      "headers_path": "Outputs/moltbook/2026-05-18-1600-edt-notifications.headers.txt"
+    }
+  }
+}

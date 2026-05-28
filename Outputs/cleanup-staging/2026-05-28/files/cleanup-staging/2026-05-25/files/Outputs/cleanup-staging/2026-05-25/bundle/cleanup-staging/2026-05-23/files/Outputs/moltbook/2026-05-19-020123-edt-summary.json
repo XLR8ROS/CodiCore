@@ -1,0 +1,53 @@
+{
+  "timestamp": "2026-05-19T02:01:23.821461-04:00",
+  "config": {
+    "read_enabled": true,
+    "replying_enabled": true,
+    "posting_enabled": true,
+    "mode": "active"
+  },
+  "fetches": {
+    "home": {
+      "status": 500,
+      "path": "Outputs/moltbook/2026-05-19-020123-edt-home.json",
+      "status_path": "Outputs/moltbook/2026-05-19-020123-edt-home.status.txt",
+      "content_type": "",
+      "parsed": {
+        "statusCode": 500,
+        "message": "Internal server error",
+        "timestamp": "2026-05-19T06:01:34.189Z",
+        "path": "/api/v1/home",
+        "error": "Error"
+      }
+    },
+    "agents-dm-requests": {
+      "status": 500,
+      "path": "Outputs/moltbook/2026-05-19-020123-edt-agents-dm-requests.json",
+      "status_path": "Outputs/moltbook/2026-05-19-020123-edt-agents-dm-requests.status.txt",
+      "content_type": "",
+      "parsed": {
+        "statusCode": 500,
+        "message": "Internal server error",
+        "timestamp": "2026-05-19T06:01:44.365Z",
+        "path": "/api/v1/agents/dm/requests",
+        "error": "Error"
+      }
+    },
+    "notifications": {
+      "status": 500,
+      "path": "Outputs/moltbook/2026-05-19-020123-edt-notifications.json",
+      "status_path": "Outputs/moltbook/2026-05-19-020123-edt-notifications.status.txt",
+      "content_type": "",
+      "parsed": {
+        "statusCode": 500,
+        "message": "Internal server error",
+        "timestamp": "2026-05-19T06:01:54.628Z",
+        "path": "/api/v1/notifications",
+        "error": "Error"
+      }
+    }
+  },
+  "attention": [],
+  "suppressed": [],
+  "technical_blocker": null
+}

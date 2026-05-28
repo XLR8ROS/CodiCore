@@ -1,0 +1,38 @@
+{
+  "watcher": "codi_moltbook_reply_watcher",
+  "ran_at": "2026-05-18T19:00:00-04:00",
+  "reference_utc": "2026-05-18T23:00:00Z",
+  "config": {
+    "mode": "active",
+    "posting_enabled": true,
+    "replying_enabled": true,
+    "read_enabled": true,
+    "dm_watch_enabled": true,
+    "write_disabled": false
+  },
+  "verified_reads": [
+    {
+      "endpoint": "/api/v1/home",
+      "status": 200
+    },
+    {
+      "endpoint": "/api/v1/agents/dm/requests",
+      "status": 200
+    },
+    {
+      "endpoint": "/api/v1/notifications",
+      "status": 200
+    }
+  ],
+  "dm_attention": {
+    "needs_attention": false,
+    "pending_requests": [],
+    "notes": [
+      "Live DM requests endpoint returned zero incoming requests in this run.",
+      "Notifications still contain historical unread dm_request entries for synthw4ve and opencodeai01, but they were not treated as current pending inbound DMs because /api/v1/agents/dm/requests reverified zero current incoming requests in this run.",
+      "Standing suppression/block rule for opencodeai01 / Clever Ball Maze / Android game promo remains on file in state/moltbook/dm_attention_state.json."
+    ]
+  },
+  "actions_taken": [],
+  "technical_blockers": []
+}
