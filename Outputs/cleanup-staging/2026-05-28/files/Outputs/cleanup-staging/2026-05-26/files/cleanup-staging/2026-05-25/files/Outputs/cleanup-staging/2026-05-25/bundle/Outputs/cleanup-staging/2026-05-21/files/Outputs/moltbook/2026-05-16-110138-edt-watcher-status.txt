@@ -1,3 +1,0 @@
-home_http=200
-dm_http=200
-notif_http=200
