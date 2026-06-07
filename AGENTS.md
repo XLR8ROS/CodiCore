@@ -101,6 +101,8 @@ Local how-tos: `IMPORTANT_CODI_HOW-TO/`.
 
 Before repo hygiene, file moves, cleanup, or lane decisions, consult `IMPORTANT_CODI_HOW-TO/XOS_Repo_Hygiene_HOWTO.md`. Before memory review, daily notes, durable promotion, QMD, event-log review, or promotion logging, consult `IMPORTANT_CODI_HOW-TO/XOS_Memory_Flow_HOWTO.md`.
 
+Durable promotion is exhaustive event write-through. Codi must promote every meaningful event captured in the canonical daily note unless Reg explicitly authorizes a documented exception. Filtering, summarizing, lowering retrieval weight, or marking malformed is not permission to silently omit captured events from durable/event memory.
+
 Do not duplicate full maps/how-tos in root files. References do not override higher authority.
 
 ## 11. Docs-First Technical Troubleshooting
@@ -108,6 +110,8 @@ Do not duplicate full maps/how-tos in root files. References do not override hig
 For technical/config/runtime/provider/routing/CLI/API/Docker/database/model/memory/OpenClaw/QMD/infrastructure: read official docs/source contracts/schemas/XOS canon first; reason from documented architecture; state what should be true; then use terminal to verify local state or apply a docs-backed conclusion.
 
 If docs are missing, stale, contradictory, unavailable, or runtime differs, focused terminal inspection is valid.
+
+For memory troubleshooting, identify the active memory backend and the exact subsystem that generated the error before repairing anything. When `memory.backend=qmd`, verify QMD health through the QMD-backed OpenClaw memory path. Do not treat legacy builtin `memory_search` or builtin SQLite identity errors as proof that QMD is broken unless the erroring path is verified to be the active QMD backend.
 
 ## 12. Protected Files and Ask-Before-Action Rules
 

@@ -63,6 +63,8 @@ Durable event promotion reads canonical daily notes and writes every event from 
 
 Promotion is exhaustive event write-through. The source daily file is promoted as events, with source path, source date, timestamps, tags, available whys, how/method details, internal state, and submitted-response route when present.
 
+Promotion is not selective summarization. Every meaningful event captured in the canonical daily note must be written through during durable promotion unless Reg explicitly authorizes a documented exception. Review may mark an event lower weight, superseded, malformed, blocked, or needing repair, but review does not silently omit captured events.
+
 A promotion run may group output by source date or write one durable record per event. It preserves all events from the source file either way.
 
 Promotion logs go under:
@@ -73,13 +75,15 @@ Each promotion log records source daily file, durable output path, event count w
 
 A promotion run appends a short receipt to today's canonical daily note with durable output paths and promotion-log path.
 
-## 7. QMD / QMB / Retrieval
+## 7. QMD / Retrieval
 
-QMD/QMB/vector search is retrieval and indexing support. It chunks, searches, and recalls. It does not decide what exists or what gets written.
+QMD/vector search is retrieval and indexing support. It chunks, searches, and recalls. It does not decide what exists or what gets written.
 
 Direct files are source authority for promotion. If QMD fails, promotion continues from canonical daily notes and reports QMD as a retrieval blocker.
 
 QMD output never outranks Constitution, higher canon, Reg's explicit direction, root contracts, known source files, or direct event-log evidence.
+
+When `memory.backend=qmd`, QMD is the authoritative retrieval backend for memory health. Legacy builtin `memory_search` failures, including `fts-only` identity errors from builtin SQLite stores, do not prove QMD failure. Before repairing memory, identify which subsystem produced the error and verify QMD health through the current OpenClaw/QMD status and search path.
 
 ## 8. Evidence Lanes
 

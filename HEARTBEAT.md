@@ -107,9 +107,11 @@ Heartbeat reports the issue. It does not normalize daily notes unless a schedule
 
 Durable event promotion reads the canonical daily note and writes every event from that daily note into durable/event memory.
 
-Durable event promotion is exhaustive event write-through.
+Durable event promotion is exhaustive event write-through. Every meaningful event in the canonical daily note must be promoted into durable/event memory unless Reg explicitly authorizes a documented exception. Heartbeat treats silent omission of captured events as a promotion-health failure, not a valid review choice.
 
-QMD/QMB supports search, retrieval, chunking, semantic recall, and context discovery. It does not decide what exists and does not decide what gets written.
+QMD supports search, retrieval, chunking, semantic recall, and context discovery. It does not decide what exists and does not decide what gets written.
+
+When heartbeat checks memory retrieval health and `memory.backend=qmd`, heartbeat verifies the QMD-backed memory path. Legacy builtin `memory_search` errors, including builtin SQLite `fts-only` identity errors, must be reported as subsystem mismatch or legacy-path failure unless verified to come from the active QMD backend. Heartbeat does not infer QMD failure from legacy builtin memory errors.
 
 Heartbeat checks whether the durable-memory promotion job exists, is targeted correctly, and produced expected artifacts when it last ran.
 
