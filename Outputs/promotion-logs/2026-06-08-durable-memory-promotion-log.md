@@ -1,0 +1,23 @@
+# Durable Memory Promotion Log — 2026-06-08
+
+- Job: nightly Codi durable-memory promotion cron `abda13ac-8649-4931-bdf9-13e4ea0d7b19`.
+- Run context: 03:00 EDT nightly promotion window on 2026-06-08.
+- Source inspection:
+  - `memory/` listing inspected.
+  - `memory/2026-06-08.md` did not exist at promotion time.
+  - `memory/2026-06-07.md` exists and contains a single event documenting the 2026-06-07 promotion run and its outcomes.
+  - `Durable_Memory/2026-06-07.md` already contains the durable record for 2026-06-07, and no new 2026-06-07 events have appeared since that run.
+- Canonical daily note validation for 2026-06-08:
+  - Active daily notes matching `2026-06-08*` under `memory/`: none.
+  - Doctrine check: one active daily note per date is required; absence at run time is allowed but must be logged as timing, not treated as data loss.
+- Promotion actions for 2026-06-08:
+  - Wrote `Durable_Memory/2026-06-08.md` documenting that no 2026-06-08 events existed at promotion time and that all known prior events (through 2026-06-07) were already promoted.
+- Counts:
+  - Entries promoted for 2026-06-08: 0.
+  - Entries skipped: 0 (no candidate events existed).
+- Skipped items requiring Reg approval or additional evidence: none.
+- QMD/indexing:
+  - No QMD/indexing refresh was performed; durable promotion proceeded directly from filesystem daily-note inspection.
+  - Indexing status: not used in this run; no blocker encountered.
+- Notes:
+  - If a 2026-06-08 daily note is later created with events, a subsequent promotion run should append those entries into `Durable_Memory/2026-06-08.md` with full provenance.

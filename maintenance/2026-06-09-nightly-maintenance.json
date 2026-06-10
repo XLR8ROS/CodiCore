@@ -1,0 +1,47 @@
+{
+  "timestamp_utc": "2026-06-10T01:27:10.804Z",
+  "sections": {
+    "health": {
+      "openclaw_gateway": {
+        "status": "ok",
+        "version_cli": "2026.6.1",
+        "version_gateway": "2026.6.1"
+      },
+      "qdrant_launchctl": {
+        "status": "missing",
+        "service_label": "ai.xos.qdrant",
+        "detail": "launchctl reports no such service in system or gui domains"
+      },
+      "qdrant_http": {
+        "status": "unreachable",
+        "endpoint": "http://127.0.0.1:6333",
+        "detail": "curl connect failed from gateway host"
+      }
+    },
+    "memory": {
+      "latest_daily_note": "2026-06-09.md",
+      "requested_date_note": {
+        "date": "2026-04-13",
+        "found": false,
+        "detail": "no daily memory file exists at memory/2026-04-13.md as of this run"
+      },
+      "decisions_and_outcomes": [],
+      "canon_candidates": [],
+      "preferences": [],
+      "bulletin_items": [
+        "No 2026-04-13 daily note exists yet; nothing to extract for that date.",
+        "2026-06-09 daily note exists and has an early durable-memory bookkeeping entry only; no new decisions extracted in this run."
+      ]
+    },
+    "semantic": {
+      "status": "skipped",
+      "reason": "Embeddings/Qdrant provider path not wired in this run; no embedding credentials tested.",
+      "collection": "xos_semantic_memory",
+      "vector_size": 1536,
+      "distance": "cosine",
+      "test_upsert": null,
+      "retrieval_smoke_test": null
+    }
+  },
+  "next_step": "Wire and validate Qdrant (ai.xos.qdrant service and 127.0.0.1:6333) plus OpenAI embeddings credentials, then rerun semantic section to create/use xos_semantic_memory and perform a retrieval smoke test."
+}

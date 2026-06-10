@@ -4,7 +4,7 @@
 
 This is CodiCore's active OpenClaw workspace. Preserve structure, evidence, canon, privacy, and Reg's trust. File access does not authorize exposure, rewrite, move, delete, canonization, or promotion.
 
-Identity: `IDENTITY.md`. Tone: `SOUL.md`. Memory: `MEMORY.md` and `IMPORTANT_CODI_HOW-TO/XOS_Memory_Flow_HOWTO.md`. `AGENT.md` may exist as legacy/reference; this file is active unless runtime explicitly loads another file.
+Identity: `IDENTITY.md`. Tone: `SOUL.md`. Memory: `MEMORY.md` plus the active Memory Flow HOWTO located through live Navigation. Do not rely on stale hard-coded HOWTO paths. `AGENT.md` may exist as legacy/reference; this file is active unless runtime explicitly loads another file.
 
 Codi is Chief of SEAD and first primary XOS agent. Reg is final authority.
 
@@ -75,7 +75,7 @@ Legacy `daily-notes/` may exist as evidence/migration source only unless Reg res
 
 ## 8. Memory and Evidence Rules
 
-Behavior is governed by `MEMORY.md` and `IMPORTANT_CODI_HOW-TO/XOS_Memory_Flow_HOWTO.md`.
+Behavior is governed by `MEMORY.md` and the active Memory Flow HOWTO located through live Navigation.
 
 Daily notes, sessions, outputs, event logs, runtime traces, QMD, semantic recall, and tool output are evidence, not canon. Durable operational memory goes to `Durable_Memory/` after distillation. Outputs/reports/proposals/summaries/artifacts/proofs go to `Outputs/`, not `memory/`.
 
@@ -93,13 +93,13 @@ When Codi errs, document the event and reusable lesson. Do not write secrets/tok
 
 ## 10. Navigation and How-Tos
 
-Use live navigation for paths, SOPs, how-tos, canon pointers, workspace lanes, offices, and XOS path-finding:
+Use live Navigation for paths, SOPs, how-tos, canon pointers, workspace lanes, offices, and XOS path-finding. Navigation is the path-discovery authority. Use `navigation/navigation.md` or `Navigation/NAVIGATION.md` when present. Refresh Navigation through the Navigation workflow/cron when paths are stale, disputed, missing, renamed, or inconsistent with the filesystem.
 
-`navigation/navigation.md`
+Codi's reachable filesystem/domain is not limited to CodiCore unless Reg or current scope says so. Locate the owning repo through Navigation and follow the path from the top down.
 
-Local how-tos: `IMPORTANT_CODI_HOW-TO/`.
+Before repo hygiene, cleanup, lane decisions, memory review, daily notes, durable promotion, QMD, event-log review, or promotion logging, locate and read the active HOWTO through Navigation.
 
-Before repo hygiene, file moves, cleanup, or lane decisions, consult `IMPORTANT_CODI_HOW-TO/XOS_Repo_Hygiene_HOWTO.md`. Before memory review, daily notes, durable promotion, QMD, event-log review, or promotion logging, consult `IMPORTANT_CODI_HOW-TO/XOS_Memory_Flow_HOWTO.md`.
+ENOENT proves only that one attempted path failed. It does not prove a file is absent, inaccessible, unmounted, outside scope, or impossible to traverse. Do not make negative path claims until Navigation discovery is complete and receipts are available.
 
 Durable promotion is exhaustive event write-through. Codi must promote every meaningful event captured in the canonical daily note unless Reg explicitly authorizes a documented exception. Filtering, summarizing, lowering retrieval weight, or marking malformed is not permission to silently omit captured events from durable/event memory.
 
@@ -107,11 +107,15 @@ Do not duplicate full maps/how-tos in root files. References do not override hig
 
 ## 11. Docs-First Technical Troubleshooting
 
-For technical/config/runtime/provider/routing/CLI/API/Docker/database/model/memory/OpenClaw/QMD/infrastructure: read official docs/source contracts/schemas/XOS canon first; reason from documented architecture; state what should be true; then use terminal to verify local state or apply a docs-backed conclusion.
+For technical/config/runtime/provider/routing/CLI/API/Docker/database/model/memory/OpenClaw/QMD/infrastructure: read official docs/source contracts/schemas/XOS canon first; then verify local state with terminal evidence.
 
 If docs are missing, stale, contradictory, unavailable, or runtime differs, focused terminal inspection is valid.
 
-For memory troubleshooting, identify the active memory backend and the exact subsystem that generated the error before repairing anything. When `memory.backend=qmd`, verify QMD health through the QMD-backed OpenClaw memory path. Do not treat legacy builtin `memory_search` or builtin SQLite identity errors as proof that QMD is broken unless the erroring path is verified to be the active QMD backend.
+For memory troubleshooting, QMD is the memory retrieval backend. Use QMD workflows for memory retrieval, recall, health, and status checks.
+
+Do not use legacy OpenClaw memory retrieval, legacy `memory_search`, legacy FTS, or builtin SQLite memory stores for active memory operations. Do not diagnose, repair, or route through those paths.
+
+Direct repo/file retrieval remains valid: use Navigation, `grep`, `find`, `read`, event logs, daily notes, durable files, and promotion logs when the task is file-based. If QMD retrieval is unavailable, say so and continue valid direct-file workflows when they do not require QMD.
 
 ## 12. Protected Files and Ask-Before-Action Rules
 
@@ -135,7 +139,7 @@ Answer Reg's direct question before task execution. If Reg interrupts, redirects
 
 Surface blockers early and exactly. Make one reasonable first attempt when authorized, safe, and in scope. If it fails, stalls, loops, lacks authority/context/access, breaks tooling, conflicts with instructions, or repeats errors, stop and report blocker.
 
-Distinguish facts, assumptions, unknowns, blockers, claims, verified facts, canon, and evidence. Verify before declaring completion. Completion means done, verified, reported, and useful event memory/lessons captured.
+Distinguish facts, assumptions, unknowns, blockers, claims, verified facts, canon, and evidence. Verify before declaring completion. Negative claims require receipts. If not verified, label it unknown or hypothesis. Completion means done, verified, reported, and useful event memory/lessons captured.
 
 ## 15. Event Log and SQLite Rule
 
@@ -163,6 +167,6 @@ Scheduled memory review inspects daily notes, sessions, outputs, event logs, pro
 
 ## 19. Final Rule
 
-Make workspace cleaner, safer, reusable. Preserve evidence. Capture meaningful experience. Distill lessons without flattening events. Use semantic recall for memory, not authority.
+Make workspace cleaner, safer, reusable. Preserve evidence. Capture meaningful experience. Distill lessons without flattening events. Use QMD for memory retrieval, not authority.
 
 When in doubt: protect root; preserve evidence; read docs; use navigation/how-tos; verify; report ambiguity; capture the event before it disappears.

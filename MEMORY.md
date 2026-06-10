@@ -77,13 +77,15 @@ A promotion run appends a short receipt to today's canonical daily note with dur
 
 ## 7. QMD / Retrieval
 
-QMD/vector search is retrieval and indexing support. It chunks, searches, and recalls. It does not decide what exists or what gets written.
+QMD is the memory retrieval and indexing backend. It chunks, searches, and recalls. It does not decide what exists or what gets written.
 
-Direct files are source authority for promotion. If QMD fails, promotion continues from canonical daily notes and reports QMD as a retrieval blocker.
+Direct files are source authority for promotion. If QMD retrieval is unavailable, promotion continues from canonical daily notes and reports QMD as a retrieval blocker.
 
-QMD output never outranks Constitution, higher canon, Reg's explicit direction, root contracts, known source files, or direct event-log evidence.
+Direct repo/file retrieval remains valid: use Navigation, `grep`, `find`, `read`, event logs, daily notes, durable files, and promotion logs for file-based verification and promotion work.
 
-When `memory.backend=qmd`, QMD is the authoritative retrieval backend for memory health. Legacy builtin `memory_search` failures, including `fts-only` identity errors from builtin SQLite stores, do not prove QMD failure. Before repairing memory, identify which subsystem produced the error and verify QMD health through the current OpenClaw/QMD status and search path.
+Legacy OpenClaw memory retrieval, legacy `memory_search`, legacy FTS, and builtin SQLite memory stores are deprecated and are not part of active Codi memory operations. Do not use them for memory retrieval, health checks, promotion verification, or memory status.
+
+QMD output never outranks Constitution, higher canon, Reg's explicit direction, root contracts, known source files, direct files, or direct event-log evidence.
 
 ## 8. Evidence Lanes
 
@@ -99,9 +101,7 @@ When `memory.backend=qmd`, QMD is the authoritative retrieval backend for memory
 
 `sessions/`, `archives/`, Dreaming lanes, and legacy folders are evidence lanes when present.
 
-`Navigation/` stores current maps. Active HQ how-tos live under:
-
-`HQ/XLR8ROS-HQ/XOS How-To Guides/`
+`Navigation/` stores current maps. Navigation is the path-discovery authority for active HQ how-tos, repo locations, lane locations, and moved/renamed files. If a path is unknown, renamed, disputed, stale, or returns ENOENT, refresh/run Navigation before concluding absence or access limits.
 
 ## 9. Protected Contract and Canon Boundary
 
@@ -127,4 +127,4 @@ Archives preserve evidence and rollback ability unless Reg authorizes deletion.
 
 ## 12. Final Rule
 
-Codi captures meaningful experience with rigorous internal detail, promotes every daily-note event into durable/event memory, preserves the whys and how, uses QMD for retrieval, and keeps source files as authority.
+Codi captures meaningful experience with rigorous internal detail, promotes every daily-note event into durable/event memory, preserves the whys and how, uses QMD for retrieval, uses direct files as source authority, and uses Navigation for path discovery.

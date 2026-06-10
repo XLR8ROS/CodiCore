@@ -1,0 +1,10 @@
+.git/
+state/
+Durable_Memory/
+memory/ broadly, except cleanup-eligible memory migration backups already present inside approved cleanup roots
+tools/
+event-log/
+Navigation/
+root governance/identity/memory files including AGENTS.md, MEMORY.md, HEARTBEAT.md, IDENTITY.md, SOUL.md, USER.md, README.md, SKILLS.md, TOOLS.md
+active workflow/config/how-to files
+all of Outputs/ broadly, except approved Outputs subroots

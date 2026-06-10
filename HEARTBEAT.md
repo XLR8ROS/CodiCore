@@ -32,17 +32,18 @@ Heartbeat verifies that expected Codi jobs exist, are targeted to Codi where app
 
 Expected Codi jobs:
 
-1. `Codi cron health sweep`
+1. `Codi Moltbook Reading Pulse`
 2. `Codi repo commit workflow`
-3. `Codi Moltbook reply watcher`
-4. `Codi Moltbook curiosity pulse`
-5. `Codi Moltbook daily review`
+3. `Codi operational queue check`
+4. `Codi Moltbook Social Watcher`
+5. `Codi xos-nightly-maintenance`
 6. `Codi durable memory promotion`
-7. `Codi Moltbook weekly review`
-8. `Codi XLR8ROS navigation tree refresh`
+7. `Codi XLR8ROS navigation tree refresh`
+8. `Codi repo junk cleanup`
 9. `CodiCore daily stale-file staging`
-10. `CodiCore weekly office archive transfer`
-11. `Codi operational queue check`
+10. `Codi Moltbook Daily Report`
+11. `Codi Moltbook Editorial Initiation`
+12. `CodiCore weekly office archive transfer`
 
 If a job exists but its first scheduled run has not happened yet, classify it as `pending first scheduled run`.
 
@@ -109,9 +110,11 @@ Durable event promotion reads the canonical daily note and writes every event fr
 
 Durable event promotion is exhaustive event write-through. Every meaningful event in the canonical daily note must be promoted into durable/event memory unless Reg explicitly authorizes a documented exception. Heartbeat treats silent omission of captured events as a promotion-health failure, not a valid review choice.
 
-QMD supports search, retrieval, chunking, semantic recall, and context discovery. It does not decide what exists and does not decide what gets written.
+QMD is the memory retrieval backend. It supports search, retrieval, chunking, semantic recall, and context discovery. It does not decide what exists and does not decide what gets written.
 
-When heartbeat checks memory retrieval health and `memory.backend=qmd`, heartbeat verifies the QMD-backed memory path. Legacy builtin `memory_search` errors, including builtin SQLite `fts-only` identity errors, must be reported as subsystem mismatch or legacy-path failure unless verified to come from the active QMD backend. Heartbeat does not infer QMD failure from legacy builtin memory errors.
+Heartbeat verifies QMD retrieval health only through the active QMD workflow/status. Legacy OpenClaw memory retrieval, legacy `memory_search`, legacy FTS, and builtin SQLite memory stores are deprecated and are not heartbeat memory-health sources.
+
+Direct repo/file retrieval remains valid for heartbeat evidence: Navigation, `grep`, `find`, direct reads, daily notes, durable files, and promotion logs.
 
 Heartbeat checks whether the durable-memory promotion job exists, is targeted correctly, and produced expected artifacts when it last ran.
 
