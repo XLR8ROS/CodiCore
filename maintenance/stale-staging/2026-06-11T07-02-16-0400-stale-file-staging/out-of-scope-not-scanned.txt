@@ -1,0 +1,10 @@
+.git/
+state/
+Durable_Memory/
+memory/ broadly except approved-root migration backups
+tools/
+event-log/
+Navigation/
+root governance/identity/memory files
+active workflow/config/how-to files
+Outputs/ broadly except approved subroots
