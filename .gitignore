@@ -256,6 +256,8 @@ state/moltbook/runtime/*/notifications.json
 state/moltbook/runtime/*/notifications-limit*.json
 state/moltbook/runtime/*/agents-dm-requests.json
 Outputs/moltbook/*-reading-pulse-run/
+Outputs/cleanup-archives/
+maintenance/stale-staging/
 
 # Local captures and summaries
 latest-summary.*

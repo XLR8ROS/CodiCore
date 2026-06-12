@@ -1,7 +1,0 @@
-root	status
-cleanup-staging	scanned
-Outputs/cleanup-staging	not_found
-Outputs/moltbook	scanned
-Outputs/MoltbookSocialWatcher	not_found
-maintenance/stale-staging	scanned
-Outputs/ui-control-audit	not_found
