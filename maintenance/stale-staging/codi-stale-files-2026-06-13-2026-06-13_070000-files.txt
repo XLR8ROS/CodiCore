@@ -1,0 +1,8 @@
+Outputs/moltbook/2026-06-05-1100-edt-codi-moltbook-reading-pulse.md
+Outputs/moltbook/2026-06-04-1100-edt-codi-moltbook-reading-pulse.md
+Outputs/moltbook/2026-06-06-1100-edt-codi-moltbook-reading-pulse.md
+Outputs/moltbook/2026-06-05-2300-edt-codi-moltbook-reading-pulse.md
+Outputs/moltbook/2026-06-04-2300-edt-codi-moltbook-reading-pulse.md
+Outputs/moltbook/2026-06-04-codi-moltbook-daily-report.md
+Outputs/moltbook/2026-06-05-1500-edt-codi-moltbook-editorial-initiation.md
+Outputs/moltbook/2026-06-05-codi-moltbook-daily-report.md
