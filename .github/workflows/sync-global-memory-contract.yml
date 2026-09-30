@@ -24,13 +24,12 @@ jobs:
         run: |
           set -euo pipefail
           tmp="$(mktemp)"
-          curl --fail --silent --show-error --location             "https://raw.githubusercontent.com/XLR8ROS/xlr8ros-hq/main/Global%20Memory%20Contract.md"             --output "$tmp"
+          curl --fail --silent --show-error --location "https://raw.githubusercontent.com/XLR8ROS/xlr8ros-hq/main/Global%20Memory%20Contract.md" --output "$tmp"
 
+          changed=0
           if [ ! -f "Global Memory Contract.md" ] || ! cmp -s "$tmp" "Global Memory Contract.md"; then
             cp "$tmp" "Global Memory Contract.md"
             changed=1
-          else
-            changed=0
           fi
 
           if [ ! -f "Global Memory Contract.metadata.md" ]; then
@@ -40,17 +39,17 @@ jobs:
           if [ "$changed" -eq 1 ]; then
             hq_commit="$(git ls-remote https://github.com/XLR8ROS/xlr8ros-hq.git refs/heads/main | awk '{print $1}')"
             local_blob="$(git hash-object "Global Memory Contract.md")"
-            cat > "Global Memory Contract.metadata.md" <<EOF
-# Global Memory Contract synchronization metadata
-
-This file is not governing contract text.
-
-- Canonical source: `XLR8ROS/xlr8ros-hq/Global Memory Contract.md`
-- Synchronization direction: HQ -> local
-- HQ main commit observed during sync: `$hq_commit`
-- Verified local Git blob SHA after sync: `$local_blob`
-- Synchronization workflow: `.github/workflows/sync-global-memory-contract.yml`
-EOF
+            {
+              printf '%s\n' '# Global Memory Contract synchronization metadata'
+              printf '\n'
+              printf '%s\n' 'This file is not governing contract text.'
+              printf '\n'
+              printf '%s\n' '- Canonical source: `XLR8ROS/xlr8ros-hq/Global Memory Contract.md`'
+              printf '%s\n' '- Synchronization direction: HQ -> local'
+              printf '%s\n' "- HQ main commit observed during sync: `$hq_commit`"
+              printf '%s\n' "- Verified local Git blob SHA after sync: `$local_blob`"
+              printf '%s\n' '- Synchronization workflow: `.github/workflows/sync-global-memory-contract.yml`'
+            } > "Global Memory Contract.metadata.md"
           fi
 
           rm -f "$tmp"
@@ -59,7 +58,7 @@ EOF
         shell: bash
         run: |
           set -euo pipefail
-          if git diff --quiet -- "Global Memory Contract.md" "Global Memory Contract.metadata.md"              && git diff --cached --quiet; then
+          if git diff --quiet -- "Global Memory Contract.md" "Global Memory Contract.metadata.md" && git diff --cached --quiet; then
             echo "Local contract already matches HQ."
             exit 0
           fi
