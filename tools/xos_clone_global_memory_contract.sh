@@ -52,8 +52,21 @@ for dest in "${DESTS[@]}"; do
     continue
   fi
 
+  if [[ -f "$dest" ]]; then
+    if ! chflags nouchg "$dest" 2>/dev/null; then
+      failed+=("$dest")
+      echo "FAILED could not unlock destination: $dest" >&2
+      continue
+    fi
+  fi
+
   if [[ -f "$dest" ]] && cmp -s "$SOURCE" "$dest"; then
-    unchanged+=("$dest")
+    if chflags uchg "$dest" && ls -lO "$dest" | grep -qw uchg; then
+      unchanged+=("$dest")
+    else
+      failed+=("$dest")
+      echo "FAILED could not relock unchanged destination: $dest" >&2
+    fi
     continue
   fi
 
@@ -62,17 +75,21 @@ for dest in "${DESTS[@]}"; do
     tmp_hash=$(shasum -a 256 "$tmp" | awk '{print $1}')
     if [[ "$tmp_hash" == "$source_hash" ]] && mv "$tmp" "$dest"; then
       dest_hash=$(shasum -a 256 "$dest" | awk '{print $1}')
-      if [[ "$dest_hash" == "$source_hash" ]]; then
+      if [[ "$dest_hash" == "$source_hash" ]] && chflags uchg "$dest" && ls -lO "$dest" | grep -qw uchg; then
         updated+=("$dest")
       else
+        chflags uchg "$dest" 2>/dev/null || true
         failed+=("$dest")
+        echo "FAILED hash or relock verification: $dest" >&2
       fi
     else
       rm -f "$tmp" 2>/dev/null || true
+      chflags uchg "$dest" 2>/dev/null || true
       failed+=("$dest")
     fi
   else
     rm -f "$tmp" 2>/dev/null || true
+    chflags uchg "$dest" 2>/dev/null || true
     failed+=("$dest")
   fi
 done
