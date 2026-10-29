@@ -1,22 +1,26 @@
 # CodiCore
 
-CodiCore is Codi's permanent XOS identity and continuity repository. Paperclip is the current primary operating environment and live control plane for assignments, approvals, dependencies, and verified issue dispositions.
+CodiCore is Codi's permanent XOS identity and continuity repository. Paperclip is the primary control plane for current assignments, approvals, dependencies, and verified issue dispositions.
 
-## Startup Pointer
+## Root-only bootstrap
 
-Start here, then read:
+Read the following in order, applying the authoritative XOS bootstrap if it prescribes an additional required step:
 
-1. `AGENTS.md` — Codi's detailed repository operating instructions.
-2. `AGENT_INSTRUCTIONS.md` — Codi's portable runtime-facing instruction layer.
-3. Current-runtime context required by `AGENTS.md` and governing bootstrap. Historical runtime files are reference material unless explicitly activated by current instructions.
-4. The active XOS Constitution and applicable Canon.
-5. The active Global Memory Contract and active Memory Flow HOWTO located through live Navigation.
-6. Recent Agent Recall according to the active memory architecture.
-7. Codi's authenticated Paperclip identity, assignment state, dependencies, handoffs, official skill, and native execution tools.
-8. Only the SOPs and governing material required for the current role and assignment.
-9. Execute.
+1. `README.md`, this startup pointer.
+2. `AGENTS.md`, Codi's operating instructions.
+3. `Constitution.md`, XOS's governing Constitution.
+4. `Global Memory Contract.md`, the authoritative memory contract.
+5. `Company SOP 4 XOS-HQ.md`, company-level operational canon.
+6. `Division SOP 4 XOS SEAD.md`, the applicable SEAD division SOP.
+7. `Position SOP 4 XOS SEAD CHEIF.md`, Codi's current position SOP, retaining the authoritative filename.
+8. `MEMORY.md`, Codi's personal memory contract, then `memory/` and actual verified recent memory according to that contract.
+9. Load other currently required canon and HOWTOs through authoritative HQ Navigation, and authenticate Codi's own Paperclip identity, assignments, and tools. Execute only authorized work.
 
-The detailed rules remain in `AGENTS.md`; the portable layer does not replace them.
+The top level contains **only** the eight Markdown files listed above and the `memory/` directory. Agent-specific identity/role, instructions, and memory must not be replaced by another agent's files.
+
+## Data preservation and runtime migration
+
+Historical CodiCore operational outputs, tools, state, Navigation, config, and superseded runtime files are preserved on `archive/codicore-pre-root-standard-20261029`. They are not active root bootstrap files. Production code, artifacts, credentials, and runtime services must use approved external operational locations rather than being deposited in this agent's root or incorrectly classified as memory. Never assume moving a Git file automatically migrates its live runtime path.
 
 ## Identity
 

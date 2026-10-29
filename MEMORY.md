@@ -67,9 +67,7 @@ Promotion is not selective summarization. Every meaningful event captured in the
 
 A promotion run may group output by source date or write one durable record per event. It preserves all events from the source file either way.
 
-Promotion logs go under:
-
-`Outputs/promotion-logs/`
+Promotion logs belong in an authorized XOS operational outputs location outside this agent repository. Historical `Outputs/promotion-logs/` is preserved in the pre-migration archival branch.
 
 Each promotion log records source daily file, durable output path, event count written, malformed entries needing repair, and exact blockers.
 
@@ -91,17 +89,17 @@ QMD output never outranks Constitution, higher canon, Reg's explicit direction, 
 
 `memory/YYYY-MM-DD.md` stores canonical daily notes.
 
-`Durable_Memory/` stores durable promoted memory.
+`memory/Durable_Memory/` stores durable promoted memory.
 
-`Outputs/` stores reports, proofs, healthchecks, snapshots, promotion logs, maps, and artifacts.
+Reports, proofs, healthchecks, snapshots, promotion logs, maps, and artifacts belong in a separately approved operational artifacts location outside the root and `memory/`. Historical `Outputs/` is preserved in the pre-migration archival branch.
 
-`event-log/` stores structured event evidence, SQLite data, audits, docs, and maintenance summaries.
+`memory/event-log/` preserves structured event evidence, SQLite data, audits, and supporting records. Live writes require an authorized runtime migration.
 
-`tools/event-log/` stores event-log tools when present.
+Executable event-log tools belong in an authorized operational tools location outside the agent root and `memory/`; the original `tools/event-log/` scripts remain available on the pre-migration archival branch.
 
 `sessions/`, `archives/`, Dreaming lanes, and legacy folders are evidence lanes when present.
 
-`Navigation/` stores current maps. Navigation is the path-discovery authority for active HQ how-tos, repo locations, lane locations, and moved/renamed files. If a path is unknown, renamed, disputed, stale, or returns ENOENT, refresh/run Navigation before concluding absence or access limits.
+HQ Navigation and the approved runtime Navigation service store current maps. Navigation is the path-discovery authority for active HQ how-tos, repo locations, lane locations, and moved/renamed files. If a path is unknown, renamed, disputed, stale, or returns ENOENT, refresh/run Navigation before concluding absence or access limits.
 
 ## 9. Protected Contract and Canon Boundary
 
