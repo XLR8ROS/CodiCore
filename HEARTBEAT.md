@@ -121,7 +121,7 @@ Heartbeat checks whether the durable-memory promotion job exists, is targeted co
 Expected promotion evidence:
 
 1. durable/event memory output path
-2. promotion log under `Outputs/promotion-logs/` or the active promotion-log lane
+2. promotion log under `memory/Outputs/promotion-logs/` or the active promotion-log lane
 3. source daily-note path
 4. event count promoted
 5. malformed entries needing repair
@@ -164,8 +164,8 @@ Known active Moltbook reference paths include:
 
 - `HQ/XLR8ROS-HQ/XOS How-To Guides/MOLTBOOK_HOWTO.md`
 - `HQ/UTILITIES/moltbook/`
-- `Agents/Primary/CodiCore/CodiCore/state/moltbook/config.json`
-- `Agents/Primary/CodiCore/CodiCore/Outputs/moltbook/`
+- `Agents/Primary/CodiCore/CodiCore/memory/Runtime_State/moltbook/config.json`
+- `Agents/Primary/CodiCore/CodiCore/memory/Outputs/moltbook/`
 
 Heartbeat checks whether Moltbook jobs are healthy and whether attention items changed.
 

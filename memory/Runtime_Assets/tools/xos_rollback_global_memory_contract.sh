@@ -1,10 +1,13 @@
 #!/bin/zsh
 set -euo pipefail
+# LEGACY SAFETY HOLD: source of truth is HQ canon YAML, not this older Markdown-cloning helper.
+echo "Legacy direct mirror mutation disabled. Use HQ scripts/sync_canon_mirrors.py with verified authorization." >&2
+exit 2
 
 CLONE_ROOT="${XOS_GITHUB_ROOT:-$HOME/XOS-GitHub}"
 SOURCE="${XOS_MEMORY_CONTRACT_SOURCE:-$CLONE_ROOT/XLR8ROS/xlr8ros-hq/Global Memory Contract.md}"
 BACKUP_DIR="${XOS_MEMORY_CONTRACT_BACKUP_DIR:-$CLONE_ROOT/XLR8ROS/xlr8ros-hq/memory-contract-backups}"
-CLONE_SCRIPT="${XOS_MEMORY_CONTRACT_CLONE_SCRIPT:-$CLONE_ROOT/XLR8ROS/CodiCore/tools/xos_clone_global_memory_contract.sh}"
+CLONE_SCRIPT="${XOS_MEMORY_CONTRACT_CLONE_SCRIPT:-$CLONE_ROOT/XLR8ROS/CodiCore/memory/Runtime_Assets/tools/xos_clone_global_memory_contract.sh}"
 MOTTO="Learn once, forget nothing, remember everything, because everything has value."
 
 fail() { echo "ERROR: $*" >&2; exit 2; }

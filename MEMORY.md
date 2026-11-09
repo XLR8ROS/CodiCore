@@ -69,7 +69,7 @@ A promotion run may group output by source date or write one durable record per 
 
 Promotion logs go under:
 
-`Outputs/promotion-logs/`
+`memory/Outputs/promotion-logs/`
 
 Each promotion log records source daily file, durable output path, event count written, malformed entries needing repair, and exact blockers.
 
@@ -91,13 +91,13 @@ QMD output never outranks Constitution, higher canon, Reg's explicit direction, 
 
 `memory/YYYY-MM-DD.md` stores canonical daily notes.
 
-`Durable_Memory/` stores durable promoted memory.
+`memory/Durable_Memory/` stores durable promoted memory.
 
-`Outputs/` stores reports, proofs, healthchecks, snapshots, promotion logs, maps, and artifacts.
+`memory/Outputs/` stores reports, proofs, healthchecks, snapshots, promotion logs, maps, and artifacts.
 
-`event-log/` stores structured event evidence, SQLite data, audits, docs, and maintenance summaries.
+`memory/Event_Log/` stores structured event evidence, SQLite data, audits, docs, and maintenance summaries.
 
-`tools/event-log/` stores event-log tools when present.
+`memory/Runtime_Assets/tools/event-log/` stores event-log tools when present.
 
 `sessions/`, `archives/`, Dreaming lanes, and legacy folders are evidence lanes when present.
 

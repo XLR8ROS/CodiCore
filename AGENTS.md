@@ -79,7 +79,7 @@ Legacy `daily-notes/` may exist as evidence/migration source only unless Reg res
 
 Behavior is governed by `MEMORY.md` and the active Memory Flow HOWTO located through live Navigation.
 
-Daily notes, sessions, outputs, event logs, runtime traces, QMD, semantic recall, and tool output are evidence, not canon. Durable operational memory goes to `Durable_Memory/` after distillation. Outputs/reports/proposals/summaries/artifacts/proofs go to `Outputs/`, not `memory/`.
+Daily notes, sessions, outputs, event logs, runtime traces, QMD, semantic recall, and tool output are evidence, not canon. Durable operational memory goes to `memory/Durable_Memory/` after distillation. Outputs, reports, proposals and proofs belong under `memory/Outputs/`; both remain distinct categories within the single `memory/` content folder.
 
 Doctrine: learn once, remember everything meaningful, forget nothing meaningful. Capture every meaningful event first; later review may lower weight, supersede, distill, or promote.
 
@@ -145,7 +145,7 @@ Distinguish facts, assumptions, unknowns, blockers, claims, verified facts, cano
 
 ## 15. Event Log and SQLite Rule
 
-Event log is structured evidence. Canonical CodiCore event DB belongs in `event-log/`. Event-log scripts/calls belong in `tools/event-log/`.
+Event log is structured evidence. Canonical CodiCore event DB belongs in `memory/Event_Log/`. Event-log scripts/calls belong in `memory/Runtime_Assets/tools/event-log/`.
 
 Use canonical modules when available. Respect WAL, busy timeout, backup safety, and single-writer constraints.
 

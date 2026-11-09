@@ -3,8 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
 
-const repoRoot = path.resolve(__dirname, '..');
-const dbPath = path.join(repoRoot, 'memory', 'sqlite', 'events.sqlite');
+const dbPath = path.resolve(__dirname, '../../../Event_Log/events.sqlite');
 
 function ensureDbExists() {
   if (!fs.existsSync(dbPath)) {

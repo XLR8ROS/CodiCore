@@ -3,7 +3,7 @@
 XOS Event Writer for CodiCore.
 
 Black-box event inserter for:
-  event-log/events.sqlite
+  memory/Event_Log/events.sqlite
 
 Main table:
   events
@@ -21,11 +21,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-DEFAULT_DB_PATH = (
-    Path.home()
-    / "Library/Mobile Documents/com~apple~CloudDocs/XLR8ROS"
-    / "Agents/Primary/CodiCore/CodiCore/event-log/events.sqlite"
-)
+DEFAULT_DB_PATH = Path(__file__).resolve().parents[2] / "Event_Log" / "events.sqlite"
 
 
 def utc_now() -> str:

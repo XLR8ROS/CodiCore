@@ -1,5 +1,8 @@
 #!/bin/zsh
 set -euo pipefail
+# LEGACY SAFETY HOLD: source of truth is HQ canon YAML, not this older Markdown-cloning helper.
+echo "Legacy direct mirror mutation disabled. Use HQ scripts/sync_canon_mirrors.py with verified authorization." >&2
+exit 2
 
 CLONE_ROOT="${XOS_GITHUB_ROOT:-$HOME/XOS-GitHub}"
 SOURCE="${XOS_MEMORY_CONTRACT_SOURCE:-$CLONE_ROOT/XLR8ROS/xlr8ros-hq/Global Memory Contract.md}"
