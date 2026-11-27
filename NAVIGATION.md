@@ -7,8 +7,8 @@ This is a generated, registered root-level mirror. Never edit a mirror independe
 - `README.md`: the agent's own bootstrap order and stable identity.
 - `Constitution.md`, `Global Memory Contract.md`, `Company SOP 4 XOS-HQ.md`: HQ-governed canonical mirrors.
 - Applicable position, division and office SOP files: each active SOP belongs directly in the root, synchronized from its authoritative YAML when registered.
-- `AGENTS.md`: common agent operating instructions, generated from HQ `canon/agents.yaml`; never edit the mirror independently.
-- `IDENTITY.md`: permanent agent identity, current position, reporting line, Core and runtime context.
+- `AGENTS.md`: common agent operating instructions, generated from the authorized private Executive Suite `canon/agents.yaml`, including the current organizational chart; never edit the mirror independently.
+- `IDENTITY.md`: permanent agent identity, Core and runtime context; current position and reporting line are in the organizational chart in AGENTS.md.
 - `BOOTSTRAP.md` and `OPENAI.md`: when present and approved, additional bootstrap and external-runtime guidance.
 - `NAVIGATION.md`: this shared navigational mirror.
 - No duplicate root `SOPs/`, `Protocol SOPs/`, `support/`, `Protocol Support/`, `reflections/`, `archives/`, or templates folders. Root SOPs/canon stay at root; lessons under memory.
