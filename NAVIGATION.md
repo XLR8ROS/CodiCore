@@ -28,4 +28,4 @@ The only normal content folder at an agent Core root is `memory/`. Hidden `.gith
 ## Synchronization and embedding are distinct
 - HQ canonical YAML is the only editable governance authority. Registered Markdown mirrors are regenerated and SHA-256-verified by the central synchronization registry.
 - Git storage alone is not semantic embedding. Verify the actual memory-index workflow and retrieval before claiming anything has been embedded.
-- Paperclip remains the task and approval control plane; a Git commit does not constitute a Paperclip receipt or Reg's approval.
+- Paperclip is deprecated. Verify current assignments and approvals against authorized XOS work records and the ONE XOS Master Assignments spreadsheet. A Git commit does not constitute Reg's approval.
