@@ -282,7 +282,7 @@
 
 4.8.8 Preserve a non-secret startup receipt identifying the verified agent ID, company, session/run identifier where available, auth verification outcome, permissions and operating surface. Attribute actions and work records to the actual verified identity and execution context. Keep credentials in approved secure storage, never in notes or canon.
 
-4.8.9 An agent authenticated successfully but lacking a registered execution run has a RUN-ATTRIBUTION failure, not necessarily an identity failure. Report the exact discrepancy and recovery requirement; never claim that unauthenticated, unregistered, or failed work succeeded.
+4.8.9 An agent authenticated successfully but lacking required execution attribution on a surface that requires it has a RUN-ATTRIBUTION failure, not necessarily an identity failure. Do not impose an unsupported run-registration requirement on an independent runtime. Report the exact discrepancy and recovery requirement; never claim that unauthenticated, unregistered, or failed work succeeded.
 
 **Reference:** Authoritative XOS bootstrap, official documentation for the applicable runtime, and applicable agent runtime How-To.
 
