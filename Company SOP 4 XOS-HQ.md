@@ -260,31 +260,31 @@
 
 4.7.10 Preserve the user's literal request and qualifiers. Do not silently convert an instruction to execute into a request for a plan, a request to verify into an admission of nonverification, or an instruction to double-check into an untested refusal. If material ambiguity remains after consulting available context, ask only the question necessary to resolve it.
 
-4.7.11 This rule applies globally to all XOS agents and work surfaces, including Paperclip, connector integrations, local and remote runtimes, code execution, files, repositories, and external services. More specific SOPs may add checks but may not weaken these duties.
+4.7.11 This rule applies globally to all XOS agents and work surfaces, including OpenClaw, independent ChatGPT runtimes, LiteLLM, connector integrations, local and remote runtimes, code execution, files, repositories, and external services. More specific SOPs may add checks but may not weaken these duties.
 
 ---
 
 ### 4.8 Mandatory Agent Runtime Identity and Authentication
 
-4.8.1 Every XOS agent MUST enter each new runtime as a specific provisioned XOS agent, never as an anonymous, default, borrowed, or identity-free process. This governs manual and scheduled starts, restarts, continuations, external ChatGPT agents, internal Paperclip agents, and tool-driven executions.
+4.8.1 Every XOS agent MUST enter each new runtime as a specific provisioned XOS agent, never as an anonymous, default, borrowed, or identity-free process. This governs manual and scheduled starts, restarts, continuations, external ChatGPT agents, OpenClaw agents, and tool-driven executions.
 
 4.8.2 Before executing an assignment, bind and verify the agent's persistent identity, company, authenticated account or agent credential, permission scope, and actual execution/session context. A model name, persona label, operating-system login, or self-declared prompt identity is not authentication.
 
-4.8.3 A Paperclip agent MUST use its OWN authenticated agent identity. Verify the agent and company returned by the authorized identity endpoint before issue checkout or mutation. Confirm the issue and checkout belong to that agent. Never execute as Reg, the Board, another agent, or a generic service identity.
+4.8.3 Every agent MUST use its OWN verified identity and authorized account or agent context. Verify the configured agent and workspace or independent runtime and applicable permissions before acting on assigned work. Never execute as Reg, the Board, another agent, or a generic service identity.
 
-4.8.4 Paperclip-managed runs MUST have the real, server-recognized agent ID and run attribution issued to their runtime. Carry current run attribution on issue mutations. Never invent, borrow, or recycle run IDs, credentials, or heartbeat records; a run UUID with no registered execution record is not a valid substitute.
+4.8.4 Use actual runtime-issued session and execution attribution where supported. Attribute authorized work-record changes to the actual actor and execution context. Never invent, borrow or recycle identifiers or credentials.
 
-4.8.5 Independent external agents keep their own identity outside Paperclip, and Paperclip MUST NOT launch, wake, or manage their external OpenAI runtime. An external agent may perform separately authorized external work, but MUST NOT claim Paperclip task ownership or make an agent-attributed Paperclip mutation until the supported external agent-scoped authentication AND server-recognized execution attribution are verified.
+4.8.5 Independent ChatGPT agents keep their own identity and runtime. OpenClaw manages enrolled agents; LiteLLM is the inference gateway. Neither authorizes launching, waking, managing or impersonating independent ChatGPT sessions. Paperclip is deprecated and historical instructions do not authorize its use.
 
 4.8.6 Missing, expired, inconsistent, or unverified identity or required run attribution is a failed startup gate for the affected operations. Stop anonymous execution. Diagnose and recover by the documented own-agent route without impersonation or credential sharing. Continue only work supported by a separately verified authorization; do not invent a blanket blocker.
 
 4.8.7 Agent, position, and execution run are separate objects. The agent retains identity across role, model, machine and session changes. Position SOPs describe a position, not a permanently named incumbent.
 
-4.8.8 Preserve a non-secret startup receipt identifying the verified agent ID, company, session/run identifier where available, auth verification outcome, permissions and operating surface. Attribute every action and Paperclip record to the actual verified identity and run. Keep credentials in approved secure storage, never in notes or canon.
+4.8.8 Preserve a non-secret startup receipt identifying the verified agent ID, company, session/run identifier where available, auth verification outcome, permissions and operating surface. Attribute actions and work records to the actual verified identity and execution context. Keep credentials in approved secure storage, never in notes or canon.
 
 4.8.9 An agent authenticated successfully but lacking a registered execution run has a RUN-ATTRIBUTION failure, not necessarily an identity failure. Report the exact discrepancy and recovery requirement; never claim that unauthenticated, unregistered, or failed work succeeded.
 
-**Reference:** Official Paperclip skill Authentication/Heartbeat Procedure, authoritative XOS bootstrap, and applicable agent runtime How-To.
+**Reference:** Authoritative XOS bootstrap, official documentation for the applicable runtime, and applicable agent runtime How-To.
 
 ---
 
